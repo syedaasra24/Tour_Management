@@ -58,8 +58,7 @@ const Header = () => {
               </div>
 
               <span className='mobile_menu'>
-              <i class="ri-menu-line"></i> 
-              </span>
+              <i class="ri-menu-fill"></i>              </span>
             </div>
           </div>
         </Row>
