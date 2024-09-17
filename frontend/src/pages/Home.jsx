@@ -5,6 +5,7 @@ import './Home.css';
 import Video from '../../src/video.mp4';
 import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
+import { Col, Row, Container } from 'reactstrap';
 
   const Home =()=> {
     return <div className='Home'>
@@ -13,16 +14,24 @@ import SearchBar from '../shared/SearchBar';
          </div>
 
          <div className='sectionText'>
-          <h1> Unlock Your Travel Dreams</h1> 
+          <h1> Unlock Your Travel Dreams</h1>    
           <h1 className='center'>With Us!</h1>
           <p>
-            Discover the World's most adventurous nature, 
-            life is so short for a 
-            trip.
+          Explore top rated tours,hotels and restaurants around the world
           </p>
           <SearchBar/>
           <Subtitle/>
          </div>
+         <section>
+          <Container>
+            <Row>
+              <Col lg='3'>
+              <h5 className='service_subtitle'> What we serve</h5>
+              <h2 className='service_title'> We offer our best services</h2>
+              </Col>
+            </Row>
+          </Container>
+         </section>
     </div>
   }
 

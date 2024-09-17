@@ -6,7 +6,7 @@
 }
 .videoBg{
     position: absolute;
-    height: 100%;
+    height: 95%;
     width: 100%;
 
     video{
@@ -34,10 +34,24 @@
     }
 
     p{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         padding: 1rem 0;
         font-size:30px;
-        font-weight: 500;
+        color: whitesmoke;
         text-align: center;
     }
 
+}
+
+
+.service_subtitle {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #ee6e6e;
+    font-family:cursive
+}
+
+.service_title {
+    font-size: 2.5rem;
+    font-weight: 500;
 }

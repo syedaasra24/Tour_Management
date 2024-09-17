@@ -1,0 +1,32 @@
+.About{
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    top: 0;
+}
+.videoBg1{
+    position: absolute;
+    height: 95%;
+    width: 100%;
+
+    video{
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.sectionText1{
+    position:relative;
+    height:100%;
+    top:10%;
+    bottom:50%;
+    color: white;
+    padding: 0 1.2rem;
+
+    h1{
+        font-size:50px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+}

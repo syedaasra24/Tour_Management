@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Button } from 'reactstrap';
 import { NavLink, Link  } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo2.png';
 import './header.css';
 
 const nav_links=[
@@ -25,7 +25,7 @@ const Header = () => {
       <Container>
         <Row>
           <div className='nav_wrapper d-flex align-items-center 
-          justify-content-between'>
+          justify-content-evenly'>
             { /* =======  logo start ========*/}
             <div className='logo'>
               <img src ={logo} alt="" />
@@ -58,7 +58,8 @@ const Header = () => {
               </div>
 
               <span className='mobile_menu'>
-              <i class="ri-menu-fill"></i>              </span>
+              <i class="ri-menu-fill"></i>              
+              </span>
             </div>
           </div>
         </Row>
