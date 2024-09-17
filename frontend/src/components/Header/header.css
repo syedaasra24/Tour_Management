@@ -1,0 +1,70 @@
+@import url('https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css');
+
+.header{
+    position: static;
+    width: 100%;
+    height: 80px;
+    line-height:80px;
+    background: seagreen;
+  }
+  
+  .logo img{
+    width:35%;
+  }
+  
+  .menu{
+    margin-bottom:0;
+  }
+  
+  .nav_item a {
+    text-decoration: none;
+    color:#fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  .nav_item a:hover{
+    color: inherit;
+  }
+
+  
+  .nav_item a.active_link{
+    color: white;
+  }
+  
+  .mobile_menu{
+    font-size: 1.3rem;
+    color: var(--heading-color);
+    display: none;
+  }
+  
+  .sticky_header{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 8px -3px #ddd;
+    z-index: 999;
+  
+  }
+  button a{
+    color: rgb(252, 252, 255);
+    text-decoration: none;
+  }
+ul {
+    text-decoration: none;
+}
+.ri-menu-line{
+    font-size: 24px;
+    color: black;
+}
+li{
+    list-style: none;
+}
+.mobile_menu{
+    font-size: 24px;
+    color: #333;
+}

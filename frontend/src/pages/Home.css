@@ -1,0 +1,43 @@
+.Home{
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    top: 0;
+}
+.videoBg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.sectionText{
+    position:relative;
+    height:100%;
+    top:20%;
+    bottom:50%;
+    color: white;
+    padding: 0 1.3rem;
+
+    h1{
+        font-size: 100px;
+        font-weight: 900;
+        text-align: center;
+    }
+    .center{
+        text-align: center;
+    }
+
+    p{
+        padding: 1rem 0;
+        font-size:30px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+}
