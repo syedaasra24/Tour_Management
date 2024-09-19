@@ -1,7 +1,7 @@
 @import url('https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css');
 
 .header{
-    position: static;
+    position:sticky;
     width: 100%;
     height: 80px;
     line-height:80px;

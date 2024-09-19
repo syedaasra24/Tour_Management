@@ -5,6 +5,8 @@ import './Home.css';
 import Video from '../../src/video.mp4';
 import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
+import ServiceList from '../services/ServiceList';
+import ServiceCard from '../services/ServiceCard';
 import { Col, Row, Container } from 'reactstrap';
 
   const Home =()=> {
@@ -29,6 +31,8 @@ import { Col, Row, Container } from 'reactstrap';
               <h5 className='service_subtitle'> What we serve</h5>
               <h2 className='service_title'> We offer our best services</h2>
               </Col>
+              <ServiceList/>
+              <ServiceCard/>
             </Row>
           </Container>
          </section>
