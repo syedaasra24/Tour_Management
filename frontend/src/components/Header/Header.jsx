@@ -58,7 +58,7 @@ const Header = () => {
               </div>
 
               <span className='mobile_menu'>
-              <i class="ri-menu-fill"></i>              
+              <i className ="ri-menu-fill"></i>              
               </span>
             </div>
           </div>
