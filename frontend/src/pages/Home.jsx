@@ -29,7 +29,7 @@ import { Col, Row, Container } from 'reactstrap';
             <Row>
               <Col lg='3'>
               <h5 className='service_subtitle'> What we serve</h5>
-              <h2 className='service_title'> We offer our best services</h2>
+              <h2 className='service_title'> We offers you our best services</h2>
               </Col>
               <ServiceList/>
               <ServiceCard/>
