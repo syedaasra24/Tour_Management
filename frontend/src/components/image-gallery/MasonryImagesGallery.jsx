@@ -24,4 +24,4 @@ const MasonryImagesGallery = () => {
   )
 }
 
-export default MasonryImagesGallery
+export default MasonryImagesGallery ;

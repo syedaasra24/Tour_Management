@@ -8,8 +8,10 @@ import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
 import { Col, Row, Container} from 'reactstrap';
 import experienceImg from "../assets/images/experience.png"
-import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
-import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGallery';
+import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
+import MasonryImagesGallery from "../components/image-gallery/MasonryImagesGallery";
+import Testimonials from "../components/Testimonial/Testimonials";
+import Newsletter from "../shared/Newsletter";
 
   const Home =()=> {
     return <div className='Home'>
@@ -113,9 +115,13 @@ import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGalle
               <Subtitle subtitle={'Fans Love'} />
               <h2 className="testimonial_title">What our fans say about Us</h2>
             </Col>
+            <Col lg='12'>
+              <Testimonials />
+            </Col>
           </Row>
         </Container>
       </section>
+
     </div>
   };
 
