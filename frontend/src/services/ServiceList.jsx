@@ -22,7 +22,6 @@ const servicesData = [
         title: 'Customization',
         desc: 'ghgjhhk',
     },
-
 ]
 const ServiceList = () => {
   return (

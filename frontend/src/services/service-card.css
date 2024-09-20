@@ -3,6 +3,8 @@
     border-bottom: 1px solid blue;
     border-right: 1px solid blue;
     border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .service_img {
@@ -19,11 +21,6 @@
 
 .service_img img {
     width: 100%;
-}
-
-.service_item {
-    font-size: 1.1rem;
-    font-weight: 500;
 }
 
 .service_item p {
