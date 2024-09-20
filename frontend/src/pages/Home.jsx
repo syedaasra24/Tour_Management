@@ -98,6 +98,9 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
               <Subtitle subtitle={'Gallery'}/>
               <h2 className="gallery_title">Visit our customer tour Gallery</h2>
             </Col>
+            <Col lg='12'>
+              
+            </Col>
           </Row>
         </Container>
       </section>
