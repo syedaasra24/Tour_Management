@@ -49,6 +49,10 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
         </Container>
       </section> }
       {/*featured tour section end */}
+      
+      {/* experience  section start */}
+
+      
     </div>
   };
 
