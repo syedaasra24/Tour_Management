@@ -19,4 +19,4 @@ const galleryImage = [
     galleryImg07,
 ]
 
-export default galleryImages ;
+export default galleryImage ;

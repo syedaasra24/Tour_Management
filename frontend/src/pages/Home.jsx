@@ -105,6 +105,16 @@ import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGalle
           </Row>
         </Container>
       </section>
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg='12'>
+              <Subtitle subtitle={'Fans Love'} />
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </div>
   };
 
