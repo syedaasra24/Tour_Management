@@ -7,6 +7,7 @@ import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
 import { Col, Row, Container} from 'reactstrap';
+import experienceImg from "../assets/images/experience.png"
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 
   const Home =()=> {
@@ -75,12 +76,15 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
                 <h6>Regular clients</h6>
               </div>
                 <div className="counter_box">
-                <span>15</span>
+                <span>20</span>
                 <h6>Years Experience</h6>
               </div>
               </div>
             </Col>
             <Col lg='6'></Col>
+            <div className="experience_img">
+              <img src={experienceImg} alt="" />
+            </div>
           </Row>
         </Container>
       </section>
