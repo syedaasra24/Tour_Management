@@ -111,6 +111,7 @@ import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGalle
           <Row>
             <Col lg='12'>
               <Subtitle subtitle={'Fans Love'} />
+              <h2 className="testimonial_title">What our fans say about Us</h2>
             </Col>
           </Row>
         </Container>
