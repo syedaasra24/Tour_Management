@@ -52,7 +52,11 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
+<<<<<<< HEAD
       
+=======
+    hello world
+>>>>>>> 5b8f890b392d7e1d19d6aa937e332559aa326c2d
     </div>
   )
 }
