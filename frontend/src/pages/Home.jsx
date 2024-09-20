@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Home.css';
-
+import '../../src/components/Footer/Footer';
 // imported assests
 import Video from '../../src/video.mp4';
 import Subtitle from '../shared/Subtitle';
