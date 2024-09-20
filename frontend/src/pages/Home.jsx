@@ -9,6 +9,7 @@ import ServiceList from '../services/ServiceList';
 import { Col, Row, Container} from 'reactstrap';
 import experienceImg from "../assets/images/experience.png"
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
+import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGallery';
 
   const Home =()=> {
     return <div className='Home'>
@@ -99,7 +100,7 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
               <h2 className="gallery_title">Visit our customer tour Gallery</h2>
             </Col>
             <Col lg='12'>
-              
+              <MasonryImagesGallery />
             </Col>
           </Row>
         </Container>
