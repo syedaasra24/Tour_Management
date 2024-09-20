@@ -38,7 +38,7 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
           </Container>
          </section>
     {/* featured tour section start */}
-      <section>
+      {/* <section>
         <Container>
           <Row>
             <Col lg='12' className='mb-5'>
@@ -48,7 +48,7 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
             <FeaturedTourList/>          
           </Row>
         </Container>
-      </section>
+      </section> */}
       {/* featured tour section end*/}
     </div>
   };
