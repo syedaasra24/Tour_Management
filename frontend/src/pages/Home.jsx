@@ -1,13 +1,12 @@
 import React from 'react';
-import './Home.css';
+import '../styles/Home.css';
 
 // imported assests
 import Video from '../../src/video.mp4';
 import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
-import ServiceCard from '../services/ServiceCard';
-import { Col, Row, Container } from 'reactstrap';
+import { Col, Row, Container} from 'reactstrap';
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 
   const Home =()=> {
@@ -33,7 +32,6 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
               <h2 className='service_title'> We offers you our best services</h2>
               </Col>
               <ServiceList/>
-              <ServiceCard/>
             </Row>
           </Container>
          </section>
@@ -42,8 +40,9 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
         <Container>
           <Row>
             <Col lg='12' className='mb-5'>
-              <Subtitle subtitle={'Explore'}/>
-              <h2 className='featured_tour-title'>Our Tours Featured</h2>
+            <h5 className='service_subtitle'>Explore</h5>
+              {/* <Subtitle subtitle={'Explore'}/> */}
+              <h2 className='featured_tour-title'>Our Featured Tours</h2>
             </Col>
             <FeaturedTourList/>          
           </Row>

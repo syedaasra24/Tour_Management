@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Subtitle = () => {
+const Subtitle = ({Subtitle}) => {
   return (
-    <div>
-      
-    </div>
+    <h3 className='section_subtitle'>{Subtitle}</h3>
   )
 }
 
