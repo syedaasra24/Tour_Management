@@ -51,6 +51,39 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
       {/*featured tour section end */}
       
       {/* experience  section start */}
+      <section>
+        <Container>
+          <Row>
+            <Col lg='6'>
+              <div className='experience_content'>
+                <Subtitle Subtitle={'Experience'} />
+                  <h2>With our all experience <br/> We will serve you</h2>
+                  <p>
+                    hhhhhjhhgg
+                    <br/>
+                    hjgfghj
+                  </p>
+              </div>
+
+              <div className="counter_wrapper d-flex align-items-center gap-5  ">
+                <div className="counter_box">
+                <span>12k+</span>
+                <h6>Successful Trip</h6>
+              </div>
+                <div className="counter_box">
+                <span>2k+</span>
+                <h6>Regular clients</h6>
+              </div>
+                <div className="counter_box">
+                <span>15</span>
+                <h6>Years Experience</h6>
+              </div>
+              </div>
+            </Col>
+            <Col lg='6'></Col>
+          </Row>
+        </Container>
+      </section>
 
       
     </div>

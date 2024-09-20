@@ -3,6 +3,7 @@
 .tour_img img{
     width: 100%;
     border-radius: 5px 5px 0 0;
+    
 }
 
 .card{
@@ -13,6 +14,7 @@
 .tour_img{
     position: relative;
 }
+    
 .tour_img span{
     position: absolute;
     bottom: 0;
