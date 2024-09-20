@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-    Saathi12345
+    Saathi123456
     </div>
   )
 }
