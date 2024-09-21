@@ -107,6 +107,7 @@ const Footer = () => {
                     <i class='ri-phone-fill'></i>
                   </span>
                   Phone:
+                  Hello
                 </h6>
                 <p className='mb-0'>+0123456789</p>
               </ListGroupItem>
