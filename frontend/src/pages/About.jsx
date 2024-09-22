@@ -13,7 +13,7 @@ import SearchBar from '../shared/SearchBar';
          </div>
 
          <div className='sectionText1'>
-          <h1>About </h1>   
+          <h1>About us </h1>   
           <br/><br/> 
           <SearchBar/>
           <Subtitle/>
