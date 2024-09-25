@@ -1,7 +1,6 @@
 import React from 'react'
 import './footer.css'
 import{Container , Row , Col , ListGroup , ListGroupItem } from 'reactstrap';
-
 import {Link} from 'react-router-dom';
 import logo from '../../assets/images/logo2.png';
 
@@ -32,7 +31,6 @@ const Footer = () => {
             <div className='logo'>
             <img src={logo} alt=''/>
             <p>lorem</p>
-
             <div className='social_links d-flex align-items-center gap-4'>
             <span>
               <Link to='#'><i class='ri-youtube-line'></i></Link>
@@ -50,7 +48,6 @@ const Footer = () => {
             </div>
             </div>
           </Col>
-
           <Col lg='3'>
             <h5 className='footer_link-title'>Discover</h5>
             <ListGroup className='footer_quick-links'></ListGroup>
@@ -62,7 +59,6 @@ const Footer = () => {
               ))
             }
           </Col>
-
           <Col lg='3'>
           <h5 className='footer_link-title'>Quick Links</h5>
             <ListGroup className='footer_quick-links'></ListGroup>
@@ -74,7 +70,6 @@ const Footer = () => {
               ))
             }
           </Col>
-
           <Col lg='3'>
           <h5 className='footer_link-title'>Contact</h5>
             <ListGroup className='footer_quick-links'>
@@ -88,7 +83,6 @@ const Footer = () => {
                 </h6>
                 <p className='mb-0'> Sylhet , Bangladesh</p>
               </ListGroupItem>
-
               <ListGroupItem className='ps-0 border-0 d-flex 
               align-items-center gap-3'>
                 <h6 className='mb-0 d-flex align-items-center gap-2'>
@@ -99,7 +93,6 @@ const Footer = () => {
                 </h6>
                 <p className='mb-0'>abc@gmail.com</p>
               </ListGroupItem>
-
               <ListGroupItem className='ps-0 border-0 d-flex 
               align-items-center gap-3'>
                 <h6 className='mb-0 d-flex align-items-center gap-2'>
@@ -111,10 +104,8 @@ const Footer = () => {
                 </h6>
                 <p className='mb-0'>+0123456789</p>
               </ListGroupItem>
-
             </ListGroup>
-          
-          
+
           </Col>
 
           <Col lg='12' className='text-center pt-5'>
@@ -126,6 +117,8 @@ const Footer = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
-
-
+=======
+export default Footer;
+>>>>>>> 6406e982e41ada4bf69985dafed6951a6f530f4f

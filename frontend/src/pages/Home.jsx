@@ -7,16 +7,16 @@ import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
 import { Col, Row, Container} from 'reactstrap';
 import experienceImg from "../assets/images/experience.png"
-import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
-import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGallery';
-import '../../src/components/Footer/Footer';
+import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
+import MasonryImagesGallery from "../components/image-gallery/MasonryImagesGallery";
+import Testimonials from "../components/Testimonial/Testimonials";
+import Newsletter from "../shared/Newsletter";
 
   const Home =()=> {
     return <div className='Home'>
          <div className='videoBg'>
           <video src={Video} autoPlay loop muted></video>
          </div>
-
          <div className='sectionText'>
           <h1> Unlock Your Travel Dreams</h1>    
           <h1 className='center'>With Us!</h1>
@@ -40,18 +40,17 @@ import '../../src/components/Footer/Footer';
     {/* featured tour section start */}
       { <section>
         <Container>
-          <Row>
+        <Row>
             <Col lg='12' className='mb-5'>
             <h5 className='service_subtitle'>Explore</h5>
               {/* <Subtitle subtitle={'Explore'}/> */}
               <h2 className='featured_tour-title'>Our Featured Tours</h2>
-            </Col>
-            <FeaturedTourList/>          
-          </Row>
+              <FeaturedTourList/>   
+            </Col> 
+            </Row>      
         </Container>
       </section> }
       {/*featured tour section end */}
-      
       {/* experience  section start */}
       <section>
         <Container>
@@ -66,7 +65,6 @@ import '../../src/components/Footer/Footer';
                     hjgfghj
                   </p>
               </div>
-
               <div className="counter_wrapper d-flex align-items-center gap-5  ">
                 <div className="counter_box">
                 <span>12k+</span>
@@ -89,9 +87,7 @@ import '../../src/components/Footer/Footer';
           </Row>
         </Container>
       </section>
-
      {/* experience  section end */}
-
       <section>
         <Container>
           <Row>
@@ -105,13 +101,15 @@ import '../../src/components/Footer/Footer';
           </Row>
         </Container>
       </section>
-
       <section>
         <Container>
           <Row>
             <Col lg='12'>
               <Subtitle subtitle={'Fans Love'} />
               <h2 className="testimonial_title">What our fans say about Us</h2>
+            </Col>
+            <Col lg='12'>
+              <Testimonials />
             </Col>
           </Row>
         </Container>
