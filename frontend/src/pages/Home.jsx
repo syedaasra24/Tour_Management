@@ -17,7 +17,6 @@ import Newsletter from "../shared/Newsletter";
          <div className='videoBg'>
           <video src={Video} autoPlay loop muted></video>
          </div>
-
          <div className='sectionText'>
           <h1> Unlock Your Travel Dreams</h1>    
           <h1 className='center'>With Us!</h1>
@@ -52,7 +51,6 @@ import Newsletter from "../shared/Newsletter";
         </Container>
       </section> }
       {/*featured tour section end */}
-      
       {/* experience  section start */}
       <section>
         <Container>
@@ -67,7 +65,6 @@ import Newsletter from "../shared/Newsletter";
                     hjgfghj
                   </p>
               </div>
-
               <div className="counter_wrapper d-flex align-items-center gap-5  ">
                 <div className="counter_box">
                 <span>12k+</span>
@@ -90,9 +87,7 @@ import Newsletter from "../shared/Newsletter";
           </Row>
         </Container>
       </section>
-
      {/* experience  section end */}
-
       <section>
         <Container>
           <Row>
@@ -106,7 +101,6 @@ import Newsletter from "../shared/Newsletter";
           </Row>
         </Container>
       </section>
-
       <section>
         <Container>
           <Row>
@@ -120,7 +114,6 @@ import Newsletter from "../shared/Newsletter";
           </Row>
         </Container>
       </section>
-
     </div>
   };
 
