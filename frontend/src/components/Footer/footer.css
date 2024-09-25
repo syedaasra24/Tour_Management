@@ -1,9 +1,6 @@
 .footer{
-<<<<<<< HEAD
     text-align: center;
-=======
     text-align:center;
->>>>>>> b4dc10bcc891c89820b32d8e1ba163deeef84f3d
     padding: 20px;
     margin-top: auto;
     width: 100%;
@@ -49,11 +46,4 @@
 .copyright{
     color: var(--text-color);
     font-size: 1rem;
-<<<<<<< HEAD
 }
-=======
-}
-
-
-
->>>>>>> b4dc10bcc891c89820b32d8e1ba163deeef84f3d

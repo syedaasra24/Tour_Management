@@ -3,11 +3,9 @@ import CommonSection from '../shared/CommonSection';
 import '../styles/tour.css';
 import {Container , Row , Col } from 'reactstrap';
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
-import SearchBar from '../shared/SearchBar';
+import Newsletter from '../shared/Newsletter';
 import TourCard from '../shared/TourCard';
 import tourData from '../assets/data/tours';
-
-// imported assests
 import Video from '../../src/video2.mp4';
 import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
