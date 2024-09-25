@@ -9,8 +9,6 @@ import { Col, Row, Container} from 'reactstrap';
 import experienceImg from "../assets/images/experience.png"
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGallery';
-import '../../src/components/Footer/Footer';
-import Footer from '../../src/components/Footer/Footer';
 
   const Home =()=> {
     return <div className='Home'>
