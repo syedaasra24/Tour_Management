@@ -1,18 +1,26 @@
-import React from 'react';
-import CommonSection from '../shared/CommonSection';
+import React, { useState, useEffect } from 'react';
+//import CommonSection from '../shared/CommonSection';
 import '../styles/tour.css';
 import {Container , Row , Col } from 'reactstrap';
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 import SearchBar from '../shared/SearchBar';
 import TourCard from '../shared/TourCard';
 import tourData from '../assets/data/tours';
+import Newsletter from '../shared/Newsletter';
 
 // imported assests
 import Video from '../../src/video2.mp4';
 import Subtitle from '../shared/Subtitle';
-import SearchBar from '../shared/SearchBar';
 
   const Tours = ()=> {
+    const [pageCount , setPageCount] = useState(0);
+    const [page , setPage] = useState(0);
+
+    useEffect(()=>{
+      const pages = Math.ceil(5/8);  // later we will use backend
+      setPageCount(pages);
+    },[page]);
+
     return (
         <div className='Tours'>
          <div className='videoBg1'>
@@ -24,19 +32,39 @@ import SearchBar from '../shared/SearchBar';
           <br/><br/>
           <Subtitle/>
          </div>
-          {/* featured tour section start */}
-      { <section>
-        <Container>
-        <Row>
-            <Col lg='12' className='mb-5'>
-            <h5 className='service_subtitle'>Explore</h5>
-              {/* <Subtitle subtitle={'Explore'}/> */}
-              <h2 className='featured_tour-title'>Our Featured Tours</h2>
-              <FeaturedTourList/>   
-            </Col> 
-            </Row>      
-        </Container>
-      </section> }
+
+         <section>
+          <Container>
+            <Row>
+              <SearchBar/>
+            </Row>
+          </Container>
+         </section>
+
+
+         <section className='pt=8'>
+          <Container>
+            <Row>
+              {tourData?.map(tour=>(
+                <Col lg='3' className='mb-4' key={tour.id}>
+                <TourCard tour={tour}></TourCard>
+                </Col>
+              ))}
+
+              <Col lg='12'>
+                <div className='pagination d-flex align-items-center 
+                justify-content-center mt-4 gap-3'>
+                {[...Array(pageCount).keys()].map(number=> (
+                  <span key={number} onClick={number}>
+                    {number + 1}
+                  </span>
+                ))}
+
+                </div>
+              </Col>
+            </Row>
+          </Container>
+         </section>
     </div>
     );
   };

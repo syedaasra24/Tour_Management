@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Home.css';
 // imported assests
 import Video from '../../src/video.mp4';
@@ -10,9 +10,18 @@ import experienceImg from "../assets/images/experience.png"
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
+import TourCard from '../shared/TourCard';
+import tourData from '../assets/data/tours';
 import Newsletter from "../shared/Newsletter";
 
   const Home =()=> {
+    const [pageCount , setPageCount] = useState(0);
+    const [page , setPage] = useState(0);
+
+    useEffect(()=>{
+      const pages = Math.ceil(5/8);  // later we will use backend
+      setPageCount(pages);
+    },[page]);
     return <div className='Home'>
          <div className='videoBg'>
           <video src={Video} autoPlay loop muted></video>
@@ -45,12 +54,36 @@ import Newsletter from "../shared/Newsletter";
             <Col lg='12' className='mb-5'>
             <h5 className='service_subtitle'>Explore</h5>
               {/* <Subtitle subtitle={'Explore'}/> */}
-              <h2 className='featured_tour-title'>Our Featured Tours</h2>
-              <FeaturedTourList/>   
+              <h2 className='featured_tour-title'>Our Featured Tours</h2>  
             </Col> 
             </Row>      
         </Container>
+        
+        <section className='pt=8'>
+          <Container>
+            <Row>
+              {tourData?.map(tour=>(
+                <Col lg='3' className='mb-4' key={tour.id}>
+                <TourCard tour={tour}></TourCard>
+                </Col>
+              ))}
+
+              <Col lg='12'>
+                <div className='pagination d-flex align-items-center 
+                justify-content-center mt-4 gap-3'>
+                {[...Array(pageCount).keys()].map(number=> (
+                  <span key={number} onClick={number}>
+                    {number + 1}
+                  </span>
+                ))}
+
+                </div>
+              </Col>
+            </Row>
+          </Container>
+         </section>
       </section> }
+
       {/*featured tour section end */}
       
       {/* experience  section start */}
