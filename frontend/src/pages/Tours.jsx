@@ -6,6 +6,7 @@ import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 import Newsletter from '../shared/Newsletter';
 import TourCard from '../shared/TourCard';
 import tourData from '../assets/data/tours';
+
 import Video from '../../src/video2.mp4';
 import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
