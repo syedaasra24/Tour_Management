@@ -10,6 +10,7 @@ import experienceImg from "../assets/images/experience.png"
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGallery';
 import '../../src/components/Footer/Footer';
+import Footer from '../../src/components/Footer/Footer';
 
   const Home =()=> {
     return <div className='Home'>
@@ -40,14 +41,14 @@ import '../../src/components/Footer/Footer';
     {/* featured tour section start */}
       { <section>
         <Container>
-          <Row>
+        <Row>
             <Col lg='12' className='mb-5'>
             <h5 className='service_subtitle'>Explore</h5>
               {/* <Subtitle subtitle={'Explore'}/> */}
               <h2 className='featured_tour-title'>Our Featured Tours</h2>
-            </Col>
-            <FeaturedTourList/>          
-          </Row>
+              <FeaturedTourList/>   
+            </Col> 
+            </Row>      
         </Container>
       </section> }
       {/*featured tour section end */}

@@ -1,62 +1,63 @@
-import React,{useState} from 'react'
-import { Container,Row, Col, FormGroup, Button} from 'reactstrap';
-import {Link} from 'react-router-dom'
-import '../styles/login.css'
-import userIcon from '../assets/images/user.png'
-const Login =() =>{
-    const [formData, setFormData] = useState({
-        email:'',
-        password:''
-    });
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../styles/login.css';
 
-const handleChange =(e) =>{
-    const{name, value} = e.target;
-    setFormData({
-        ...formData,
-        [name]: value,
-    });
-  }; 
-  
-const handelSubmit=(e) =>{
-    e.preventDefault();
-    //logic to handel form submission goes here 
-    console.log(formData)
-};
+const Login = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Get the form data
+    const formData = new FormData(event.target);
+    const username = formData.get('username');
+    const password = formData.get('password');
+
+    // Perform login logic
+    // You can make an API call or check the credentials here
+    if (username === 'admin' && password === 'password') {
+      // Successful login, navigate to the dashboard or home page
+      navigate('/dashboard');
+    } else {
+      // Display an error message or perform other actions
+      alert('Invalid username or password');
+    }
+  };
+
   return (
-  <section>
-    <Container>
-      <Row>
-        <Col lg='8' className="m-auto">
-        <div className="login_container.d-flex.justify-content-between">
-          {/* <div className="login_img">
-            <img src={loginImg} alt="login" />
-          </div> */}
-
-          <div className="login_form">
-            <div className="user">
-              <img src={userIcon} alt="user" />
-            </div>
-
-            <h2>Login</h2>
-            <form onSubmit={handelSubmit}>
-              <FormGroup>
-                <input type="email" placeholder="Email" id="email" Onchange={handleChange} required />
-              </FormGroup>
-
-              <FormGroup>
-                <input type="password" placeholder="Password" id="password" Onchange={handleChange} required />
-              </FormGroup>
-
-              <Button className="btn secondary_btn auth_btn" type="submit">Submit</Button>
-
-            </form>
-            <p>Don't have an account?<Link to='/register'>Create</Link></p>
-          </div>
+    <div className="login-container">
+      <h2 className="login-title">Login</h2>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="login-field">
+          <label htmlFor="username" className="login-label">
+            Username:
+          </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            className="login-input"
+            required
+          />
         </div>
-        </Col>
-      </Row>
-    </Container>
-  </section>
-  ); 
-}
+        <div className="login-field">
+          <label htmlFor="password" className="login-label">
+            Password:
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            className="login-input"
+            required
+          />
+        </div>
+        <button type="submit" className="login-button">
+          Login
+        </button>
+      </form>
+    </div>
+  );
+};
+
 export default Login;
