@@ -126,8 +126,3 @@ const Footer = () => {
 };
 
 export default Footer;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> b4dc10bcc891c89820b32d8e1ba163deeef84f3d
