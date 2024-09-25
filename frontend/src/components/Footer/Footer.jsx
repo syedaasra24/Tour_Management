@@ -1,7 +1,6 @@
 import React from 'react'
 import './footer.css'
 import{Container , Row , Col , ListGroup , ListGroupItem } from 'reactstrap';
-
 import {Link} from 'react-router-dom';
 import logo from '../../assets/images/logo2.png';
 
@@ -127,3 +126,8 @@ const Footer = () => {
 };
 
 export default Footer;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b4dc10bcc891c89820b32d8e1ba163deeef84f3d

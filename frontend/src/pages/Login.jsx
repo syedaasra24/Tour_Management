@@ -1,50 +1,64 @@
-// import React from "react"; 
-// import { Container,Row, Col, From, FormGroup, Button} from 'reactstrap';
-// import {Link} from 'teact-router-dom'
-// import '../styles/login.css'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../styles/login.css';
 
-// import loginImg from '../assets/images/login.png'
-// import usericon from '../assets/images/user.png'
+const Login = () => {
+  const navigate = useNavigate();
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
+    // Get the form data
+    const formData = new FormData(event.target);
+    const username = formData.get('username');
+    const password = formData.get('password');
 
+    // Perform login logic
+    // You can make an API call or check the credentials here
+    if (username === 'admin' && password === 'password') {
+      // Successful login, navigate to the dashboard or home page
+      navigate('/dashboard');
+    } else {
+      // Display an error message or perform other actions
+      alert('Invalid username or password');
+    }
+  };
 
+  return (
+    <div className="login-container">
+      <h2 className="login-title">Login</h2>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="login-field">
+          <label htmlFor="username" className="login-label">
+            Username:
+          </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            className="login-input"
+            required
+          />
+        </div>
+        <div className="login-field">
+          <label htmlFor="password" className="login-label">
+            Password:
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            className="login-input"
+            required
+          />
+        </div>
+        <button type="submit" className="login-button">
+          Login
+        </button>
+      </form>
+    </div>
+  );
+};
 
+export default Login;
 
-
-// const Login = () => {
-//   return <section>
-//     <Container>
-//       <Row>
-//         <Col lg='8' className="m-auto">
-//         <div className="login_container.d-flex.justify-content-between">
-//           <div className="login_img">
-//             <img src={loginImg} alt="" />
-//           </div>
-
-//           <div className="login_form">
-//             <div className="user">
-//               <img src={userIcon} alt="" />
-//             </div>
-//             <h2>Login</h2>
-
-//             <form>
-//               <FormGroup>
-//                 <input type="email" placeholder="Email" required id="email" Onchange={handleChange} />
-//               </FormGroup>
-//               <FormGroup>
-//                 <input type="password" placeholder="Password" required id="password" Onchange={handleChange} />
-//               </FormGroup>
-//               <Button className="btn secondary_btn auth_btn" type="submit">login</Button>
-//             </form>
-//             <p>Don't have an account?<link to='/register'>Create</link></p>
-//           </div>
-//         </div>
-//         </Col>
-//       </Row>
-//     </Container>
-//   </section> 
-    
-// };
-
-// export default Login;

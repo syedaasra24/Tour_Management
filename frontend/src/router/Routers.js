@@ -17,8 +17,13 @@ const Routers = () => {
         <Route path='/about' element={<About/>}></Route>
         <Route path='/tours' element={<Tours />}></Route>
         <Route path='/tours/:id' element={<TourDetails />}></Route>
-        <Route path='/login' element={<Login />}></Route>
+<<<<<<< HEAD
+        <Route path='/login' element={<Login />}></Route>    
         <Route path='/register' element={<Register />}></Route>
+=======
+        <Route path='/ login' element={<Login/>}></Route>
+        <Route path='/register' element={<Register/>}></Route>
+>>>>>>> 565bea3e352214f07d5f97cdab344a99c4e5c207
         <Route path='/tours/search' element={<SearchResultList />}></Route>
     </Routes>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Home.css';
-
 // imported assests
 import Video from '../../src/video.mp4';
 import Subtitle from '../shared/Subtitle';
@@ -42,14 +41,14 @@ import Newsletter from "../shared/Newsletter";
     {/* featured tour section start */}
       { <section>
         <Container>
-          <Row>
+        <Row>
             <Col lg='12' className='mb-5'>
             <h5 className='service_subtitle'>Explore</h5>
               {/* <Subtitle subtitle={'Explore'}/> */}
               <h2 className='featured_tour-title'>Our Featured Tours</h2>
-            </Col>
-            <FeaturedTourList/>          
-          </Row>
+              <FeaturedTourList/>   
+            </Col> 
+            </Row>      
         </Container>
       </section> }
       {/*featured tour section end */}

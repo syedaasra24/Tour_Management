@@ -6,11 +6,13 @@ import Footer from "./../Footer/Footer";
 
 
 const Layout = () => {
-  return <>
+  return ( 
+  <>
     <Header />
     <Routers />
-    <Footer />
-    </>
+    <Footer />  
+  </>
+  );
 };
 
 export default Layout;
