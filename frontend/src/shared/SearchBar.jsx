@@ -1,28 +1,23 @@
-import React ,{useRef}from 'react';
+import React ,{useRef, useState}from 'react';
 import './search-bar.css'
 import {Col , Form , FormGroup } from 'reactstrap';
 
 const SearchBar = () => {
 
     const locationRef = useRef('')
-    const distanceRef = useRef(0)
+    const [cost, setCost] = useState(0)
     const maxGroupSizeRef = useRef(0)
 
     const searchHandler = ()=> {
 
         const location = locationRef.current.value
-        const distance = distanceRef.current.value
         const maxGroupSize = maxGroupSizeRef.current.value
         
-        if(location === '' || distance === '' || maxGroupSize === '') 
+        if(location === '' || cost === '0' || maxGroupSize === '') 
             {
-            return alert('All fields are required !');
+            return alert('All fields are required !');
           }
-        
-
     }
-
-
   return (
   <Col  lg= '12'>
     <div className='search_bar'>
@@ -36,10 +31,11 @@ const SearchBar = () => {
         </FormGroup>
 
         <FormGroup className='d-flex gap-3 form_group form_group-fast'>
-            <span><i class='ri-map-pin-time-line'></i></span>
+            <span><i class="ri-money-rupee-circle-line"></i></span>           
             <div>
-              <h6>Distance</h6>
-              <input type ='number' placeholder='Distance k/m' ref = {distanceRef} />
+              <h6>cost</h6>
+              <input type ='range' min='40000' max='10000000' step='1000' value={cost} on onChange={(e) => setCost(e.target.value)} />
+              <span>₹{cost}</span>
             </div>
         </FormGroup>
 
