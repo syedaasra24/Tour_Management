@@ -1,4 +1,5 @@
 import Tour from '../models/Tour.js'
+import {} from "dotenv/config.js";
 
 //create new tour
 export const createTour =  async (req,res)=> {
