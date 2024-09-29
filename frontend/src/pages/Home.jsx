@@ -26,7 +26,6 @@ import Newsletter from "../shared/Newsletter";
          <div className='videoBg'>
           <video src={Video} autoPlay loop muted></video>
          </div>
-
          <div className='sectionText'>
           <h1> Unlock Your Travel Dreams</h1>    
           <h1 className='center'>With Us!</h1>
@@ -85,7 +84,6 @@ import Newsletter from "../shared/Newsletter";
       </section> }
 
       {/*featured tour section end */}
-      
       {/* experience  section start */}
       <section>
         <Container>
@@ -95,12 +93,15 @@ import Newsletter from "../shared/Newsletter";
                 <Subtitle Subtitle={'Experience'} />
                   <h2>With our all experience <br/> We will serve you</h2>
                   <p>
-                    hhhhhjhhgg
+                  With years of expertise in the travel industry, 
+                  our team is dedicated to creating memorable journeys that cater to every traveler's needs. 
+                  We leverage our in-depth knowledge and local insights to offer exceptional service,
+                   ensuring that each experience is not just a trip,
+                    but a discovery filled with adventure and cultural richness.
                     <br/>
-                    hjgfghj
+                    Trust u to guide you through unforgettable moments and unique destinations. 
                   </p>
               </div>
-
               <div className="counter_wrapper d-flex align-items-center gap-5  ">
                 <div className="counter_box">
                 <span>12k+</span>
@@ -123,9 +124,7 @@ import Newsletter from "../shared/Newsletter";
           </Row>
         </Container>
       </section>
-
      {/* experience  section end */}
-
       <section>
         <Container>
           <Row>
@@ -139,7 +138,6 @@ import Newsletter from "../shared/Newsletter";
           </Row>
         </Container>
       </section>
-
       <section>
         <Container>
           <Row>
@@ -153,7 +151,6 @@ import Newsletter from "../shared/Newsletter";
           </Row>
         </Container>
       </section>
-
     </div>
   };
 

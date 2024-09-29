@@ -1,18 +1,18 @@
-import tourImg01 from "../images/tour-img01.jpg";
-import tourImg02 from "../images/tour-img02.jpg";
-import tourImg03 from "../images/tour-img03.jpg";
-import tourImg04 from "../images/tour-img04.jpg";
-import tourImg05 from "../images/tour-img05.jpg";
-import tourImg06 from "../images/tour-img06.jpg";
-import tourImg07 from "../images/tour-img07.jpg";
+import tourImg01 from "../images/kerela.jpg";
+import tourImg02 from "../images/agra.jpg";
+import tourImg03 from "../images/kashmir.jpg";
+import tourImg04 from "../images/darjeling.jpg";
+import tourImg05 from "../images/jaipur.jpg";
+import tourImg06 from "../images/rajasthan.jpg";
+import tourImg07 from "../images/shimla.jpg";
 
 const tours = [
   {
     id: "01",
-    title: "Westminister Bridge",
-    city: "London",
+    title: "Munnar Tea Valley",
+    city: "Kerela",
     distance: 300,
-    price: 99,
+    price: 2000000,
     maxGroupSize: 10,
     desc: "this is the description",
     reviews: [
@@ -31,15 +31,15 @@ const tours = [
   },
   {
     id: "02",
-    title: "Bali, Indonesia",
-    city: "Indonesia",
+    title: "Taj Mahal",
+    city: "Agra",
     distance: 400,
-    price: 99,
+    price: 1000000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Jhon",
         rating: 4.6,
       },
     ],
@@ -49,10 +49,10 @@ const tours = [
   },
   {
     id: "03",
-    title: "Snowy Mountains, Thailand",
-    city: "Thailand",
+    title: "Snowy Mountains,Kashmir",
+    city: "srinagar",
     distance: 500,
-    price: 99,
+    price: 1200000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -85,8 +85,8 @@ const tours = [
   },
   {
     id: "05",
-    title: "Nusa Pendia Bali, Indonesia",
-    city: "Indonesia",
+    title: "Jaipur",
+    city: "Jaipur",
     distance: 500,
     price: 99,
     maxGroupSize: 8,
@@ -103,8 +103,8 @@ const tours = [
   },
   {
     id: "06",
-    title: "Cherry Blossoms Spring",
-    city: "Japan",
+    title: "Rajasthan",
+    city: "Rajasthan",
     distance: 500,
     price: 99,
     maxGroupSize: 8,

@@ -47,7 +47,7 @@
 .service_subtitle {
     font-size: 2.2rem;
     font-weight: 500;
-    color: #ee6e6e;
+    color: skyblue;
     font-family:cursive
 }
 
@@ -83,7 +83,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: seagreen ;
+    background: rgb(16, 102, 103) ;
     color: white;
     font-size: 1.6rem;
     font-weight: 600;

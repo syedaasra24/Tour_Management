@@ -1,7 +1,16 @@
 .footer{
+<<<<<<< HEAD
     text-align:center;
     padding: 20px;
     margin-top: auto;
+=======
+    position: relative;
+    text-align:center;
+    padding: 2rem 0;
+    display:flex;
+    justify-content: center;
+    margin: auto;
+>>>>>>> 102c4c1053fae5e6f57329886e5d462f060a9797
     width: 100%;
     height: 20vh;
     background-color: #fff;
@@ -46,4 +55,7 @@
     color: var(--text-color);
     font-size: 1rem;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 102c4c1053fae5e6f57329886e5d462f060a9797
