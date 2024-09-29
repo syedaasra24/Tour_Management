@@ -1,64 +1,45 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import '../styles/login.css';
 
 const Login = () => {
-  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // Get the form data
-    const formData = new FormData(event.target);
-    const username = formData.get('username');
-    const password = formData.get('password');
-
-    // Perform login logic
-    // You can make an API call or check the credentials here
-    if (username === 'admin' && password === 'password') {
-      // Successful login, navigate to the dashboard or home page
-      navigate('/dashboard');
-    } else {
-      // Display an error message or perform other actions
-      alert('Invalid username or password');
-    }
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Add authentication logic here
   };
 
   return (
     <div className="login-container">
-      <h2 className="login-title">Login</h2>
-      <form className="login-form" onSubmit={handleSubmit}>
-        <div className="login-field">
-          <label htmlFor="username" className="login-label">
-            Username:
-          </label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            className="login-input"
-            required
-          />
-        </div>
-        <div className="login-field">
-          <label htmlFor="password" className="login-label">
-            Password:
-          </label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            className="login-input"
-            required
-          />
-        </div>
-        <button type="submit" className="login-button">
-          Login
-        </button>
-      </form>
+      <div className="login-card">
+        <h2>Travel With Us</h2>
+        <p className="welcome-text">Plan your perfect trip!</p>
+        <form onSubmit={handleLogin}>
+          <div className="input-group">
+            <input 
+              type="email" 
+              placeholder="Email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required 
+            />
+          </div>
+          <div className="input-group">
+            <input 
+              type="password" 
+              placeholder="Password" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required 
+            />
+          </div>
+          <button type="submit" className="login-btn">Login</button>
+        </form>
+        <p className="footer-text">New here? <a href="/ register">Register Now</a></p>
+      </div>
     </div>
   );
 };
 
 export default Login;
-

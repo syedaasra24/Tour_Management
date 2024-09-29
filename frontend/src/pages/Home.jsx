@@ -60,9 +60,13 @@ import Newsletter from "../shared/Newsletter";
                 <Subtitle Subtitle={'Experience'} />
                   <h2>With our all experience <br/> We will serve you</h2>
                   <p>
-                    hhhhhjhhgg
+                  With years of expertise in the travel industry, 
+                  our team is dedicated to creating memorable journeys that cater to every traveler's needs. 
+                  We leverage our in-depth knowledge and local insights to offer exceptional service,
+                   ensuring that each experience is not just a trip,
+                    but a discovery filled with adventure and cultural richness.
                     <br/>
-                    hjgfghj
+                    Trust u to guide you through unforgettable moments and unique destinations. 
                   </p>
               </div>
               <div className="counter_wrapper d-flex align-items-center gap-5  ">

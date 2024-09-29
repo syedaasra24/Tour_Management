@@ -10,7 +10,7 @@
   .form_group span {
     font-size: 1.8rem;
     color: white;
-    font-weight: 700;
+    font-weight: 400;
   }
   
   .form_group input {
@@ -42,6 +42,43 @@
     padding : 0.5rem;
     border-radius: 10px 5px 10px 5px;
     cursor: Pointer;
-    color: black;
+    color: rgb(16, 102, 103);
 
   }
+
+.cost-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cost-btn {
+    background-color: rgb(16, 102, 103);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cost-btn:hover {
+    background-color: gray;
+}
+
+.cost-input {
+    width: 80px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form_group {
+    flex: 1; /* Ensure form groups take equal space */
+}
+
+h6 {
+    margin-bottom: 5px; /* Spacing for the label */
+}

@@ -10,17 +10,17 @@ const servicesData =[
     {
         imgUrl: weatherImg,
         title: 'Calculate Weather',
-        desc: 'ghgjhhk',
+        desc: 'Offers real-time weather updates for your location, helping you plan your day with accurate forecasts and essential weather information at your fingertips.',
     },
     {
         imgUrl: guideImg,
         title: 'Best Tour Guide',
-        desc: 'lorem ',
+        desc: 'Connects travelers with expert local guides, ensuring unforgettable experiences through personalized insider knowledge of the hidden gems. ',
     },
     {
         imgUrl: customizationImg,
         title: 'Customization',
-        desc: 'ghgjhhk',
+        desc: 'Allows you to tailor your travel experience to your preferences, offering personalized activities that match your interests, ensuring the best journey.',
     },
 ]
 
