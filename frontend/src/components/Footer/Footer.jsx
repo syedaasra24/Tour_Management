@@ -1,200 +1,95 @@
-// import React from 'react'
-// import './footer.css'
-// import{Container , Row , Col , ListGroup , ListGroupItem } from 'reactstrap';
-// import {Link} from 'react-router-dom';
-// import logo from '../../assets/images/logo2.png';
+import React from 'react';
+import './footer.css';
 
-// const quick_links =[
-//   {
-//     path: "/gallery",
-//     display: 'Gallery',
-//   },
-//   {
-//     path:'/login',
-//     display:'Login',
-//   },
-//   {
-//     path:'/register',
-//     display:'Register',
-//   },
-// ]
+// Assuming you're using React Router DOM
+import { Link } from 'react-router-dom';
 
-// const Footer = () => {
+// Replace with your actual logo image path
+import logo from '../../assets/images/logo2.png';
 
-//   const year = new Date().getFullYear()
+const quick_links = [
+  {
+    path: "/gallery",
+    display: 'Gallery',
+  },
+  {
+    path: '/login',
+    display: 'Login',
+  },
+  {
+    path: '/register',
+    display: 'Register',
+  },
+];
 
-//   return (
-//     <footer className='footer'>
-//       <Container>
-//         <Row>
-//           <Col lg='3'>
-//             <div className='logo'>
-//             <img src={logo} alt=''/>
-//             <p>lorem</p>
-//             <div className='social_links d-flex align-items-center gap-4'>
-//             <span>
-//               <Link to='#'><i class='ri-youtube-line'></i></Link>
-//             </span>
-//             <span>
-//               <Link to='#'><i class='ri-github-line'></i></Link>
-//             </span>
-//             <span>
-//               <Link to='#'><i class='ri-facebook-line'></i></Link>
-//             </span>
-//             <span>
-//               <Link to='#'><i class='ri-instagram-line'></i></Link>
-//             </span>
+const Footer = () => {
+  const year = new Date().getFullYear();
 
-//             </div>
-//             </div>
-//           </Col>
-//           <Col lg='3'>
-//             <h5 className='footer_link-title'>Discover</h5>
-//             <ListGroup className='footer_quick-links'></ListGroup>
-//             {
-//               quick_links.map((item,index)=>(
-//                 <ListGroupItem key={index} className='ps-0 border-0'>
-//                   <Link to ={item.path}>{item.display}</Link>
-//                 </ListGroupItem>
-//               ))
-//             }
-//           </Col>
-//           <Col lg='3'>
-//           <h5 className='footer_link-title'>Quick Links</h5>
-//             <ListGroup className='footer_quick-links'></ListGroup>
-//             {
-//               quick_links.map((item,index)=>(
-//                 <ListGroupItem key={index} className='ps-0 border-0'>
-//                   <Link to ={item.path}>{item.display}</Link>
-//                 </ListGroupItem>
-//               ))
-//             }
-//           </Col>
-//           <Col lg='3'>
-//           <h5 className='footer_link-title'>Contact</h5>
-//             <ListGroup className='footer_quick-links'>
-//               <ListGroupItem className='ps-0 border-0 d-flex 
-//               align-items-center gap-3'>
-//                 <h6 className='mb-0 d-flex align-items-center gap-2'>
-//                   <span>
-//                     <i class='ri-map-pin-line'></i>
-//                   </span>
-//                   Address:
-//                 </h6>
-//                 <p className='mb-0'> Sylhet , Bangladesh</p>
-//               </ListGroupItem>
-//               <ListGroupItem className='ps-0 border-0 d-flex 
-//               align-items-center gap-3'>
-//                 <h6 className='mb-0 d-flex align-items-center gap-2'>
-//                   <span>
-//                     <i class='ri-mail-line'></i>
-//                   </span>
-//                   Email:
-//                 </h6>
-//                 <p className='mb-0'>abc@gmail.com</p>
-//               </ListGroupItem>
-//               <ListGroupItem className='ps-0 border-0 d-flex 
-//               align-items-center gap-3'>
-//                 <h6 className='mb-0 d-flex align-items-center gap-2'>
-//                   <span>
-//                     <i class='ri-phone-fill'></i>
-//                   </span>
-//                   Phone:
-//                   Hello
-//                 </h6>
-//                 <p className='mb-0'>+0123456789</p>
-//               </ListGroupItem>
-//             </ListGroup>
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-3">
+            <div className="logo">
+              <img src={logo} alt="" />
+              <p>lorem</p>
+              <div className="social-links">
+                <a href="https://your-youtube-link" target="_blank" rel="noopener noreferrer">
+                  <i className="ri-youtube-line"></i>
+                </a>
+                <a href="https://your-github-link" target="_blank" rel="noopener noreferrer">
+                  <i className="ri-github-line"></i>
+                </a>
+                <a href="https://your-facebook-link" target="_blank" rel="noopener noreferrer">
+                  <i className="ri-facebook-line"></i>
+                </a>
+                <a href="https://your-instagram-link" target="_blank" rel="noopener noreferrer">
+                  <i className="ri-instagram-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-//           </Col>
+          <div className="col-lg-3">
+            <h5 className="footer-link-title">Discover</h5>
+            <ul>
+              {quick_links.map((item, index) => (
+                <li key={index}>
+                  <Link to={item.path}>{item.display}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-<<<<<<< HEAD
-          <Col lg='3'>
-            <h5 className='footer_link-title'>Discover</h5>
-            <ListGroup className='footer_quick-links'></ListGroup>
-            {
-              quick_links.map((item,index)=>(
-                <ListGroupItem key={index} className='ps-0 border-0'>
-                  <Link to ={item.path}>{item.display}</Link>
-                </ListGroupItem>
-              ))
-            }
-          </Col>
+          {/* ... Similar structure for Quick Links and Contact sections */}
 
-          <Col lg='3'>
-          <h5 className='footer_link-title'>Quick Links</h5>
-            <ListGroup className='footer_quick-links'></ListGroup>
-            {
-              quick_links.map((item,index)=>(
-                <ListGroupItem key={index} className='ps-0 border-0'>
-                  <Link to ={item.path}>{item.display}</Link>
-                </ListGroupItem>
-              ))
-            }
-          </Col>
+          <div className="col-lg-3">
+            <h5 className="footer-link-title">Contact</h5>
+            <ul>
+              <li>
+                <i className="ri-map-pin-line"></i>
+                Address: Your Address
+              </li>
+              <li>
+                <i className="ri-mail-line"></i>
+                Email: your@email.com
+              </li>
+              <li>
+                <i className="ri-phone-fill"></i>
+                Phone: Your Phone Number
+              </li>
+            </ul>
+          </div>
 
-          <Col lg='3'>
-          <h5 className='footer_link-title'>Contact</h5>
-            <ListGroup className='footer_quick-links'>
-              <ListGroupItem className='ps-0 border-0 d-flex 
-              align-items-center gap-3'>
-                <h6 className='mb-0 d-flex align-items-center gap-2'>
-                  <span>
-                    <i class='ri-map-pin-line'></i>
-                  </span>
-                  Address:
-                </h6>
-                <p className='mb-0'> Sylhet , Bangladesh</p>
-              </ListGroupItem>
-
-              <ListGroupItem className='ps-0 border-0 d-flex 
-              align-items-center gap-3'>
-                <h6 className='mb-0 d-flex align-items-center gap-2'>
-                  <span>
-                    <i class='ri-mail-line'></i>
-                  </span>
-                  Email:
-                </h6>
-                <p className='mb-0'>abc@gmail.com</p>
-              </ListGroupItem>
-
-              <ListGroupItem className='ps-0 border-0 d-flex 
-              align-items-center gap-3'>
-                <h6 className='mb-0 d-flex align-items-center gap-2'>
-                  <span>
-                    <i class='ri-phone-fill'></i>
-                  </span>
-                  Phone:
-                  Hello
-                </h6>
-                <p className='mb-0'>+0123456789</p>
-              </ListGroupItem>
-
-            </ListGroup>
-          
-          
-          </Col>
-
-          <Col lg='12' className='text-center pt-5'>
-            <p className='copyright'>Copyright{year} , design and develop by abc. All rights reserved.</p>
-          </Col>
-        </Row>
-      </Container>
+          <div className="col-lg-12 text-center pt-5">
+            <p className="copyright">
+              Copyright {year}, design and develop by abc. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
 
 export default Footer;
-
-
-=======
-//           <Col lg='12' className='text-center pt-5'>
-//             <p className='copyright'>Copyright{year} , design and develop by abc. All rights reserved.</p>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </footer>
-//   );
-// };
-// export default Footer;
->>>>>>> 102c4c1053fae5e6f57329886e5d462f060a9797
