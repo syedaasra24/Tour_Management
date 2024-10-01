@@ -93,7 +93,7 @@ export const getAllTour = async (req, res) => {
     const page = parseInt(req.query.page);
 
     try {
-        const tours = await Tour.find({})
+        const tours = await Tour.find({}).populate('reviews')
          .skip(page * 8)
          .limit(8);
 
@@ -126,8 +126,8 @@ export const getTourBySearch = async(req, res) => {
         const tours = await Tour.find({ 
             city,
             distance:{$gte:distance}, 
-            maxGroupSize: { $gte: maxGroupSize }
-        })
+            maxGroupSize: { $gte: maxGroupSize },
+        }).populate('reviews');
 
         res.status(200)
         .json({
@@ -150,7 +150,7 @@ export const getFeaturedTour = async(req, res) => {
 
     try {
         const tours = await Tour.find({ 
-         featured: true})
+         featured: true}).populate('reviews')
          .limit(8);
 
         res.status(200)

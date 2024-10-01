@@ -23,18 +23,18 @@ export const verifyUser = (req, res, next) => {
       if(req.user.id === req.params.id || req.user.role === "admin") {
         next();
       } else {
-        res.status(401)
+        return res.status(401)
            .json({success: false, message: "you're not authenticated"});
       }
     });
 };
 
-export const verifAdmin = (req, res, next) => {
+export const verifyAdmin = (req, res, next) => {
     verifyToken(req, res, next, () => {
       if(req.user.role === "admin") {
         next();
       } else {
-        res.status(401)
+        return res.status(401)
            .json({success: false, message: "you're not authenticated"});
       }
     });

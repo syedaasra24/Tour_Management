@@ -65,10 +65,10 @@ export const login = async (req, res) => {
         })
         .status(200)
         .json({
-            success: true,
-            message: "successfilly login",
+            token,
             data: { ...rest},
-        })
+            role,
+        });
 
     } catch (err) {
         res
