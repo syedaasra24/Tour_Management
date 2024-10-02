@@ -88,7 +88,8 @@ import Newsletter from "../shared/Newsletter";
           <Row>
             <Col lg='6'>
               <div className='experience_content'>
-                <Subtitle Subtitle={'Experience'} />
+              <h5 className='service_subtitle'>Experience</h5>
+                {/* <Subtitle Subtitle={'Experience'} /> */}
                   <h2>With our all experience <br/> We will serve you</h2>
                   <p>
                   With years of expertise in the travel industry, 
@@ -128,7 +129,7 @@ import Newsletter from "../shared/Newsletter";
           <Row>
             <Col lg='12'>
               <Subtitle subtitle={'Gallery'}/>
-              <h2 className="gallery_title">Visit our customer tour Gallery</h2>
+              <h2 className="gallery_title">Visit Our Customer Tour Gallery</h2>
             </Col>
             <Col lg='12'>
               <MasonryImagesGallery />
