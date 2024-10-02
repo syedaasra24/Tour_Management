@@ -41,7 +41,7 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "Jhon",
+        name: "anshu",
         rating: 4.6,
       },
     ],
