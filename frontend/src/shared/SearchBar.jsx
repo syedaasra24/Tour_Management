@@ -2,14 +2,13 @@ import React, { useRef, useState } from 'react';
 import './search-bar.css';
 import { Col, Form, FormGroup } from 'reactstrap';
 
-import { BASE_URL } from '../utils/config';
-import {useNavigate} from 'react-router-dom';
+// import { BASE_URL } from '../utils/config';
+// import {useNavigate} from 'react-router-dom';
 
 const SearchBar = () => {
     const locationRef = useRef('');
     const [cost, setCost] = useState(50000); // Set initial cost
     const maxGroupSizeRef = useRef(0);
-    const navigate = useNavigate()
 
     const searchHandler = () => {
         const location = locationRef.current.value;

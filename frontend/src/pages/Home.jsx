@@ -6,7 +6,6 @@ import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
 import { Col, Row, Container} from 'reactstrap';
-import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
 import TourCard from '../shared/TourCard';
@@ -14,7 +13,7 @@ import tourData from '../assets/data/tours';
 import Newsletter from "../shared/Newsletter";
   const Home =()=> {
     const [pageCount , setPageCount] = useState(0);
-    const [page , setPage] = useState(0);
+    const [page ] = useState(0);
 
     useEffect(()=>{
       const pages = Math.ceil(5/8);  // later we will use backend

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import CommonSection from '../shared/CommonSection';
 import './Tours.css';
 import {Container , Row , Col } from 'reactstrap';
-import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 import TourCard from '../shared/TourCard';
 import tourData from '../assets/data/tours';
 import SearchBar from '../shared/SearchBar';
@@ -13,7 +12,7 @@ import Subtitle from '../shared/Subtitle';
 
   const Tours = ()=> {
     const [pageCount , setPageCount] = useState(0);
-    const [page , setPage] = useState(0);
+    const [page] = useState(0);
 
     useEffect(()=>{
       const pages = Math.ceil(5/8);  // later we will use backend

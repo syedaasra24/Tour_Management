@@ -1,4 +1,4 @@
-import {useState, useEffect }from 'react'; 4.2 (gzipped, 1.8)
+import {useState, useEffect }from 'react';
 
 const useFetch = ()=>{
 
@@ -10,7 +10,7 @@ const useFetch = ()=>{
             const fetchData = async()=>{
                 setLoading(true)
                 try{
-                    const res=await fetch(url);
+                    const res=await fetch();
 
                     if(!res.ok){
                         setError('failed to fetch');   
@@ -26,7 +26,7 @@ const useFetch = ()=>{
             };
 
             fetchData();
-    }, [url]);
+    }, []);
 
     return {
         data,
