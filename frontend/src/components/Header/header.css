@@ -1,9 +1,13 @@
 @import url('https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css');
 
 .header{
-    position:sticky;
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 80px;
+    z-index: 700;
     line-height:80px;
     background: rgb(16, 102, 103);
   }
@@ -12,20 +16,33 @@
     width:35%;
     padding-bottom: 14px;
   }
-  
-  .menu{
+  @media screen and (max-width: 778px) {
+    .header{
+      position: absolute;
+      height: max-content;
+      width: 100%;
+      border-radius: 1rem;
+      top:.1rem;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 2000;
+      box-shadow: 0 2px 4px rgba(2,15,29,0.904);
+      transition: .3s ease-in-out;
+      }
+    .menu{
     margin-bottom:0;
-  }
+     }
   
-  .nav_item a {
+   .nav_item a {
     text-decoration: none;
     color: white;
     font-weight: 700;
     font-size: 1.2rem;
     font-family:Arial, Helvetica, sans-serif;
-  }
+
+   }
   
-  .nav_item a:hover{
+   .nav_item a:hover{
     color: black;
   }
 
@@ -44,8 +61,8 @@
     cursor: pointer;
     
   }
-  
-  .sticky_header{
+/*   
+   .sticky_header{
     width: 100%;
     height: 80px;
     line-height: 80px;
@@ -54,9 +71,9 @@
     top: 0;
     left: 0;
     box-shadow: 3px 3px 8px -3px #ddd;
-    z-index: 999;
+    z-index: 999; 
   
-  }
+  } */
   button a{
     color:white;
     font-size: 18px;
@@ -88,6 +105,82 @@
 
     outline: none;
   }
-  /* .btn.secondary_btn:hover{
-    background-color: navy;
-  } */
+}
+
+.menu{
+  margin-bottom:0;
+   }
+
+ .nav_item a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family:Arial, Helvetica, sans-serif;
+
+ }
+
+ .nav_item a:hover{
+  color: black;
+}
+
+
+.nav_item a.active_link{
+  color: rgb(215, 220, 224);
+}
+.nav_item a.active_link:hover{
+  color: black;
+}
+
+.mobile_menu{
+  font-size: 1.3rem;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  
+}
+
+.sticky_header{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 8px -3px #ddd;
+  z-index: 999;
+
+}
+button a{
+  color:white;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 900;
+}
+/* button a:hover{
+  color: white;
+} */
+
+ul {
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+.btn.primary_btn{
+border: none;
+border-radius: 20px;
+width: 6em;
+
+outline: none;
+}
+.btn.secondary_btn{
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  width: 5em;
+
+  outline: none;
+}
+

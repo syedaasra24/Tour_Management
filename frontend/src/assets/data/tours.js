@@ -1,10 +1,12 @@
-import tourImg01 from "../images/kerela.jpg";
-import tourImg02 from "../images/agra.jpg";
-import tourImg03 from "../images/kashmir.jpg";
-import tourImg04 from "../images/darjeling.jpg";
-import tourImg05 from "../images/jaipur.jpg";
-import tourImg06 from "../images/rajasthan.jpg";
-import tourImg07 from "../images/shimla.jpg";
+import tourImg01 from "../images/tour-01.jpg";
+import tourImg02 from "../images/tour-02.jpg";
+import tourImg03 from "../images/tour-03.jpg";
+import tourImg04 from "../images/tour-04.jpg";
+import tourImg05 from "../images/tour-05.jpg";
+import tourImg06 from "../images/tour-06.jpg";
+import tourImg07 from "../images/tour-07.jpg";
+import tourImg08 from "../images/tour-08.jpg";
+
 
 const tours = [
   {
@@ -12,7 +14,7 @@ const tours = [
     title: "Munnar Tea Valley",
     city: "Kerela",
     distance: 300,
-    price: 2000000,
+    price: 100000,
     maxGroupSize: 10,
     desc: "this is the description",
     reviews: [
@@ -34,12 +36,12 @@ const tours = [
     title: "Taj Mahal",
     city: "Agra",
     distance: 400,
-    price: 1000000,
+    price:  100000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
       {
-        name: "Jhon",
+        name: "anshu",
         rating: 4.6,
       },
     ],
@@ -49,10 +51,10 @@ const tours = [
   },
   {
     id: "03",
-    title: "Snowy Mountains,Kashmir",
-    city: "srinagar",
+    title: "Pahalgam",
+    city: "Jammu & Kashmir",
     distance: 500,
-    price: 1200000,
+    price: 120000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -67,10 +69,10 @@ const tours = [
   },
   {
     id: "04",
-    title: "Beautiful Sunrise, Thailand",
-    city: "Thailand",
+    title: "Kodaikanal",
+    city: "Chennai",
     distance: 500,
-    price: 99,
+    price: 70000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -85,10 +87,10 @@ const tours = [
   },
   {
     id: "05",
-    title: "Jaipur",
+    title: " Nahagrah Fort",
     city: "Jaipur",
     distance: 500,
-    price: 99,
+    price: 80000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -103,10 +105,10 @@ const tours = [
   },
   {
     id: "06",
-    title: "Rajasthan",
+    title: "Jaisalmer Fort",
     city: "Rajasthan",
     distance: 500,
-    price: 99,
+    price: 90000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -121,10 +123,10 @@ const tours = [
   },
   {
     id: "07",
-    title: "Holmen Lofoten",
-    city: "France",
+    title: "Kufri",
+    city: "shimla",
     distance: 500,
-    price: 99,
+    price: 100000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [],
@@ -134,15 +136,15 @@ const tours = [
   },
   {
     id: "08",
-    title: "Snowy Mountains, Thailand",
-    city: "Thailand",
+    title: "Yumthang Valley",
+    city: "Sikkim",
     distance: 500,
-    price: 99,
+    price: 80000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [],
     avgRating: 4.5,
-    photo: tourImg03,
+    photo: tourImg08,
     featured: false,
   },
 ];

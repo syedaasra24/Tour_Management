@@ -1,8 +1,9 @@
 .search_bar{
     padding: 0.5rem 1rem;
     border-radius: 50px;
-    box-shadow: rgba(17 , 12 , 46 , 0.15) 0px 48px 100px 0px;
+    /* box-shadow: rgba(17 , 12 , 46 , 0.15) 0px 48px 100px 0px; */
     width: max-content;
+    height: max-content;
     margin-top : 50px;
   
   }

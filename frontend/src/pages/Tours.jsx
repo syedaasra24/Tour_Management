@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-//import CommonSection from '../shared/CommonSection';
-import '../styles/tour.css';
+import CommonSection from '../shared/CommonSection';
+import './Tours.css';
 import {Container , Row , Col } from 'reactstrap';
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 import TourCard from '../shared/TourCard';
@@ -29,16 +29,17 @@ import Subtitle from '../shared/Subtitle';
          <div className='sectionText2'>
           <h1>Your Adventure Starts Here</h1>  
           <br/><br/>
+          <SearchBar/>
           <Subtitle/>
          </div>
 
-         <section>
+         {/* <section>
           <Container>
             <Row>
               <SearchBar/>
             </Row>
           </Container>
-         </section>
+         </section> */}
 
 
          <section className='pt=8'>
@@ -64,6 +65,8 @@ import Subtitle from '../shared/Subtitle';
             </Row>
           </Container>
          </section>
+         <CommonSection/>
+         <Newsletter/>
     </div>
     );
   };

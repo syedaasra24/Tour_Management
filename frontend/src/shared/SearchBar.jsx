@@ -31,6 +31,7 @@ const SearchBar = () => {
     return (
         <Col lg='12'>
             <div className='search_bar'>
+            {/* location section*/}
                 <Form className='d-flex align-items-center gap-4'>
                     <FormGroup className='d-flex gap-3 form_group form_group-fast'>
                         <span><i className='ri-map-pin-line'></i></span>
@@ -58,11 +59,21 @@ const SearchBar = () => {
                         </div>
                     </FormGroup>
 
+                    {/* Cost Section */}
                     <FormGroup className='d-flex gap-3 form_group form_group-fast'>
                         <span><i className='ri-group-line'></i></span>
                         <div>
-                            <h6>Max People</h6>
+                            <h6>Max person</h6>
                             <input type='number' placeholder='0' ref={maxGroupSizeRef} />
+                        </div>
+                    </FormGroup>
+                    {/* date Section */}
+
+                    <FormGroup className='d-flex gap-3 form_group form_group-fast'>
+                        <span><i class="ri-calendar-line"></i></span>
+                        <div>
+                            <h6>Select Your Date</h6>
+                            <input type='date'/>
                         </div>
                     </FormGroup>
 
