@@ -7,6 +7,7 @@
 }
 .tour_card{
     display: flex;
+    height: 50vh;
     
 }
 
@@ -26,7 +27,7 @@
     width: max-content;
     height: max-content;
     z-index: 10;
-    background-color: chocolate;
+    background-color: rgb(16, 102, 103);
     color: #fff;
     padding: 0.3rem 0.5rem;
     border-radius: 3px 0 0 0;;
@@ -43,7 +44,7 @@
 }
 
 .tour_location{
-    color: palevioletred;
+    color: rgb(180, 13, 13);
     font-weight: 500;
     font-size: .9rem;
 }
@@ -55,33 +56,33 @@
 }
 .tour_title a{
     text-decoration: none;
-    color: blue;
+    color: rgb(25, 124, 200);
     transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
 }
 .tour_title a:hover{
     color: darkgreen;
 }
 
 .card_bottom h5{
-    color: #000;
+    color: goldenrod;
     font-size: 1.1rem;
     font-weight: 700;
 }
 .card_bottom h5 span{
     font-weight: 500;
-    color: yellow;
+    color: rgb(221, 63, 20);
     font-size: 0.8rem;
 }
 .booking_btn{
-    background-color: crimson;
     cursor: pointer;
     padding: 0.2rem 0.5rem !important;
 }
 .booking_btn a{
     text-decoration: none;
     font-size: .9rem;
-    color: #fff;
+    color: seagreen;
 }
 .booking_btn a:hover{
-    color: #fff;
+    color: rgb(16, 56, 33);
 }

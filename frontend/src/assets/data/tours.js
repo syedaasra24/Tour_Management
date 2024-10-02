@@ -14,7 +14,7 @@ const tours = [
     title: "Munnar Tea Valley",
     city: "Kerela",
     distance: 300,
-    price: 2000000,
+    price: 100000,
     maxGroupSize: 10,
     desc: "this is the description",
     reviews: [
@@ -36,7 +36,7 @@ const tours = [
     title: "Taj Mahal",
     city: "Agra",
     distance: 400,
-    price: 1000000,
+    price:  100000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -54,7 +54,7 @@ const tours = [
     title: "Pahalgam",
     city: "Jammu & Kashmir",
     distance: 500,
-    price: 1200000,
+    price: 120000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -69,10 +69,10 @@ const tours = [
   },
   {
     id: "04",
-    title: "Ooty",
-    city: "Tamil Nadu",
+    title: "Kodaikanal",
+    city: "Chennai",
     distance: 500,
-    price: 99,
+    price: 70000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -90,7 +90,7 @@ const tours = [
     title: " Nahagrah Fort",
     city: "Jaipur",
     distance: 500,
-    price: 99,
+    price: 80000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -108,7 +108,7 @@ const tours = [
     title: "Jaisalmer Fort",
     city: "Rajasthan",
     distance: 500,
-    price: 99,
+    price: 90000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -126,7 +126,7 @@ const tours = [
     title: "Kufri",
     city: "shimla",
     distance: 500,
-    price: 99,
+    price: 100000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [],
@@ -139,7 +139,7 @@ const tours = [
     title: "Yumthang Valley",
     city: "Sikkim",
     distance: 500,
-    price: 99,
+    price: 80000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [],

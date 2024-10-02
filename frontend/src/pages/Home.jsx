@@ -12,7 +12,6 @@ import Testimonials from "../components/Testimonial/Testimonials";
 import TourCard from '../shared/TourCard';
 import tourData from '../assets/data/tours';
 import Newsletter from "../shared/Newsletter";
-
   const Home =()=> {
     const [pageCount , setPageCount] = useState(0);
     const [page , setPage] = useState(0);
@@ -150,7 +149,7 @@ import Newsletter from "../shared/Newsletter";
           </Row>
         </Container>
       </section>
+      <Newsletter/>
     </div>
   };
-
 export default Home;
