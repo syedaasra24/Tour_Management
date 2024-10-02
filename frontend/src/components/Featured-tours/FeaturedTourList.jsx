@@ -1,17 +1,33 @@
 import React from 'react'
 import TourCard from '../../shared/TourCard'
-import tourData from '../../assets/data/tours'
+
 import { Col } from 'reactstrap'
 
-
+import useFetch from '../../hooks/usefetch'
+import { BASE_URL } from '../../utils/config'
 const FeaturedTourList = () => {
+
+    const {data: featuredTours, loading, error }=useFetch(
+      '${BASE_URL}/tours/search/getFeaturedTours'
+    );
+
+    console.log(featuredTours);
 
   const data = Object.values(tourData);//assumes tourData is an object
   return (
   <div>
+  {
+    loading && <h4>Loading.......</h4>
+  }
+  {
+  error && <h4>{error}</h4>
+}
+
     {
-      data?.map(tour => (
-        <Col lg="3" className='mb-4' key={tour.id}>
+      !loading && 
+      !error &&
+      featuredTours?.map(tour => (
+        <Col lg="3" className='mb-4' key={tour._id}>
           <TourCard tour={tour}/>
         </Col>
       ))
