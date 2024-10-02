@@ -68,7 +68,7 @@ const Footer = () => {
             <ul>
               <li>
                 <i className="ri-map-pin-line"></i>
-                Address: Your Anshu
+                Address: Your Address
               </li>
               <li>
                 <i className="ri-mail-line"></i>
