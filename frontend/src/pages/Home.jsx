@@ -6,7 +6,6 @@ import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
 import { Col, Row, Container} from 'reactstrap';
-import experienceImg from "../assets/images/experience.png"
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
@@ -85,9 +84,9 @@ import Newsletter from "../shared/Newsletter";
               </div>
             </Col>
             <Col lg='6'></Col>
-            <div className="experience_img">
+            {/* <div className="experience_img">
               <img src={experienceImg} alt="" />
-            </div>
+            </div> */}
           </Row>
         </Container>
       </section>
