@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import './search-bar.css';
 import { Col, Form, FormGroup } from 'reactstrap';
 
-import { BASE_URL } from '../utils/config';
+import { BASE_URL } from './../utils/config';
 import {useNavigate} from 'react-router-dom';
 
 const SearchBar = () => {
@@ -11,7 +11,7 @@ const SearchBar = () => {
     const maxGroupSizeRef = useRef(0);
     const navigate = useNavigate()
 
-    const searchHandler = () => {
+    const searchHandler = async() => {
         const location = locationRef.current.value;
         const maxGroupSize = maxGroupSizeRef.current.value;
 
@@ -19,8 +19,8 @@ const SearchBar = () => {
             return alert('All fields are required!');
         }
 
-        // You can handle the search logic here
-        // console.log(Searching for ${location} with cost ₹${cost} for ${maxGroupSize} people.);   
+        // const res = await fetch(`${BASE-URL}/tours/search/getTourBySearch?city=$
+        //     {location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
          };
 
     // Increment and decrement functions for cost
