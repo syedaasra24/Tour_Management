@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './newsletter.css'
+import maleTourist from '../assets/images/maleTourist.jpg'
 
 import {Container, Row, Col} from 'reactstrap'
 // import maleTourist from '../assets/images/male-tourist.png'
@@ -18,13 +19,14 @@ const Newsletter=() => {
                             <input type="email" placeholder='Enter Your Email'/>
                             <button className="btn newsletter_btn">Subscribe</button>
                         </div>
-                        <p>hffghghsrstrhhk</p>
+                        <p>"Explore breathtaking destinations with tailored travel experiences. 
+                        Book your dream adventure today and create unforgettable memories!"</p>
                     </div>
                 </Col>
                 <Col lg='6'>
-                    {/* <div className="newsletter_img">
+                    <div className="newsletter_img">
                         <img src={maleTourist} alt="" />
-                    </div> */}
+                    </div>
                 </Col>
             </Row>
         </Container>

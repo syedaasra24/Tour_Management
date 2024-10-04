@@ -10,7 +10,11 @@ const useFetch = (url)=>{
             const fetchData = async()=>{
                 setLoading(true);
                 try{
+<<<<<<< HEAD
                     const res = await fetch(url);
+=======
+                    const res=await fetch();
+>>>>>>> 588b6bc461b3d73799f38729592af5280ed3b5af
 
                     if(!res.ok){
                         setError('failed to fetch');   
@@ -25,7 +29,7 @@ const useFetch = (url)=>{
             };
 
             fetchData();
-    }, [url]);
+    }, []);
 
     return {
         data,

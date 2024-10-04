@@ -6,7 +6,6 @@ import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
 import { Col, Row, Container} from 'reactstrap';
-import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
 import TourCard from '../shared/TourCard';
@@ -14,7 +13,7 @@ import tourData from '../assets/data/tours';
 import Newsletter from "../shared/Newsletter";
   const Home =()=> {
     const [pageCount , setPageCount] = useState(0);
-    const [page , setPage] = useState(0);
+    const [page ] = useState(0);
 
     useEffect(()=>{
       const pages = Math.ceil(5/8);  // later we will use backend
@@ -88,7 +87,8 @@ import Newsletter from "../shared/Newsletter";
           <Row>
             <Col lg='6'>
               <div className='experience_content'>
-                <Subtitle Subtitle={'Experience'} />
+              <h5 className='service_subtitle'>Experience</h5>
+                {/* <Subtitle Subtitle={'Experience'} /> */}
                   <h2>With our all experience <br/> We will serve you</h2>
                   <p>
                   With years of expertise in the travel industry, 
@@ -128,7 +128,7 @@ import Newsletter from "../shared/Newsletter";
           <Row>
             <Col lg='12'>
               <Subtitle subtitle={'Gallery'}/>
-              <h2 className="gallery_title">Visit our customer tour Gallery</h2>
+              <h2 className="gallery_title">Visit Our Customer Tour Gallery</h2>
             </Col>
             <Col lg='12'>
               <MasonryImagesGallery />
