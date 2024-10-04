@@ -3,6 +3,7 @@ import '../styles/tour-details.css'
 import { Container, Row,Col } from 'reactstrap'
 import { useParams } from 'react-router-dom'
 import tourData from '../assets/data/tours'
+import { calculateAvgRating } from '../utils/avgRating';
 
 const TourDetails = () => {
 
@@ -10,11 +11,14 @@ const TourDetails = () => {
 
   const tour = tourData.find(tour=> tour.id === id)
 
-  const {photo, title, desc,price,reviews,city,distance,maxGroupSize}= tour
+  const {photo, title, desc,price, address, reviews,city,distance,maxGroupSize}= tour;
+   
+  const {totalRating, avgRating} = calculateAvgRating(reviews)
 
 
 
-  return <>
+  return( 
+  <>
   <section>
     <Container>
       <Row>
@@ -31,8 +35,15 @@ const TourDetails = () => {
             <h2>{maxGroupSize}</h2>
             <div className="d-flex align-items-center gap-5">
               <span className="d-flex align-items-center gap-1">
-                
+                <i class="ri-star-s-fill" style={{'color':"black"}}></i>
+                {calculateAvgRating === 0 ? null : avgRating}
+                {totalRating === 0 ? ("Not Rated") : (
+                  <span>({reviews?.length})</span>
+                )}
               </span>
+ 
+               
+
             </div>
 
           </div>
@@ -45,6 +56,6 @@ const TourDetails = () => {
 
   </>
   
-};
+)};
 
 export default TourDetails;
