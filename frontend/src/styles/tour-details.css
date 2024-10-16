@@ -70,4 +70,54 @@
     border: 1px solid black;
   }
 
-  
+  .review_input input {
+    width: 100%;
+    padding: 0.5rem 0;
+    border: none;
+  }
+
+  .review_input input:focus {
+    outline: none;
+  }
+
+  .review_item {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .review_item img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50px;
+    object-fit: cover;
+  }
+
+  .user_reviews {
+    margin-top: 2.5rem;
+  }
+
+  .review_item h5 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .review_item p {
+    font-size: 0.9rem;
+    color: black;
+  }
+
+  .review_item h6 {
+    font-size: 1.1rem;
+    color: black;
+  }
+
+  .review_item span i {
+    font-size: 1.2rem;
+    color: black;
+  } 
+
+  .review_item span {
+    font-weight: 500;
+  }
