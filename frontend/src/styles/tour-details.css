@@ -48,4 +48,26 @@
   }
 
  
+  .rating_group span {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+  }
+
+  .tour_reviews h5 {
+    margin-bottom: 3rem;
+  }
+   
+  .review_input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    border: 1px solid black;
+  }
+
   
