@@ -56,7 +56,7 @@ const Booking = ({ tour, avgRating }) => {
             <FromGroup>
               <input type="number" placeholder="Phone" id="phone" required onChange={handleChange} />
             </FromGroup>
-            
+
             <FromGroup className="d-flex align-items-center gap-3">
               <input type="date" placeholder="" id="bookAt" required onChange={handleChange} />
               <input type="number" placeholder="Guest" id="guestSize" required onChange={handleChange} />
@@ -87,3 +87,5 @@ const Booking = ({ tour, avgRating }) => {
   };
 
 export default Booking;
+
+// durgapur
