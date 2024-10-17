@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import './booking.css';
-import { From, FromGroup, ListGroup, ListGroupItem, Button} from "reactstrap";
+import { Form, FormGroup, ListGroup, ListGroupItem, Button} from "reactstrap";
 
 import { useNavigate } from "react-router-dom";
 
@@ -48,20 +48,20 @@ const Booking = ({ tour, avgRating }) => {
         {/* ================ Booking Form =======*/}
        <div className="booking_form">
         <h5>Information</h5>
-        <From className="booking_info-form" onSubmit={handleClick}>
-            <FromGroup>
+        <Form className="booking_info-form" onSubmit={handleClick}>
+            <FormGroup>
               <input type="text" placeholder="Full Name" id="fullName" required onChange={handleChange} />
-            </FromGroup>
+            </FormGroup>
 
-            <FromGroup>
+            <FormGroup>
               <input type="number" placeholder="Phone" id="phone" required onChange={handleChange} />
-            </FromGroup>
+            </FormGroup>
 
-            <FromGroup className="d-flex align-items-center gap-3">
+            <FormGroup className="d-flex align-items-center gap-3">
               <input type="date" placeholder="" id="bookAt" required onChange={handleChange} />
               <input type="number" placeholder="Guest" id="guestSize" required onChange={handleChange} />
-            </FromGroup>
-        </From>
+            </FormGroup>
+        </Form>
        </div>
 
        <div className="booking_botton">
