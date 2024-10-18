@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/login.css";
 import registering from "../assets/images/register.png";
 import userIcon from "../assets/images/user1.png";
