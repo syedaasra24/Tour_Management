@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../styles/login.css";
 import registering from "../assets/images/register.png";
 import userIcon from "../assets/images/user1.png";
-import { AuthContext } from './../context/AuthContext';
+//import { AuthContext } from './../context/AuthContext';
 import { BASE_URL } from "../utils/config";
 
 const Register = () => {
@@ -15,7 +15,7 @@ const Register = () => {
     password: '',
   });
 
-  const { dispatch } = useContext(AuthContext);
+ // const { dispatch } = useContext(AuthContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
