@@ -1,7 +1,8 @@
 import React, {useRef , useEffect} from 'react';
-import { Container, Row, Button } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import { NavLink, Link  } from 'react-router-dom';
 import logo from '../../assets/images/logo2.png';
+import { FaSignInAlt, FaUserPlus } from 'react-icons/fa'; // FontAwesome Icons
 import './header.css';
 
 const nav_links=[
@@ -45,7 +46,7 @@ const Header = () => {
           justify-content-evenly'>
             { /* =======  logo start ========*/}
             <div className='logo'>
-              <img src ={logo} alt="" />
+               <img src ={logo} alt="" />
             </div>
             {/*===========  logo end  =======*/}
 
@@ -65,13 +66,13 @@ const Header = () => {
 
            {/*===========  menu end =======*/}
 
-
             <div className='nav_right d-flex align-items-center gap-4'>
               <div className='nav_btns d-flex align-items-center gap-4'>
-                    <Button className='btn secondary_btn'><Link to='/
-                    login'>Login</Link></Button>
-                    <Button className='btn primary_btn'><Link to='/
-                    register'>Register</Link></Button>
+                    <button className='btn secondary_btn'><Link to='/login'>
+                    <FaSignInAlt className="icon" />Login</Link></button>
+                    <button className='btn primary_btn'><Link to='/register'>
+                    <FaUserPlus className="icon" />Register</Link>
+                    </button>
               </div>
 
               <span className='mobile_menu'>
