@@ -1,13 +1,27 @@
-import React, { useState } from 'react';
-import '../styles/register.css';
+import React, { useState,useContext } from "react";
+
+import{ Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
+
+import { Link } from "react-router-dom" ;
+
+import "../styles/login.css";
+
+import registering from "../assets/images/register.png";
+import userIcon from "../assets/images/user.png";
+
+import { AuthContext } from './../context/AuthContext';
+import { BASE_URL } from "../utils/config"; 
+
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: ''
+    firstName: undefined,
+    lastName: undefined,
+    email: undefined,
+    password: undefined,
   });
+
+  const {dispatch} = useContext(AuthContext)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
