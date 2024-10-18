@@ -9,7 +9,7 @@ import "../styles/login.css";
 import registering from "../assets/images/register.png";
 import userIcon from "../assets/images/user.png";
 
-import { AuthContext } from './../context/AuthContext';
+import { AuthContext } from '../context/AutoContext';
 import { BASE_URL } from "../utils/config"; 
 
 
