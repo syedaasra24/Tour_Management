@@ -24,7 +24,6 @@ const FeaturedTourList = () => {
       ))}
   </div>
   );
-  
 };
 
 export default FeaturedTourList;
