@@ -8,10 +8,13 @@ import { calculateAvgRating } from '../utils/avgRating';
 import avatar from '../assets/images/avatar.jpg';
 import Booking from '../components/Booking/Booking';
 import Newsletter from './../shared/Newsletter';
-import  useFetch  from './../hooks/usefetch';
+import  useFetch  from '../hooks/usefetch';
 import { BASE_URL } from '../utils/config';
 
+
 import { AuthContex } from '../contex/AuthContex';
+import { AuthContextProvider } from "../context/AuthContext";
+
 
 const TourDetails = () => {
 
