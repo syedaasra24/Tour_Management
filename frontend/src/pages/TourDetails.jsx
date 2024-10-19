@@ -1,4 +1,4 @@
-import React ,{useRef , useState} from 'react';
+import React ,{useContext, useRef , useState} from 'react';
 import { Form } from 'reactstrap';
 import '../styles/tour-details.css'
 import { Container, Row,Col, ListGroup } from 'reactstrap'
@@ -7,12 +7,18 @@ import tourData from '../assets/data/tours'
 import { calculateAvgRating } from '../utils/avgRating';
 import avatar from '../assets/images/avatar.jpg';
 import Booking from '../components/Booking/Booking';
+import Newsletter from './../shared/Newsletter';
+import  useFetch  from './../hooks/usefetch';
+import { BASE_URL } from '../utils/config';
+
+import { AuthContex } from './..contex/AuthContex';
 
 const TourDetails = () => {
 
   const {id}= useParams();
-  const reviewMsgRef = useRef('')
-  const [tourRating, setTourRating]=useState(null)
+  const reviewMsgRef = useRef('');
+  const [tourRating, setTourRating]=useState(null);
+  const {user} = useContext(AuthContex)
 
   const tour = tourData.find(tour=> tour.id === id)
 
