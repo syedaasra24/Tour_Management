@@ -3,17 +3,16 @@ import { Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/login.css";
 import registering from "../assets/images/register.png";
-<<<<<<< HEAD
+
 import userIcon from "../assets/images/user1.png";
 //import { AuthContext } from './../context/AuthContext';
 import { BASE_URL } from "../utils/config";
-=======
-import userIcon from "../assets/images/user.png";
+
+import userIcon from "../assets/images/user1.png";
 
 import { AuthContext } from '../context/AutoContext';
 import { BASE_URL } from "../utils/config"; 
 
->>>>>>> 4fb1587ad2300fa30c77f124acc0cb3c06beb604
 
 const Register = () => {
   const [formData, setFormData] = useState({

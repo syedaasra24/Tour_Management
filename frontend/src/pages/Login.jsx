@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/login.css';
 
-import { AuthContext } from './../context/AuthContext';
+//import { AuthContext } from './../context/AuthContext';
 import { BASE_URL } from "../utils/config";
 
 const Login = () => {
