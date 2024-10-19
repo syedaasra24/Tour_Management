@@ -20,7 +20,7 @@ const Booking = ({ tour, avgRating }) => {
 
 
     const handleChange = e => {
-      setCredentials(prev=>({...prev, [e.target.id]:e.target.value}))
+      setCredentials(prev=>({...prev, [e.target.id]:e.target.value}));
     };
      
     const ServiceFee = 10
