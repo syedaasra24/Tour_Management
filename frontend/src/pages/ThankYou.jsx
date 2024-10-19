@@ -1,6 +1,4 @@
 
-
-
 import React from 'react';
 import { Container, Row,Col,Button } from 'reactstrap';
 import { Link } from "react-router-dom";

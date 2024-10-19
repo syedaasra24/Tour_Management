@@ -1,7 +1,14 @@
+
 import React, {useRef , useEffect, useContext} from 'react';
 import { Container, Row, Button } from 'reactstrap';
 import { NavLink, Link, useNavigate  } from 'react-router-dom';
+
+import React, {useRef , useEffect} from 'react';
+import { Container, Row } from 'reactstrap';
+import { NavLink, Link  } from 'react-router-dom';
+
 import logo from '../../assets/images/logo2.png';
+import { FaSignInAlt, FaUserPlus } from 'react-icons/fa'; // FontAwesome Icons
 import './header.css';
 
 import { AuthContext } from './../../context/AuthContext'
@@ -54,7 +61,7 @@ const Header = () => {
           justify-content-evenly'>
             { /* =======  logo start ========*/}
             <div className='logo'>
-              <img src ={logo} alt="" />
+               <img src ={logo} alt="" />
             </div>
             {/*===========  logo end  =======*/}
 
@@ -74,7 +81,6 @@ const Header = () => {
 
            {/*===========  menu end =======*/}
 
-
             <div className='nav_right d-flex align-items-center gap-4'>
               <div className='nav_btns d-flex align-items-center gap-4'>
 
@@ -89,10 +95,12 @@ const Header = () => {
                     <Button className='btn primary_btn'><Link to='/
                     register'>Register</Link></Button>
                 </>
-                 ) }
-
-
-                   
+                 ) };
+                    <button className='btn secondary_btn'><Link to='/login'>
+                    <FaSignInAlt className="icon" />Login</Link></button>
+                    <button className='btn primary_btn'><Link to='/register'>
+                    <FaUserPlus className="icon" />Register</Link>
+                    </button>
               </div>
 
               <span className='mobile_menu'>
