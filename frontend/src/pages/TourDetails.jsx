@@ -1,4 +1,4 @@
-import React ,{useContext, useRef , useState} from 'react';
+import React ,{useContext, useEffect, useRef , useState} from 'react';
 import { Form } from 'reactstrap';
 import '../styles/tour-details.css'
 import { Container, Row,Col, ListGroup } from 'reactstrap'
@@ -37,11 +37,44 @@ const submitHandler = e =>{
   e.preventDefault()
   const reviewText  = reviewMsgRef.current.value;
 
+
+};
+
+  try {
+
+    if(!user || user=== undefined || user===null){
+      alert('Please Sign in')
+    }
+
+    const reviewObj = {
+      username:user?.username,reviewText,
+      rating:tourRating,
+    }
+
+    const res = await fetch('${BASE_URL}/review/${id}',{
+      method:'post',
+      headers:{
+        'content-type':'application/json'
+      },
+      credentials:'include',
+      body:JSON.stringify(reviewObj)
+    })
+
+    const result= await res.json();
+    if(!res.ok) {
+      return alert(result.message);
+    } 
+    alert(result.message)
+  } catch (err) {
+    alert(err.message);
+
+  }
   
+};
 
-  //later will call our api
-}
-
+useEffect(() =>{
+  window.scrollTo(0,0);
+}, [tour]);
 
   return ( 
   <>
@@ -59,7 +92,7 @@ const submitHandler = e =>{
             <h2>{city}</h2>
             <h2>{distance}</h2>
             <h2>{maxGroupSize}</h2>
-
+            
             <div className="d-flex align-items-center gap-5">
               <span className="tour_rating d-flex align-items-center 
               gap-1">
@@ -79,7 +112,6 @@ const submitHandler = e =>{
                <span>
                 <i class="ri-map-pin-fill"></i> {address}
                </span>
-
             </div>
             
           <div className="tour_extra-details">
@@ -150,19 +182,21 @@ const submitHandler = e =>{
                     <div className='d-flex align-items-center
                     justufy-content-between'>
                     <div>
-                      <h5>muhib</h5>
-                      <p>{new Date('01-01-2024').toLocaleDateString(
-                      'en-US' , 
-                      options
+                      <h5>{review.username}</h5>
+                      <p>{new Date
+                      (review.createdAt
+                      ).toLocaleDateString(
+                      'en-US' , options
                       )}
                       </p>
                     </div>
                     <span className='d-flex align-items-center'>
-                      5<i class='ri-star-s-fill'></i>
+                     {review.rating}
+                      <i class='ri-star-s-fill'></i>
                     </span>
                     </div>
 
-                    <h6>Amazing Tour</h6>
+                    <h6>{review.reviewText}</h6>
                     </div>
                   </div>
                 ))
@@ -183,6 +217,6 @@ const submitHandler = e =>{
 
   </>
   
-)};
+ 
 
 export default TourDetails;
