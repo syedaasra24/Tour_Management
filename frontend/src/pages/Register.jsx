@@ -10,7 +10,7 @@ import { BASE_URL } from "../utils/config";
 
 import userIcon from "../assets/images/user1.png";
 
-import { AuthContext } from '../context/AutoContext';
+//problemimport { AuthContext } from '../context/AuthContext';
 import { BASE_URL } from "../utils/config"; 
 
 
