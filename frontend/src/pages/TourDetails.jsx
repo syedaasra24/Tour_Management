@@ -132,7 +132,7 @@ useEffect(() =>{
                  <h5>description</h5>
                  <p>{desc}</p>
           </div>
-
+        
 
           {/*=============== tour reviews section ========== */}
           <div className='tour_reviews mt-4'>
