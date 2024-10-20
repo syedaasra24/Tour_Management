@@ -3,10 +3,10 @@ import CommonSection from '../shared/CommonSection';
 import './Tours.css';
 import {Container , Row , Col } from 'reactstrap';
 import TourCard from '../shared/TourCard';
-import tourData from '../assets/data/tours';
 import SearchBar from '../shared/SearchBar';
 import Newsletter from '../shared/Newsletter';
-
+import useFetch from '../hooks/useFetch';
+import { BASE_URL } from "../utils/config";
 import Video from '../../src/video2.mp4';
 import Subtitle from '../shared/Subtitle';
 
@@ -14,10 +14,15 @@ import Subtitle from '../shared/Subtitle';
     const [pageCount , setPageCount] = useState(0);
     const [page] = useState(0);
 
+    const {data:tours, loading, error,
+    } = useFetch(`${BASE_URL}/tours?page=${page}`);
+    const {data:tourCount} = useFetch(`${BASE_URL}/tours/search/getTourCount`);
+
     useEffect(()=>{
-      const pages = Math.ceil(5/8);  // later we will use backend
+      const pages = Math.ceil(tourCount / 8 );  // later we will use backend
       setPageCount(pages);
-    },[page]);
+      window.scrollTo(0,0)
+    },[page, tourCount, tours]);
 
     return (
         <div className='Tours'>
@@ -32,7 +37,7 @@ import Subtitle from '../shared/Subtitle';
           <Subtitle/>
          </div>
 
-         {/* <section>
+          {/* <section>
           <Container>
             <Row>
               <SearchBar/>
@@ -41,11 +46,14 @@ import Subtitle from '../shared/Subtitle';
          </section> */}
 
 
-         <section className='pt=8'>
+         <section className='pt-0'>
           <Container>
-            <Row>
-              {tourData?.map(tour=>(
-                <Col lg='3' className='mb-4' key={tour.id}>
+          {loading && <h4 className='text-center pt-5'>Loading.....</h4>}
+          {error && <h4 className='text-center pt-5'>{error}</h4>}
+            {
+              !loading && !error && <Row>
+              {tours?.map(tour=>(
+                <Col lg='3' className='mb-4' key={tour._id}>
                 <TourCard tour={tour}></TourCard>
                 </Col>
               ))}
@@ -53,18 +61,17 @@ import Subtitle from '../shared/Subtitle';
               <Col lg='12'>
                 <div className='pagination d-flex align-items-center 
                 justify-content-center mt-4 gap-3'>
-                {[...Array(pageCount).keys()].map(number=> (
+                {[...Array(pageCount).keys()].map(number => (
                   <span key={number} onClick={number}>
                     {number + 1}
                   </span>
                 ))}
-
                 </div>
               </Col>
             </Row>
+            }
           </Container>
          </section>
-         <CommonSection/>
          <Newsletter/>
     </div>
     );
