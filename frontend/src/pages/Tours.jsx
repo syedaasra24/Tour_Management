@@ -45,7 +45,6 @@ import Subtitle from '../shared/Subtitle';
           </Container>
          </section> */}
 
-
          <section className='pt-0'>
           <Container>
           {loading && <h4 className='text-center pt-5'>Loading.....</h4>}
@@ -72,6 +71,7 @@ import Subtitle from '../shared/Subtitle';
             }
           </Container>
          </section>
+         <CommonSection/>
          <Newsletter/>
     </div>
     );
