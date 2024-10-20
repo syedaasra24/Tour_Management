@@ -99,7 +99,6 @@ const TourDetails = () => {
                     <span className="tour_rating d-flex align-items-center 
                       gap-1">
 
-<<<<<<< HEAD
                 <i 
                     class="ri-star-s-fill" 
                     style={{'color':"black"}}
@@ -190,14 +189,14 @@ const TourDetails = () => {
                       (review.createdAt
                       ).toLocaleDateString(
                       'en-US' , options
-=======
+
                       <i class="ri-star-s-fill" style={{'color':"black"}}></i>
                       {calculateAvgRating === 0 ? null : avgRating}
                       {totalRating === 0 ? (
                          "Not Rated"
                       ) : (
                        <span>{reviews.length}</span>
->>>>>>> 75312cebf4974ac24c19c7287b7d5385d9d94bc5
+
                       )}
                     </span>
               
