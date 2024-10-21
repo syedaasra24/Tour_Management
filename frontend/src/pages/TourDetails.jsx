@@ -70,7 +70,7 @@ const TourDetails = () => {
   window.scrollTo(0,0);
   }, [tour])
 
-  return (
+  return ( 
    <>
     <section>
       <Container>
