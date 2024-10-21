@@ -191,7 +191,7 @@ const TourDetails = () => {
                       'en-US' , options
 
                       <i class="ri-star-s-fill" style={{'color':"black"}}></i>
-                      {calculateAvgRating === 0 ? null : avgRating}
+                      { avgRating=== 0 ? null : avgRating}
                       {totalRating === 0 ? (
                          "Not Rated"
                       ) : (
