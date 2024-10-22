@@ -20,7 +20,7 @@ const Booking = ({ tour, avgRating }) => {
 
 
     const handleChange = e => {
-      setCredentials(prev=>({...prev, [e.target.id]:e.target.value}))
+      setCredentials(prev=>({...prev, [e.target.id]:e.target.value}));
     };
      
     const ServiceFee = 10
@@ -40,7 +40,7 @@ const Booking = ({ tour, avgRating }) => {
               </h3>
               <span className="tour_rating d-flex align-items-center ">
                 <i class='ri-star-s-fill'></i>
-                {avgRating === 0 ? null : avgRating} ( {reviews ?.length})
+                {avgRating === 0 ? null : avgRating} ( {reviews?.length})
             
               </span>
        </div>

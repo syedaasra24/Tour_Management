@@ -1,47 +1,89 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { Container, Row, Col, Form, FormGroup, Button} from 'reactstrap';
+import {Link, useNavigate} from 'react-router-dom'
 import '../styles/login.css';
 
-//import { AuthContext } from './../context/AuthContext';
-import { BASE_URL } from "../utils/config";
+import loginImg from '../assets/images/login.png'
+import userIcon from '../assets/images/user.png'
+
+ import { AuthContext } from './../context/AuthContext';
+ import { BASE_URL } from "../utils/config";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [credentials, setCredentials] = useState({
+    email: undefined,
+    password: undefined,
+  });
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // Add authentication logic here
-  };
+  const { dispatch } = useContext(AuthContext);
+  const { navigate } = useNavigate(AuthContext);
 
-  return (
-    <div className="login-container">
-      <div className="login-card">
-        <h2>Travel With Us</h2>
-        <p className="welcome-text">Plan your perfect trip!</p>
-        <form onSubmit={handleLogin}>
-          <div className="input-group">
-            <input 
-              type="email" 
-              placeholder="Email" 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required 
-            />
+    const handleChange = e => {
+      setCredentials(prev=>({...prev, [e.target.id]:e.target.value}));
+    };
+
+    const handleClick = async e => {
+      e.preventDefault();
+
+      dispatch({type:'LOGIN_START'})
+
+      try{
+        const res = await fetch(`${BASE_URL}/auth/login`,{
+            method: 'post',
+            headers:{
+                'content-type': 'application/json'
+            },
+            credentials:'include',
+            body: JSON.stringify(credentials)
+        })
+
+        const result = await res.json()
+        if(!res.ok) alert(result.message);
+
+        console.log(result.data);
+
+          dispatch({type:'LOGIN_SUCCESS', payload:result.data});
+          navigate('/')
+      } catch (err) {
+        dispatch({type:'LOGIN_FAILURE', payload:err.message});
+      }
+    };
+
+  return  (
+  <section>
+    <Container>
+      <Row>
+        <Col lg="8" className= "m-auto">
+          <div className="login__container d-flex justify-content-between">
+            <div className="logo__img">
+              <img src={loginImg} alt=""/>
+            </div>
+
+            <div className='login__form'>
+              <div className="user">
+                <img src={userIcon} alt=""/>
+              </div>
+              <h2>Login</h2>
+
+              <Form onSubmit={handleClick}>
+                <FormGroup>
+                  <input type="email" placeholder="Email" required id="email"
+                  onChange={handleChange} />
+                </FormGroup>
+                <FormGroup>
+                <input type="password" placeholder="password" required id="password"
+                  onChange={handleChange} />
+                </FormGroup>
+                <Button className='btn secondary__btn auth__btn'
+                type="submit">Login</Button>
+              </Form>
+              <p>Don't have an account? <Link to='/register'>Create</Link></p>
+            </div>
           </div>
-          <div className="input-group">
-            <input 
-              type="password" 
-              placeholder="Password" 
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required 
-            />
-          </div>
-          <button type="submit" className="login-btn">Login</button>
-        </form>
-        <p className="footer-text">New here? <a href="/ register">Register Now</a></p>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
+  </section>
   );
 };
 

@@ -4,7 +4,7 @@ import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { FaSignInAlt, FaUserPlus } from 'react'; // FontAwesome Icons
 import './header.css';
 import logo from '../../assets/images/logo2.png';
-//import { AuthContext } from './../../context/AuthContext';
+import { AuthContext } from './../../context/AuthContext';
 
 const nav_links = [
   {
@@ -80,8 +80,11 @@ const Header = () => {
                   </>
                 ) : (
                   <>
-                    <Button className='btn secondary_btn'><Link to='/login'>Login</Link></Button>
-                    <Button className='btn primary_btn'><Link to='/register'>Register</Link></Button>
+                    <button className='btn secondary_btn'><Link to='/login'>
+                    <FaSignInAlt className="icon" />Login</Link></button>
+                    <button className='btn primary_btn'><Link to='/register'>
+                    <FaUserPlus className="icon" />Register</Link>
+                    </button>
                   </>
                 )}
               </div>

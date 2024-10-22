@@ -15,12 +15,20 @@ const SearchBar = () => {
         const location = locationRef.current.value;
         const maxGroupSize = maxGroupSizeRef.current.value;
 
-        if (location === '' || cost === 0 || maxGroupSize === '') {
+        if (location === "" || cost === "" || maxGroupSize === "") {
             return alert('All fields are required!');
         }
 
-        // const res = await fetch(`${BASE-URL}/tours/search/getTourBySearch?city=$
-        //     {location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
+        const res = await fetch(`${BASE_URL}/tours/search/getTourBySearch?city=
+             ${location}&distance=${cost}&maxGroupSize=${maxGroupSize}`)
+
+             if(!res.ok) alert('Something went wrong')
+
+                const result = await res.json()
+
+                navigate(`/tours/search?city=${location}&distance=${cost}&maxGroupSize=${maxGroupSize}`,
+                    {state:result.data}
+                )
          };
 
     // Increment and decrement functions for cost

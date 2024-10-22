@@ -1,94 +1,94 @@
-import React, { useState, useContext } from "react";
-import { Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
-import { Link, useNavigate } from "react-router-dom";
-import "../styles/login.css";
-import registering from "../assets/images/register.png";
+import React, { useState, useContext } from 'react';
+import { Container, Row, Col, Form, FormGroup, Button} from 'reactstrap';
+import {Link, useNavigate} from 'react-router-dom'
+import '../styles/login.css';
 
-import userIcon from "../assets/images/user1.png";
-//import { AuthContext } from './../context/AuthContext';
+import registerImg from '../assets/images/register.png';
+import userIcon from '../assets/images/user.png';
+
+import { AuthContext } from './../context/AuthContext';
 import { BASE_URL } from "../utils/config";
 
+<<<<<<< HEAD
 // import userIcon from "../assets/images/user1.png";
 
 //problemimport { AuthContext } from '../context/AuthContext';
 import { BASE_URL } from "../utils/config"; 
 
+=======
+>>>>>>> 6f2fbcefee6a89468f2b10e0bcacc3ac9e6df949
 
 const Register = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
+  const [credentials, setCredentials] = useState({
+    username: undefined,
+    email: undefined,
+    password: undefined,
   });
 
- // const { dispatch } = useContext(AuthContext);
+  const { dispatch} = useContext(AuthContext)
+  const navigate = useNavigate()
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
+    const handleChange = e => {
+      setCredentials(prev=>({...prev, [e.target.id]:e.target.value}));
+    };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  
-    console.log('User registered:', formData);
-  };
+    const handleClick = async e => {
+      e.preventDefault();
 
-  return (
-    <div className="register-container">
-      <div className="register-card">
-        <h2>Create Your Account</h2>
-        <p className="welcome-text">Join us and plan your dream trips!</p>
-        <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <input 
-              type="text" 
-              name="firstName" 
-              placeholder="First Name" 
-              value={formData.firstName}
-              onChange={handleChange}
-              required 
-            />
+      try{
+        const res = await fetch(`${BASE_URL}/auth/register`,{
+            method: 'post',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(credentials)
+        })
+        const result = await res.json()
+
+        if(!res.ok) alert(result.message)
+
+            dispatch({type:'REGISTER_SUCCESS'})
+            navigate('/login')
+      } catch (err) {
+        alert(err.message);
+      }
+    };
+
+  return  (
+  <section>
+    <Container>
+      <Row>
+        <Col lg="8" className= "m-auto">
+          <div className="login__container d-flex justify-content-between">
+            <div className="logo__img">
+              <img src={registerImg} alt=""/>
+            </div>
+
+            <div className='login__form'>
+              <div className="user">
+                <img src={userIcon} alt=""/>
+              </div>
+              <h2>Register</h2>
+
+              <Form onSubmit={handleClick}>
+                <FormGroup>
+                  <input type="text" placeholder="Username" required id="username"
+                  onChange={handleChange} />
+                </FormGroup>
+                <FormGroup>
+                <input type="password" placeholder="password" required id="password"
+                  onChange={handleChange} />
+                </FormGroup>
+                <Button className='btn secondary__btn auth__btn'
+                type="submit">Create Account</Button>
+              </Form>
+              <p>Already have an account? <Link to='/login'>Login</Link></p>
+            </div>
           </div>
-          <div className="input-group">
-            <input 
-              type="text" 
-              name="lastName" 
-              placeholder="Last Name" 
-              value={formData.lastName}
-              onChange={handleChange}
-              required 
-            />
-          </div>
-          <div className="input-group">
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="Email" 
-              value={formData.email}
-              onChange={handleChange}
-              required 
-            />
-          </div>
-          <div className="input-group">
-            <input 
-              type="password" 
-              name="password" 
-              placeholder="Password" 
-              value={formData.password}
-              onChange={handleChange}
-              required 
-            />
-          </div>
-          <button type="submit" className="register-btn">Register</button>
-        </form>
-        <p className="footer-text">Already have an account? <Link to="/login">Login</Link></p>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
+  </section>
   );
 };
 
