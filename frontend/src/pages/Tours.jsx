@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import CommonSection from '../shared/CommonSection';
 import './Tours.css';
 import { Container, Row, Col } from 'reactstrap';
 import TourCard from '../shared/TourCard';
@@ -9,6 +8,7 @@ import useFetch from '../hooks/useFetch';  // Ensure useFetch is exported proper
 import { BASE_URL } from '../utils/config';
 import Video from '../../src/video2.mp4';
 import Subtitle from '../shared/Subtitle';  // Ensure Subtitle is exported correctly
+import Footer from '../components/Footer/Footer';  // Importing Footer component
 
 const Tours = () => {
   const [pageCount, setPageCount] = useState(0);
@@ -25,10 +25,12 @@ const Tours = () => {
 
   return (
     <div className='Tours'>
+      {/* Background Video */}
       <div className='videoBg1'>
         <video src={Video} autoPlay loop muted></video>
       </div>
 
+      {/* Section Text */}
       <div className='sectionText2'>
         <h1>Your Adventure Starts Here</h1>
         <br /><br />
@@ -36,6 +38,7 @@ const Tours = () => {
         <Subtitle />
       </div>
 
+      {/* Tour List Section */}
       <section className='pt-0'>
         <Container>
           {loading && <h4 className='text-center pt-5'>Loading.....</h4>}
@@ -49,6 +52,7 @@ const Tours = () => {
                   </Col>
                 ))}
 
+                {/* Pagination */}
                 <Col lg='12'>
                   <div className='pagination d-flex align-items-center justify-content-center mt-4 gap-3'>
                     {[...Array(pageCount).keys()].map(number => (
@@ -63,8 +67,12 @@ const Tours = () => {
           }
         </Container>
       </section>
-      {/* <CommonSection /> */}
+
+      {/* Newsletter Section */}
       <Newsletter />
+
+      {/* Footer Section */}
+      <Footer />  {/* Footer is added here */}
     </div>
   );
 };
