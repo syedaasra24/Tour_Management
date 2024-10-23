@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useFetch = (url) => {
-    const [data, setData] = useState(null); // Initialize as null
+    const [data, setData] = useState([]); // Initialize as null
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
@@ -12,7 +12,8 @@ const useFetch = (url) => {
                 const res = await fetch(url);
 
                 if (!res.ok) {
-                    throw new Error('Failed to fetch'); // Throw an error to be caught
+                    setError('Failed to fetch'); // Throw an error to be caught
+                    alert("failed to fetch");
                 }
 
                 const result = await res.json();
