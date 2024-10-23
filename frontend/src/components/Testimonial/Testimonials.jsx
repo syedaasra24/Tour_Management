@@ -35,48 +35,93 @@ const testimonialsData = [
   },
 ];
 
-const Testimonials = () => {
-  const settings = {
-    dots: "true",
-    infinite: "true",
-    autoplay: "true",
-    speed: 1000,
-    autoplaySpeed: 2000,
-    slidesToShow: 3, // Show 3 testimonials at once to keep it compact
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
+ const Testimonials = () => {
+//   const settings = {
+//     dots: "true",
+//     infinite: "true",
+//     autoplay: "true",
+//     speed: 1000,
+//     autoplaySpeed: 2000,
+//     slidesToShow: 3, // Show 3 testimonials at once to keep it compact
+//     slidesToScroll: 1,
+//     responsive: [
+//       {
+//         breakpoint: 992,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 1,
+//         },
+//       },
+//       {
+//         breakpoint: 576,
+//         settings: {
+//           slidesToShow: 1,
+//           slidesToScroll: 1,
+//         },
+//       },
+//     ],
+//   };
+
+const settings = {
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  speed: 1000,
+  autoplaySpeed: 2000,
+  slidesToShow: 3, // Show 3 testimonials side by side
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
-    ],
-  };
+    },
+  ],
+};
+
+
+
 
   return (
+    // <Slider {...settings} className="testimonials-slider-horizontal">
+    //   {testimonialsData.map((testimonial, index) => (
+    //     <div key={index} className="testimonial-item-horizontal">
+    //       <p>{testimonial.message}</p>
+    //       <div className="testimonial-content d-flex align-items-center gap-4">
+    //         <img src={testimonial.image} className="testimonial-img-horizontal rounded-circle" alt={testimonial.name} />
+    //         <div>
+    //           <h6>{testimonial.name}</h6>
+    //           <p>Customer</p>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   ))}
+    // </Slider>
+
     <Slider {...settings} className="testimonials-slider-horizontal">
-      {testimonialsData.map((testimonial, index) => (
-        <div key={index} className="testimonial-item-horizontal">
-          <p>{testimonial.message}</p>
-          <div className="testimonial-content d-flex align-items-center gap-4">
-            <img src={testimonial.image} className="testimonial-img-horizontal rounded-circle" alt={testimonial.name} />
-            <div>
-              <h6>{testimonial.name}</h6>
-              <p>Customer</p>
-            </div>
-          </div>
+  {testimonialsData.map((testimonial, index) => (
+    <div key={index} className="testimonial-item-horizontal">
+      <p>{testimonial.message}</p>
+      <div className="testimonial-content">
+        <img src={testimonial.image} className="testimonial-img-horizontal rounded-circle" alt={testimonial.name} />
+        <div>
+          <h6>{testimonial.name}</h6>
+          <p>Customer</p>
         </div>
-      ))}
-    </Slider>
+      </div>
+    </div>
+  ))}
+</Slider>
+
   );
 };
 

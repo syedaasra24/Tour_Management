@@ -117,5 +117,11 @@
 .testimonial_title {
     font-size: 2.3rem;
     margin-top: 1rem;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px; */
 }
 
