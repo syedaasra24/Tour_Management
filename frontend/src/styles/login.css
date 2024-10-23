@@ -1,12 +1,13 @@
 
-
-.login__img{
+.login__container{
+  margin-top: 25%;
+}
+.logo__img{
   width: 60%;
   text-align: center;
-
 }
 
-.login__img img{
+.logo__img img{
   width: 70%;
   object-fit: contain;
 }
@@ -78,7 +79,7 @@
 
 
 
-
+/* 
 .login-container {
   display: flex;
   justify-content: center;
@@ -180,4 +181,4 @@ input:focus {
   .login-btn {
     padding: 10px;
  }
-}
+} */

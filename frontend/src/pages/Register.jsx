@@ -3,8 +3,8 @@ import { Container, Row, Col, Form, FormGroup, Button} from 'reactstrap';
 import {Link, useNavigate} from 'react-router-dom'
 import '../styles/login.css';
 
-import registerImg from '../assets/images/register.png';
-import userIcon from '../assets/images/user.png';
+import registerImg from '../assets/images/register3.png';
+import userIcon from '../assets/images/user11.png';
 
 import { AuthContext } from './../context/AuthContext';
 import { BASE_URL } from "../utils/config";
