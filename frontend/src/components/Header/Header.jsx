@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useContext } from 'react';
 import { Container, Row, Button } from 'reactstrap';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
-import { FaSignInAlt, FaUserPlus } from 'react'; // FontAwesome Icons
+import { FaSignInAlt, FaUserPlus } from 'react-icons/fa'; // Correct FontAwesome Icons import
 import './header.css';
 import logo from '../../assets/images/logo2.png';
 import { AuthContext } from './../../context/AuthContext';

@@ -1,21 +1,21 @@
-import React from 'react'
-import '../common-section.css'
-import { Container , Row , Col } from 'reactstrap';
+// import React from 'react'
+// import '../common-section.css'
+// import { Container , Row , Col } from 'reactstrap';
 
 
-const CommonSection = ({title}) => {
-  return (
-    <section className='common_section'>
-    <Container>
-        <Row>
-            <Col lg='12'>
-               <h1>{title}</h1>  
-            </Col>
-        </Row>
-    </Container>
+// const CommonSection = ({title}) => {
+//   return (
+//     <section className='common_section'>
+//     <Container>
+//         <Row>
+//             <Col lg='12'>
+//                <h1>{title}</h1>  
+//             </Col>
+//         </Row>
+//     </Container>
 
-    </section>
-  );
-};
+//     </section>
+//   );
+// };
 
-export default CommonSection
+// export default CommonSection
