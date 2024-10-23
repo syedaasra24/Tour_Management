@@ -63,7 +63,7 @@ const Tours = () => {
           }
         </Container>
       </section>
-      <CommonSection />
+      {/* <CommonSection /> */}
       <Newsletter />
     </div>
   );
