@@ -5,7 +5,7 @@ import {Container , Row , Col } from 'reactstrap';
 import TourCard from '../shared/TourCard';
 import SearchBar from '../shared/SearchBar';
 import Newsletter from '../shared/Newsletter';
-import useFetch from '../hooks/useFetch';
+import useFetch from '../hooks/usefetch';
 import { BASE_URL } from "../utils/config";
 import Video from '../../src/video2.mp4';
 import Subtitle from '../shared/Subtitle';
