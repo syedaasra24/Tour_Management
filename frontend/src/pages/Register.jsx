@@ -11,6 +11,10 @@ import { BASE_URL } from "../utils/config";
 
 
 //problemimport { AuthContext } from '../context/AuthContext';
+
+// import userIcon from "../assets/images/user1.png";
+
+//problemimport { AuthContext } from '../context/AuthContext';
 const Register = () => {
   const [credentials, setCredentials] = useState({
     username: undefined,

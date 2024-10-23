@@ -9,13 +9,13 @@ import Booking from '../components/Booking/Booking';
 import Newsletter from './../shared/Newsletter';
 import useFetch from '../hooks/usefetch';
 import { BASE_URL } from '../utils/config';
-import { AuthContext } from '../context/AuthContext';
+import { AuthContex } from '../contex/AuthContex';
 
 const TourDetails = () => {
   const { id } = useParams();
   const reviewMsgRef = useRef();
   const [tourRating, setTourRating] = useState(null);
-  const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContex);
   const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`);
 
   const { photo, title, desc, price, address, reviews, city, distance, maxGroupSize } = tour || {};
