@@ -128,6 +128,35 @@
 //                         </button>
 //                       </div>
 //                     </Form>
+  return ( 
+   <>
+    <section>
+      <Container>
+       {
+        loading && <h4 ClassName="text-center pt-5">Loading..........</h4>
+       }
+       {
+        error && <h4 ClassName="text-center pt-5">{error}</h4>
+       }
+       {
+        !loading && !error && (
+          <Row>
+            <Col lg="8">
+              <div className="tour_content">
+                  <img src={photo} alt="" />
+                <div className="tour_info">
+                  <h2>{title}</h2>
+                  <h2>{desc}</h2>
+                  <h2>{price}</h2>
+                  <h2>{reviews}</h2>
+                  <h2>{city}</h2>
+                  <h2>{distance}</h2>
+                  <h2>{maxGroupSize}</h2>
+            
+                  <div className="d-flex align-items-center gap-5">
+                    <span className="tour_rating d-flex align-items-center 
+                      gap-1">
+
 
 //                     <ListGroup className="user_reviews">
 //                       {reviews?.map((review) => (
@@ -162,4 +191,4 @@
 //   );
 // };
 
-// export default TourDetails;
+// export default TourDetails; 
