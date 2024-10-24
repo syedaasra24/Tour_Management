@@ -80,12 +80,17 @@ const Header = () => {
                   </>
                 ) : (
                   <>
-                    <button className='btn secondary_btn'><Link to='/login'>
-                    <FaSignInAlt className="icon" />Login</Link></button>
-                    <button className='btn primary_btn'><Link to='/register'>
-                    <FaUserPlus className="icon" />Register</Link>
+                    <button className='btn secondary_btn'>
+                      <Link to='/login'>
+                       <FaSignInAlt className="icon" />&nbsp;Login
+                      </Link>
                     </button>
-                  </>
+                    <button className='btn primary_btn'>
+                      <Link to='/register'>
+                       <FaUserPlus className="icon" />&nbsp;Register
+                      </Link>
+                    </button>
+                   </>
                 )}
               </div>
 
