@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import './Tours.css';
 import { Container, Row, Col } from 'reactstrap';
@@ -12,13 +10,18 @@ import Footer from '../components/Footer/Footer';
 
 // Import the tours data
 import tours from '../../src/assets/data/tours';  
-
 const Tours = () => {
-  const [visibleTours, setVisibleTours] = useState(8); // Initially showing 8 tours
+  const [visibleTours, setVisibleTours] = useState(8); 
+  const [seeMore, setSeeMore] = useState(true); 
 
 
-  const handleSeeMore = () => {
-    setVisibleTours((prevVisibleTours) => prevVisibleTours + 8); // Load 8 more tours
+  const toggleTours = () => {
+    if (seeMore) {
+      setVisibleTours(tours.length); 
+    } else {
+      setVisibleTours(8); 
+    }
+    setSeeMore(!seeMore); 
   };
 
   return (
@@ -47,16 +50,14 @@ const Tours = () => {
               </Col>
             ))}
 
-            {/* See More Button */}
-            {visibleTours < tours.length && ( 
-              <Col lg='12'>
-                <div className='see-more d-flex align-items-center justify-content-center mt-4'>
-                  <button onClick={handleSeeMore} className='btn btn-primary'>
-                    See More
-                  </button>
-                </div>
-              </Col>
-            )}
+            {/* See More/See Less Button */}
+            <Col lg='12'>
+              <div className='see-more d-flex align-items-center justify-content-center mt-4'>
+                <button onClick={toggleTours} className='btn btn-primary'>
+                  {seeMore ? 'See More' : 'See Less'}
+                </button>
+              </div>
+            </Col>
           </Row>
         </Container>
       </section>
