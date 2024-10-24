@@ -191,7 +191,7 @@ outline: none;
   outline: none;
 } */
 
-/* @media only screen and (max-width: 992px ){
+@media only screen and (max-width: 992px ){
   .logo img {
     width: 20%;
   }
@@ -205,4 +205,4 @@ outline: none;
     z-index: 999;
   }
   
-} */
+}
