@@ -82,6 +82,8 @@
 
 
 
+
+
 import React, { useState, useEffect } from 'react';
 import './Tours.css';
 import { Container, Row, Col } from 'reactstrap';
