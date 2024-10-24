@@ -7,7 +7,7 @@ import {useNavigate} from 'react-router-dom';
 
 const SearchBar = () => {
     const locationRef = useRef('');
-    const [cost, setCost] = useState(50000); // Set initial cost
+    const [cost, setCost] = useState(0); // Set initial cost
     const maxGroupSizeRef = useRef(0);
     const navigate = useNavigate()
 
@@ -37,7 +37,7 @@ const SearchBar = () => {
     };
 
     const decrementCost = () => {
-        setCost(prevCost => Math.max(prevCost - 1000, 50000)); // Min limit 40,000
+        setCost(prevCost => Math.max(prevCost - 1000)); // Min limit 40,000
     };
 
     return (
@@ -71,7 +71,7 @@ const SearchBar = () => {
                         </div>
                     </FormGroup>
 
-                    {/* Cost Section */}
+                    {/* max-person Section */}
                     <FormGroup className='d-flex gap-3 form_group form_group-fast'>
                         <span><i className='ri-group-line'></i></span>
                         <div>
@@ -79,8 +79,8 @@ const SearchBar = () => {
                             <input type='number' placeholder='0' ref={maxGroupSizeRef} />
                         </div>
                     </FormGroup>
-                    {/* date Section */}
 
+                    {/* date Section */}
                     <FormGroup className='d-flex gap-3 form_group form_group-fast'>
                         <span><i class="ri-calendar-line"></i></span>
                         <div>

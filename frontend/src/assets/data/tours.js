@@ -15,7 +15,7 @@ const tours = [
     city: "Kerela",
     distance: 300,
     address:"Somewhere",
-    price: 100000,
+    price: 70000,
     maxGroupSize: 10,
     desc: "this is the description",
     reviews: [
@@ -38,7 +38,7 @@ const tours = [
     city: "Agra",
     distance: 400,
     address:"Somewhere",
-    price:  100000,
+    price:  50000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -57,7 +57,7 @@ const tours = [
     city: "Jammu & Kashmir",
     distance: 500,
     address:"Somewhere",
-    price: 120000,
+    price: 70000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -76,7 +76,7 @@ const tours = [
     city: "Chennai",
     distance: 500,
     address:"Somewhere",
-    price: 70000,
+    price: 35000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -95,7 +95,7 @@ const tours = [
     city: "Jaipur",
     distance: 500,
     address:"Somewhere",
-    price: 80000,
+    price: 50000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -114,7 +114,7 @@ const tours = [
     city: "Rajasthan",
     distance: 500,
     address:"Somewhere",
-    price: 90000,
+    price: 100000,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -133,10 +133,15 @@ const tours = [
     city: "shimla",
     distance: 500,
     address:"Somewhere",
-    price: 100000,
+    price: 40000,
     maxGroupSize: 8,
     desc: "this is the description",
-    reviews: [],
+    reviews: [
+      {
+        name: "jhon doe",
+        rating: 4.6,
+      },
+    ],
     avgRating: 4.5,
     photo: tourImg07,
     featured: false,
@@ -147,10 +152,15 @@ const tours = [
     city: "Sikkim",
     distance: 500,
     address:"Somewhere",
-    price: 80000,
+    price: 60000,
     maxGroupSize: 8,
     desc: "this is the description",
-    reviews: [],
+    reviews: [
+      {
+        name: "jhon doe",
+        rating: 4.5,
+      },
+    ],
     avgRating: 4.5,
     photo: tourImg08,
     featured: false,
