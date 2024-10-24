@@ -115,7 +115,7 @@ const tours = [
     ],
     avgRating: 4.5,
     photo: tourImg05,
-    featured: false,
+    featured: true,
   },
   {
     id: "06",
@@ -134,7 +134,7 @@ const tours = [
     ],
     avgRating: 4.5,
     photo: tourImg06,
-    featured: false,
+    featured: true,
   },
   {
     id: "07",
@@ -148,7 +148,7 @@ const tours = [
     reviews: [],
     avgRating: 4.5,
     photo: tourImg07,
-    featured: false,
+    featured: true,
   },
   {
     id: "08",
@@ -162,7 +162,7 @@ const tours = [
     reviews: [],
     avgRating: 4.5,
     photo: tourImg08,
-    featured: false,
+    featured: true,
   },
   {
     id: "09",
@@ -257,7 +257,7 @@ const tours = [
     ],
     avgRating: 4.7,
     photo: tourImg13,
-    featured: false,
+    featured: true,
   },
   {
     id: "14",
@@ -276,7 +276,7 @@ const tours = [
     ],
     avgRating: 4.6,
     photo: tourImg14,
-    featured: false,
+    featured: true,
   },
   {
     id: "15",
@@ -295,27 +295,28 @@ const tours = [
     ],
     avgRating: 4.8,
     photo: tourImg15,
-    featured: false,
+    featured: true,
   },
   {
     id: "16",
-    title: "Backwaters of Alleppey",
-    city: "Kerala",
-    distance: 300,
-    address: "Somewhere",
-    price: 95000,
-    maxGroupSize: 6,
-    desc: "Enjoy the tranquil backwaters with houseboat stays and scenic views.",
+    title: "Varanasi Ghats",
+    city: "Varanasi",
+    distance: 250,
+    address: "Along the River Ganges",
+    price: 85000,
+    maxGroupSize: 12,
+    desc: "A spiritual experience by the sacred River Ganges, Varanasi is known for its ancient ghats where pilgrims perform rituals and witness mesmerizing evening aartis.",
     reviews: [
       {
-        name: "sophia",
-        rating: 4.8,
-      },
+        name: "manoj",
+        rating: 5.0
+      }
     ],
-    avgRating: 4.7,
+    avgRating: 4.9,
     photo: tourImg16,
-    featured: false,
-  },
+    featured: true,
+    },
+    
 
 ];
 
