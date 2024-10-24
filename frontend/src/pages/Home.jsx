@@ -10,7 +10,7 @@ import { Col, Row, Container } from 'reactstrap';
 import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGallery';
 import Testimonials from '../components/Testimonial/Testimonials';
 import TourCard from '../shared/TourCard';
-import tourData from '../assets/data/tours';
+import tourData from '../assets/data/tours'; // Assuming this is your tour.js file
 import Newsletter from '../shared/Newsletter';
 import Footer from '../components/Footer/Footer'; 
 
@@ -22,6 +22,9 @@ const Home = () => {
     const pages = Math.ceil(5 / 8); // later we will use backend
     setPageCount(pages);
   }, [page]);
+
+  // Only show the first 8 tours on the home page
+  const homeTours = tourData.slice(0, 8);
 
   return (
     <div className='Home'>
@@ -66,7 +69,8 @@ const Home = () => {
         <section className='pt-8'>
           <Container>
             <Row>
-              {tourData?.map((tour) => (
+              {/* Display only the first 8 tours */}
+              {homeTours.map((tour) => (
                 <Col lg='3' className='mb-4' key={tour.id}>
                   <TourCard tour={tour} />
                 </Col>

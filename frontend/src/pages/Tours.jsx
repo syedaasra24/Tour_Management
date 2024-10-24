@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+
+
+import React, { useState } from 'react';
 import './Tours.css';
 import { Container, Row, Col } from 'reactstrap';
 import TourCard from '../shared/TourCard';
@@ -9,21 +11,15 @@ import Subtitle from '../shared/Subtitle';
 import Footer from '../components/Footer/Footer';
 
 // Import the tours data
-import tours from '../../src/assets/data/tours';  // Update this path to match your actual location
+import tours from '../../src/assets/data/tours';  
 
 const Tours = () => {
-  const [pageCount, setPageCount] = useState(0);
-  const [page, setPage] = useState(0);
-  const toursPerPage = 8;  // Number of tours to display per page
+  const [visibleTours, setVisibleTours] = useState(8); // Initially showing 8 tours
 
-  // Pagination logic
-  const paginatedTours = tours.slice(page * toursPerPage, (page + 1) * toursPerPage);
 
-  useEffect(() => {
-    const pages = Math.ceil(tours.length / toursPerPage);
-    setPageCount(pages);
-    window.scrollTo(0, 0);
-  }, [page]);
+  const handleSeeMore = () => {
+    setVisibleTours((prevVisibleTours) => prevVisibleTours + 8); // Load 8 more tours
+  };
 
   return (
     <div className='Tours'>
@@ -44,22 +40,23 @@ const Tours = () => {
       <section className='pt-0'>
         <Container>
           <Row>
-            {paginatedTours.map(tour => (
+            {/* Display visibleTours number of tours */}
+            {tours.slice(0, visibleTours).map((tour) => (
               <Col lg='3' className='mb-4' key={tour.id}>
                 <TourCard tour={tour} />
               </Col>
             ))}
 
-            {/* Pagination */}
-            <Col lg='12'>
-              <div className='pagination d-flex align-items-center justify-content-center mt-4 gap-3'>
-                {[...Array(pageCount).keys()].map(number => (
-                  <span key={number} onClick={() => setPage(number)} style={{ cursor: 'pointer' }}>
-                    {number + 1}
-                  </span>
-                ))}
-              </div>
-            </Col>
+            {/* See More Button */}
+            {visibleTours < tours.length && ( 
+              <Col lg='12'>
+                <div className='see-more d-flex align-items-center justify-content-center mt-4'>
+                  <button onClick={handleSeeMore} className='btn btn-primary'>
+                    See More
+                  </button>
+                </div>
+              </Col>
+            )}
           </Row>
         </Container>
       </section>
