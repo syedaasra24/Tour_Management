@@ -108,4 +108,12 @@ h6 {
  .form_group input {
   font-size: 0.7rem;
  }
+
+ .form_group span i {
+      font-size: 1.1rem;
+ }
+.form_group h6{
+  font-size: 1rem;
+}
+
 }
