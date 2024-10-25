@@ -14,6 +14,11 @@ import tourImg13 from "../images/tour-13.jpg";
 import tourImg14 from "../images/tour-14.jpg";
 import tourImg15 from "../images/tour-15.jpg";
 import tourImg16 from "../images/tour-16.jpg";
+import tourImg17 from "../images/tour-17.jpg";
+import tourImg18 from "../images/tour-18.jpg";
+import tourImg19 from "../images/tour-19.jpg";
+import tourImg20 from "../images/tour-20.jpg";
+
 
 
 
@@ -326,6 +331,88 @@ const tours = [
     photo: tourImg16,
     featured: true,
     },
+    
+    {
+      id: "17",
+      title: "Sundarbans National Park",
+      city: "West Bengal",
+      distance: 450,
+      address: "Somewhere",
+      price: 95000,
+      maxGroupSize: 8,
+      desc: "A UNESCO World Heritage site, the Sundarbans is known for its mangrove forests and Bengal tiger reserve.",
+      reviews: [
+        {
+          name: "priya",
+          rating: 4.7,
+        },
+      ],
+      avgRating: 4.6,
+      photo: tourImg17,
+      featured: true,
+    },
+
+
+    {
+      id: "18",
+      title: "Sun Temple",
+      city: "Konark",
+      distance: 350,
+      address: "Somewhere",
+      price: 72000,
+      maxGroupSize: 15,
+      desc: "A UNESCO World Heritage site, known for its intricate stone carvings and chariot-like structure dedicated to the Sun God.",
+      reviews: [
+        {
+          name: "priya",
+          rating: 4.8,
+        },
+      ],
+      avgRating: 4.7,
+      photo: tourImg18,
+      featured: true,
+    },
+
+    {
+      id: "19",
+      title: "Mahabalipuram Shore Temple",
+      city: "Tamil Nadu",
+      distance: 300,
+      address: "Somewhere",
+      price: 80000,
+      maxGroupSize: 10,
+      desc: "A beautiful ancient temple on the Bay of Bengal coast, known for its unique stone carvings and architecture.",
+      reviews: [
+        {
+          name: "sara",
+          rating: 4.7,
+        },
+      ],
+      avgRating: 4.6,
+      photo: tourImg19,
+      featured: true,
+    },
+
+    {
+      id: "20",
+      title: "Andaman and Nicobar Islands",
+      city: "Port Blair",
+      distance: 1200,
+      address: "Somewhere",
+      price: 150000,
+      maxGroupSize: 20,
+      desc: "A tropical paradise with pristine beaches, coral reefs, and crystal-clear waters perfect for water sports and relaxation.",
+      reviews: [
+        {
+          name: "rohan",
+          rating: 4.9,
+        },
+      ],
+      avgRating: 4.8,
+      photo: tourImg20,
+      featured: true,
+    },
+    
     
 
 ];
