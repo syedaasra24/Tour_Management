@@ -34,12 +34,8 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Mukesh roy",
         rating: 4.6,
-      },
-      {
-        name: "jhon doe",
-        rating: 5,
       },
     ],
     avgRating: 4.5,
@@ -57,7 +53,7 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon",
+        name: "Aditi Sharma",
         rating: 4.6,
       },
     ],
@@ -76,7 +72,7 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Kriti",
         rating: 4.6,
       },
     ],
@@ -95,7 +91,7 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
+        name: "polomi ",
         rating: 4.6,
       },
     ],
@@ -114,7 +110,7 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Mohit ",
         rating: 4.6,
       },
     ],
@@ -133,7 +129,7 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Anshu",
         rating: 4.6,
       },
     ],
@@ -152,7 +148,7 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Ankita",
         rating: 4.6,
       },
     ],
@@ -171,7 +167,7 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Saathi",
         rating: 4.5,
       },
     ],
@@ -190,7 +186,7 @@ const tours = [
     desc: "Explore the ruins of the Vijayanagara Empire with stunning ancient architecture.",
     reviews: [
       {
-        name: "alex",
+        name: "Asra",
         rating: 4.8,
       },
     ],
@@ -209,7 +205,7 @@ const tours = [
     desc: "Experience the vast white desert and vibrant culture at the Rann of Kutch.",
     reviews: [
       {
-        name: "maria",
+        name: "Bapon",
         rating: 4.7,
       },
     ],
@@ -247,7 +243,7 @@ const tours = [
     desc: "A spiritual haven, the Golden Temple is the holiest Sikh gurdwara.",
     reviews: [
       {
-        name: "simran",
+        name: "Ankit",
         rating: 5.0,
       },
     ],
@@ -364,7 +360,7 @@ const tours = [
       desc: "A UNESCO World Heritage site, known for its intricate stone carvings and chariot-like structure dedicated to the Sun God.",
       reviews: [
         {
-          name: "priya",
+          name: "Sayak",
           rating: 4.8,
         },
       ],
