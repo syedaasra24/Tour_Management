@@ -96,6 +96,10 @@
 
 
 
+
+
+
+
 import React from 'react';
 import './footer.css';
 import { Link } from 'react-router-dom';
@@ -103,9 +107,7 @@ import logo from '../../assets/images/logo2.png';
 
 const quickLinks = [
   { path: "/about", display: 'About Us' },
-  { path: "/services", display: 'Our Services' },
-  { path: "/contact", display: 'Contact Us' },
-  { path: "/gallery", display: 'Gallery' },
+  { path: "/tours", display: 'Our Services' },
   { path: '/login', display: 'Login' },
   { path: '/register', display: 'Register' },
 ];
@@ -128,7 +130,9 @@ const Footer = () => {
             <div className="footer-logo">
               <img src={logo} alt="Logo" />
               <p>Creating memorable experiences one journey at a time.</p>
-              <p>Follow us at :-</p>
+              <div className="follow-us">
+              <h5>Fllow us at : </h5>
+              </div>
             </div>
             <div className="footer-social">
               {socialLinks.map((social, index) => (
@@ -168,3 +172,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
