@@ -224,7 +224,7 @@ const tours = [
     desc: "A beautiful Dravidian-style temple dedicated to Goddess Meenakshi.",
     reviews: [
       {
-        name: "rohit",
+        name: "Rohit",
         rating: 4.9,
       },
     ],
