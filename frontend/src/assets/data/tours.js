@@ -31,7 +31,7 @@ const tours = [
     address:"Somewhere",
     price: 70000,
     maxGroupSize: 10,
-    desc: "this is the description",
+    desc: "Munnar Tea Valley in Kerala is a breathtaking hill station known for its lush green tea plantations, misty mountains, and tranquil beauty.",
     reviews: [
       {
         name: "Mukesh roy",
@@ -50,7 +50,7 @@ const tours = [
     address:"Somewhere",
     price:  50000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "The Taj Mahal in Agra is a magnificent white marble mausoleum, celebrated worldwide as a symbol of eternal love and architectural beauty.",
     reviews: [
       {
         name: "Aditi Sharma",
@@ -69,7 +69,7 @@ const tours = [
     address:"Somewhere",
     price: 70000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Pahalgam in Jammu & Kashmir is a scenic town nestled in the Lidder Valley, known for its lush meadows, pine forests, and stunning Himalayan views.",
     reviews: [
       {
         name: "Kriti",
@@ -88,7 +88,7 @@ const tours = [
     address:"Somewhere",
     price: 35000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Kodaikanal is a serene hill station in Tamil Nadu, not in Chennai, known for its misty mountains, lush forests, and beautiful lakes.",
     reviews: [
       {
         name: "polomi ",
@@ -101,13 +101,13 @@ const tours = [
   },
   {
     id: "05",
-    title: " Nahagrah Fort",
+    title: "Nahagrah Fort",
     city: "Jaipur",
     distance: 500,
     address:"Somewhere",
     price: 50000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Nahargarh Fort in Jaipur offers panoramic views of the city and once served as a defense fort for the royal family.",
     reviews: [
       {
         name: "Mohit ",
@@ -126,7 +126,7 @@ const tours = [
     address:"Somewhere",
     price: 100000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Jaisalmer Fort, in Rajasthan, is a majestic, golden sandstone fortress rising from the Thar Desert.",
     reviews: [
       {
         name: "Anshu",
@@ -145,7 +145,7 @@ const tours = [
     address:"Somewhere",
     price: 40000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Kufri, near Shimla, is a scenic hill station known for its snow-covered slopes, adventure sports, and Himalayan views.",
     reviews: [
       {
         name: "Ankita",
@@ -164,7 +164,7 @@ const tours = [
     address:"Somewhere",
     price: 60000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Yumthang Valley in Sikkim is a stunning alpine meadow renowned for its vibrant rhododendron blooms and breathtaking views of the surrounding Himalayan peaks.",
     reviews: [
       {
         name: "Saathi",
