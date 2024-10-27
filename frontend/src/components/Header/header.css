@@ -102,10 +102,10 @@ li {
     background-color: #ff4d4d;
     color: white; /* White text */
     border: none;
-    padding: 10px 20px;
-    line-height: 1.5;
-    font-size: 16px;
-    font-weight: 800;
+    padding: 10px 10px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 700;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;

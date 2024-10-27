@@ -75,9 +75,10 @@
 }
 
 .login__form p a {
-  color: rgb(74, 205, 249);
+  color: skyblue;
   text-decoration: none;
   margin-left: 5px;
+  font-size: larger;
   font-weight: 500;
 } 
 
