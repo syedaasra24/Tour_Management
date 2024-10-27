@@ -186,7 +186,7 @@ li {
 .icon {
     font-size: 18px;
     transition: transform 0.4s ease;
-    margin-right: 8px;
+    margin-right: 0px;
 }
 
 /* Icon Animation on Hover */

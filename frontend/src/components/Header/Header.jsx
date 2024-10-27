@@ -65,7 +65,7 @@ const Header = () => {
                 {user ? (
                   <>
                     <h5 className="mb-0 text-white">{user.username}</h5>
-                    <button className="btn-logout" onClick={logout}><FaAngleLeft className='icon' />&nbsp;Logout</button>
+                    <button className="btn-logout" onClick={logout}><FaAngleLeft className='icon'/>Logout</button>
                   </>
                 ) : (
                   <>
