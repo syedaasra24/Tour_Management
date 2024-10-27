@@ -30,7 +30,7 @@ const tours = [
     address:"Somewhere",
     price: 70000,
     maxGroupSize: 10,
-    desc: "this is the description",
+    desc: "Munnar Tea Valley in Kerala is a breathtaking hill station known for its lush green tea plantations, misty mountains, and tranquil beauty.",
     reviews: [
       {
         name: "Mukesh roy",
@@ -49,7 +49,7 @@ const tours = [
     address:"Somewhere",
     price:  50000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "The Taj Mahal in Agra is a magnificent white marble mausoleum, celebrated worldwide as a symbol of eternal love and architectural beauty.",
     reviews: [
       {
         name: "Aditi Sharma",
@@ -68,10 +68,10 @@ const tours = [
     address:"Somewhere",
     price: 70000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Pahalgam in Jammu & Kashmir is a scenic town nestled in the Lidder Valley, known for its lush meadows, pine forests, and stunning Himalayan views.",
     reviews: [
       {
-        name: "Kriti",
+        name: "Kriti Sen",
         rating: 4.6,
       },
     ],
@@ -87,10 +87,10 @@ const tours = [
     address:"Somewhere",
     price: 35000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Kodaikanal is a serene hill station in Tamil Nadu, not in Chennai, known for its misty mountains, lush forests, and beautiful lakes.",
     reviews: [
       {
-        name: "polomi ",
+        name: "Polomi Roy",
         rating: 4.6,
       },
     ],
@@ -100,16 +100,16 @@ const tours = [
   },
   {
     id: "05",
-    title: " Nahagrah Fort",
+    title: "Nahagrah Fort",
     city: "Jaipur",
     distance: 500,
     address:"Somewhere",
     price: 50000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Nahargarh Fort in Jaipur offers panoramic views of the city and once served as a defense fort for the royal family.",
     reviews: [
       {
-        name: "Mohit ",
+        name: "Mohit Sharma ",
         rating: 4.6,
       },
     ],
@@ -125,10 +125,10 @@ const tours = [
     address:"Somewhere",
     price: 100000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Jaisalmer Fort, in Rajasthan, is a majestic, golden sandstone fortress rising from the Thar Desert.",
     reviews: [
       {
-        name: "Anshu",
+        name: "Anshu Raj",
         rating: 4.6,
       },
     ],
@@ -144,10 +144,10 @@ const tours = [
     address:"Somewhere",
     price: 40000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Kufri, near Shimla, is a scenic hill station known for its snow-covered slopes, adventure sports, and Himalayan views.",
     reviews: [
       {
-        name: "Ankita",
+        name: "Ankita Chowdhury",
         rating: 4.6,
       },
     ],
@@ -163,10 +163,10 @@ const tours = [
     address:"Somewhere",
     price: 60000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Yumthang Valley in Sikkim is a stunning alpine meadow renowned for its vibrant rhododendron blooms and breathtaking views of the surrounding Himalayan peaks.",
     reviews: [
       {
-        name: "Saathi",
+        name: "Saathi Paul",
         rating: 4.5,
       },
     ],
@@ -185,7 +185,7 @@ const tours = [
     desc: "Explore the ruins of the Vijayanagara Empire with stunning ancient architecture.",
     reviews: [
       {
-        name: "Asra",
+        name: "Asra Faisal",
         rating: 4.8,
       },
     ],
@@ -204,7 +204,7 @@ const tours = [
     desc: "Experience the vast white desert and vibrant culture at the Rann of Kutch.",
     reviews: [
       {
-        name: "Bapon",
+        name: "Bapon Paramanik",
         rating: 4.7,
       },
     ],
@@ -223,7 +223,7 @@ const tours = [
     desc: "A beautiful Dravidian-style temple dedicated to Goddess Meenakshi.",
     reviews: [
       {
-        name: "rohit",
+        name: "Rohit Dutta",
         rating: 4.9,
       },
     ],
@@ -242,7 +242,7 @@ const tours = [
     desc: "A spiritual haven, the Golden Temple is the holiest Sikh gurdwara.",
     reviews: [
       {
-        name: "Ankit",
+        name: "Ankit Das",
         rating: 5.0,
       },
     ],
@@ -261,7 +261,7 @@ const tours = [
     desc: "Known for their intricate sculptures, these temples are a UNESCO World Heritage site.",
     reviews: [
       {
-        name: "amit",
+        name: "Amit Bose",
         rating: 4.8,
       },
     ],
@@ -280,7 +280,7 @@ const tours = [
     desc: "Famous for houseboats and shikara rides, Dal Lake offers serene beauty.",
     reviews: [
       {
-        name: "farhan",
+        name: "Farhan",
         rating: 4.7,
       },
     ],
@@ -299,7 +299,7 @@ const tours = [
     desc: "The Yoga Capital of the World, Rishikesh offers adventure sports and spiritual retreats.",
     reviews: [
       {
-        name: "ravi",
+        name: "Ravi Kumar",
         rating: 4.9,
       },
     ],
@@ -318,7 +318,7 @@ const tours = [
     desc: "A spiritual experience by the sacred River Ganges, Varanasi is known for its ancient ghats where pilgrims perform rituals and witness mesmerizing evening aartis.",
     reviews: [
       {
-        name: "manoj",
+        name: "Manoj Singh",
         rating: 5.0
       }
     ],
@@ -338,7 +338,7 @@ const tours = [
       desc: "A UNESCO World Heritage site, the Sundarbans is known for its mangrove forests and Bengal tiger reserve.",
       reviews: [
         {
-          name: "priya",
+          name: "Priya Sen",
           rating: 4.7,
         },
       ],
@@ -359,7 +359,7 @@ const tours = [
       desc: "A UNESCO World Heritage site, known for its intricate stone carvings and chariot-like structure dedicated to the Sun God.",
       reviews: [
         {
-          name: "Sayak",
+          name: "Sayak Mukherjee",
           rating: 4.8,
         },
       ],
@@ -379,7 +379,7 @@ const tours = [
       desc: "A beautiful ancient temple on the Bay of Bengal coast, known for its unique stone carvings and architecture.",
       reviews: [
         {
-          name: "sara",
+          name: "Sara  Biswas",
           rating: 4.7,
         },
       ],
@@ -399,7 +399,7 @@ const tours = [
       desc: "A tropical paradise with pristine beaches, coral reefs, and crystal-clear waters perfect for water sports and relaxation.",
       reviews: [
         {
-          name: "rohan",
+          name: "Rohan Pal",
           rating: 4.9,
         },
       ],

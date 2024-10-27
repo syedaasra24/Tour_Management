@@ -84,10 +84,20 @@ text-align:center;
     width: 50%;
     margin-bottom: 1rem;
   }
+
+  
+.footer-logo img {
+  width: 50%;
+  padding: 1rem;
+  background-color:  rgb(16, 102, 103); 
+  border-radius: 8px; 
+  margin-bottom: 0.5rem;
+}
+
   
   .footer-logo p {
     color: #6c757d;
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.5;
   }
   
