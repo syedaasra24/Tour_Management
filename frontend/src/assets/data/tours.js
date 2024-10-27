@@ -21,10 +21,9 @@ import tourImg20 from "../images/tour-20.jpg";
 
 
 
-
 const tours = [
   {
-    id: "01",
+    _id: "01",
     title: "Munnar Tea Valley",
     city: "Kerela",
     distance: 300,

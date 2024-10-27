@@ -179,13 +179,13 @@ const Login = () => {
                       onChange={handleChange} />
                   </FormGroup>
                   <Button
-                    className={`btn auth__btn ${isCredentialsFilled ? 'filled' : 'empty'}`}
+                    className={` btn auth__btn ${isCredentialsFilled ? 'filled' : 'empty'}`}
                     type="submit"
                   >
                     Login
                   </Button>
                 </Form>
-                <p>Don't have an account? <Link to='/register'>Create</Link></p>
+                <p>Don't have an account? <Link to='/register'> Create</Link></p>
               </div>
             </div>
           </Col>

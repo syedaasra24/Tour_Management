@@ -118,14 +118,14 @@ export const getTourBySearch = async(req, res) => {
 
     // here 'i' means case sensitive
     const city = new RegExp(req.query.city, 'i');
-    const distance = parseInt(req.query.distance);
+    const cost = parseInt(req.query.cost);
     const maxGroupSize = parseInt(req.query.maxGroupSize);
 
     try {
         //gte means greater than equal
         const tours = await Tour.find({ 
             city,
-            distance:{$gte:distance}, 
+            cost:{$gte: cost }, 
             maxGroupSize: { $gte: maxGroupSize },
         }).populate('reviews');
 

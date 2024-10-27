@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useContext } from 'react';
 import { Container, Row, Button } from 'reactstrap';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
-import { FaSignInAlt, FaUserPlus } from 'react-icons/fa'; 
+import { FaSignInAlt, FaUserPlus, FaAngleLeft } from 'react-icons/fa'; 
 import './header.css';
 import logo from '../../assets/images/logo2.png';
 import { AuthContext } from './../../context/AuthContext';
@@ -64,8 +64,8 @@ const Header = () => {
               <div className='nav_btns d-flex align-items-center gap-4'>
                 {user ? (
                   <>
-                    <h5 className="mb-0">{user.username}</h5>
-                    <Button className="btn btn-dark" onClick={logout}>Logout</Button>
+                    <h5 className="mb-0 text-white">{user.username}</h5>
+                    <button className="btn-logout" onClick={logout}><FaAngleLeft className='icon' />&nbsp;Logout</button>
                   </>
                 ) : (
                   <>

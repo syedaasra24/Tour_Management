@@ -21,7 +21,7 @@ router.get("/", getAllTour);
 // get tour by search
 router.get("/search/getTourBySearch", getTourBySearch);
 
-router.get("/search/getFeaturedTour", getFeaturedTour);
+router.get("/search/getFeaturedTours", getFeaturedTour);
 
 router.get("/search/getTourCount", getTourCount);
 

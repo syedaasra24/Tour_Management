@@ -108,7 +108,7 @@ const TourDetails = () => {
                   </div>
 
                   <h5>Description</h5>
-                  <p>{desc}</p>
+                  <p>{desc}</p> 
                 </div>
 
                 {/*=============== Tour reviews section ========== */}
