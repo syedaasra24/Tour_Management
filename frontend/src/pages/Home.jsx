@@ -13,6 +13,7 @@ import TourCard from '../shared/TourCard';
 import tourData from '../assets/data/tours'; // Assuming this is your tour.js file
 import Newsletter from '../shared/Newsletter';
 import Footer from '../components/Footer/Footer'; 
+import earthImg from '../assets/images/earth.png';
 
 const Home = () => {
   const [pageCount, setPageCount] = useState(0);
@@ -121,7 +122,9 @@ const Home = () => {
               </div>
             </Col>
             <Col lg='6'>
-              {/* You can include an image or any other content here */}
+              <div className='earth_img'>
+                <img src={earthImg} alt="" />
+              </div>
             </Col>
           </Row>
         </Container>
