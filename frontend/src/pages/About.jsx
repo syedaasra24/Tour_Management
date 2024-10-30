@@ -119,15 +119,19 @@ import Footer from '../components/Footer/Footer';
 import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
 
-import tourImg01 from "../assets/images/photo-01.jpg"; // Import your team member image
+import tourImg01 from "../assets/images/photo01.jpg";
+import tourImg02 from "../assets/images/photo02.jpg";
+import tourImg03 from "../assets/images/photo03.jpg";
+import tourImg04 from "../assets/images/photo04.jpg";
+import tourImg05 from "../assets/images/photo05.jpg"; // Import your team member image
 
 const About = () => {
   const team = [
     { id: "01", name: "Saathi Paul", role: "Frontend Developer", photo: tourImg01 },
-    { id: "02", name: "Anshu Raj", role: "Backend Developer", photo: tourImg01 },
-    { id: "03", name: "Ankita Chowdhury", role: "Frontend Developer", photo: tourImg01 },
-    { id: "04", name: "Bapon Paramanik", role: "Backend Developer", photo: tourImg01 },
-    { id: "05", name: "Sayeda Asra Faisal", role: "Frontend Developer", photo: tourImg01 },
+    { id: "02", name: "Anshu Raj", role: "Backend Developer", photo: tourImg02 },
+    { id: "03", name: "Ankita Chowdhury", role: "Frontend Developer", photo: tourImg03 },
+    { id: "04", name: "Bapon Paramanik", role: "Backend Developer", photo: tourImg04 },
+    { id: "05", name: "Sayeda Asra Faisal", role: "Frontend Developer", photo: tourImg05 },
   ];
 
   return (
