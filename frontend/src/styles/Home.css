@@ -127,12 +127,95 @@
 }
 
 
-/* @media only screen and (max-width:992px) {
-    .hero_content h1 {
-        font-size: 2.7rem;
+@media only screen and (max-width: 1200px) {
+    .sectionText h1 {
+        font-size: 2.5rem;
     }
 
-    .hero_img_box {
-        display: none;
+    .sectionText p {
+        font-size: 1.3rem;
     }
-} */
+}
+
+@media only screen and (max-width: 992px) {
+    .videoBg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sectionText h1 {
+        font-size: 2rem;
+    }
+
+    .sectionText p {
+        font-size: 1.1rem;
+    }
+
+    .service_title,
+    .featured_tour-title,
+    .experience_content h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sectionText {
+        padding: 0 1rem;
+    }
+
+    .sectionText h1 {
+        font-size: 1.8rem;
+    }
+
+    .sectionText p {
+        font-size: 1rem;
+    }
+
+    .service_title,
+    .featured_tour-title,
+    .experience_content h2,
+    .gallery_title,
+    .testimonial_title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .counter_box span {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4rem;
+    }
+
+    .earth_img img {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .sectionText h1 {
+        font-size: 1.5rem;
+    }
+
+    .sectionText p {
+        font-size: 0.9rem;
+    }
+
+    .service_title,
+    .featured_tour-title,
+    .experience_content h2,
+    .gallery_title,
+    .testimonial_title {
+        font-size: 1.2rem;
+    }
+
+    .counter_box span {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .earth_img img {
+        width: 75%;
+    }
+}
