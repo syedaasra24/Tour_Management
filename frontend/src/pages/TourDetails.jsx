@@ -70,7 +70,8 @@ const TourDetails = () => {
     window.scrollTo(0, 0);
   }, [tour]);
 
-  return (
+  return(
+    <>
     <section>
       <Container>
         {loading && <h4 className="text-center pt-5">Loading...</h4>}
@@ -92,7 +93,7 @@ const TourDetails = () => {
                     <span className="tour_rating d-flex align-items-center gap-1">
                       <i className="ri-star-s-fill" style={{ color: 'black' }}></i>
                       {avgRating !== 0 ? avgRating : 'Not Rated'}
-                      {reviews?.length > 0 && <span>({reviews.length})</span>}
+                      {reviews?.length > 0 && <span>{reviews.length}</span>}
                     </span>
 
                     <span>
@@ -158,9 +159,10 @@ const TourDetails = () => {
             </Col>
           </Row>
         )}
-      </Container>
+    </Container>
       <Newsletter />
     </section>
+    </>
   );
 };
 
