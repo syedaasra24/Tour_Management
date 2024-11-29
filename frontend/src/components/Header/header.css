@@ -2,13 +2,13 @@
 @import url('https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css');
 
 .header {
-    position: fixed; /* Keep the header fixed at the top */
+    position: fixed; 
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 80px;
-    z-index: 700; /* Adjusted z-index */
+    z-index: 700; 
     line-height: 80px;
     background: rgb(16, 102, 103);
 }
