@@ -1,7 +1,7 @@
 import React from 'react';
 import TourCard from '../../shared/TourCard';
 import { Col } from 'reactstrap';
-import useFetch from './../../hooks/useFetch.js';
+import useFetch from './../../hooks/useFetch';
 import { BASE_URL } from './../../utils/config.js';
 
 const FeaturedTourList = () => {
