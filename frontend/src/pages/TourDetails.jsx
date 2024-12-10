@@ -6,7 +6,7 @@ import { calculateAvgRating } from '../utils/avgRating';
 import avatar from '../assets/images/avatar.jpg';
 import Booking from '../components/Booking/Booking';
 import Newsletter from './../shared/Newsletter';
-import useFetch from './../hooks/useFetch';
+import useFetch from "./../hooks/useFetch";
 import { BASE_URL } from '../utils/config';
 import { AuthContext } from '../context/AuthContext';
 import '../styles/tour-details.css';
@@ -30,23 +30,25 @@ const TourDetails = () => {
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value.trim();
 
-    if (!user) {
-      alert('Please Sign in to submit a review');
-      return;
-    }
-
-    if (!reviewText || !tourRating) {
-      alert('Please fill out all fields and select a rating');
-      return;
-    }
-
-    const reviewObj = {
-      username: user.username,
-      reviewText,
-      rating: tourRating,
-    };
+    
 
     try {
+      if (!user) {
+        alert('Please Sign in to submit a review');
+        return;
+      }
+  
+      if (!reviewText || !tourRating) {
+        alert('Please fill out all fields and select a rating');
+        return;
+      }
+  
+      const reviewObj = {
+        username: user?.username,
+        reviewText,
+        rating: tourRating,
+      };
+
       const res = await fetch(`${BASE_URL}/review/${id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
