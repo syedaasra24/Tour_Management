@@ -118,10 +118,10 @@ import tourImg05 from "../assets/images/photo05.jpg"; // Import your team member
 const About = () => {
   const team = [
     { id: "01", name: "Saathi Paul", role: "Frontend Developer", photo: tourImg01 },
-    { id: "02", name: "Anshu Raj", role: "Backend Developer", photo: tourImg02 },
-    { id: "03", name: "Ankita Chowdhury", role: "Frontend Developer", photo: tourImg03 },
-    { id: "04", name: "Bapon Paramanik", role: "Backend Developer", photo: tourImg04 },
-    { id: "05", name: "Sayeda Asra Faisal", role: "Frontend Developer", photo: tourImg05 },
+    { id: "02", name: "Ankita Chowdhury", role: "Frontend Developer", photo: tourImg03 },
+    { id: "03", name: "Sayeda Asra Faisal", role: "Frontend Developer", photo: tourImg05 },
+    { id: "04", name: "Anshu Raj", role: "Backend Developer", photo: tourImg02 },
+    { id: "05", name: "Bapon Paramanik", role: "Backend Developer", photo: tourImg04 },
   ];
 
   return (
