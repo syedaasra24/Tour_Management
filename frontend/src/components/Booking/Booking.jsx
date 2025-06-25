@@ -28,6 +28,7 @@ const Booking = ({ tour, avgRating }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        
         // You can add booking logic here, like sending data to a server.
 
         navigate('/Thank-You'); // Navigate to a thank-you page after submission
