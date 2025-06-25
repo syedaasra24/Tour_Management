@@ -19,7 +19,6 @@ export const createUser =  async (req,res)=> {
     }
 };
 
-
 // update User
 export const updateUser = async (req, res) => {
     const id = req.params.id;
