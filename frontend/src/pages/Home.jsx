@@ -18,14 +18,22 @@ import earthImg from '../assets/images/earth.png';
 const Home = () => {
   const [pageCount, setPageCount] = useState(0);
   const [page] = useState(0);
+  const [visibleTours, setVisibleTours] = useState(8);
+  const [seeMore, setSeeMore] = useState(true);
 
   useEffect(() => {
     const pages = Math.ceil(5 / 8); // later we will use backend
     setPageCount(pages);
   }, [page]);
 
-  // Only show the first 8 tours on the home page
-  const homeTours = tourData.slice(0, 8);
+  const toggleTours = () => {
+    if (seeMore) {
+      setVisibleTours(tourData.length);
+    } else {
+      setVisibleTours(8);
+    }
+    setSeeMore(!seeMore);
+  };
 
   return (
     <div className='Home'>
@@ -70,19 +78,19 @@ const Home = () => {
         <section className='pt-8'>
           <Container>
             <Row>
-              {/* Display only the first 8 tours */}
-              {homeTours.map((tour) => (
-                <Col lg='3' className='mb-4' key={tour.id}>
+              {/* Display tours based on visibleTours state */}
+              {tourData.slice(0, visibleTours).map((tour) => (
+                <Col lg='3' className='mb-4' key={tour._id || tour.id}>
                   <TourCard tour={tour} />
                 </Col>
               ))}
+
+              {/* See More/See Less Button */}
               <Col lg='12'>
-                <div className='pagination d-flex align-items-center justify-content-center mt-4 gap-3'>
-                  {[...Array(pageCount).keys()].map((number) => (
-                    <span key={number} onClick={() => console.log(number)}>
-                      {number + 1}
-                    </span>
-                  ))}
+                <div className='see-more d-flex align-items-center justify-content-center mt-4'>
+                  <button onClick={toggleTours} className='btn btn-primary'>
+                    {seeMore ? 'See More' : 'See Less'}
+                  </button>
                 </div>
               </Col>
             </Row>

@@ -12,32 +12,23 @@ const SearchBar = () => {
     const navigate = useNavigate()
 
     const searchHandler = async() => {
-        const location = locationRef.current.value;
-        const maxGroupSize = maxGroupSizeRef.current.value;
+        const location = (locationRef.current.value || '').trim();
+        const maxGroupSize = (maxGroupSizeRef.current.value || '').toString().trim();
 
         if (location === "" || cost === "" || maxGroupSize === "") {
             return alert('All fields are required!');
         }
 
-        const res = await fetch(`${BASE_URL}/tours/search/getTourBySearch?city=
-             ${location}&distance=${cost}&maxGroupSize=${maxGroupSize}`)
-
-             if(!res.ok) alert('Something went wrong')
-
-                const result = await res.json()
-
-                navigate(`/tours/search?city=${location}&distance=${cost}&maxGroupSize=${maxGroupSize}`,
-                    {state:result.data}
-                )
-         };
+        navigate(`/tours?city=${encodeURIComponent(location)}&distance=${encodeURIComponent(cost)}&maxGroupSize=${encodeURIComponent(maxGroupSize)}`);
+    };
 
     // Increment and decrement functions for cost
     const incrementCost = () => {
-        setCost(prevCost => Math.min(prevCost + 1000, 10000000)); // Max limit 10,000,000
+        setCost(prevCost => Math.min(Number(prevCost) + 1000, 10000000));
     };
 
     const decrementCost = () => {
-        setCost(prevCost => Math.max(prevCost - 1000)); // Min limit 40,000
+        setCost(prevCost => Math.max(Number(prevCost) - 1000, 0));
     };
 
     return (
@@ -63,7 +54,14 @@ const SearchBar = () => {
                                 <input
                                     type='number'
                                     value={cost}
-                                    readOnly
+                                    min={0}
+                                    max={10000000}
+                                    step={1000}
+                                    onChange={(e) => {
+                                        const val = Number(e.target.value);
+                                        if (Number.isNaN(val)) { setCost(0); return; }
+                                        setCost(Math.max(0, Math.min(val, 10000000)));
+                                    }}
                                     className='cost-input'
                                 />
                                 <button type='button' className='cost-btn' onClick={incrementCost}>+</button>
@@ -82,7 +80,7 @@ const SearchBar = () => {
 
                     {/* date Section */}
                     <FormGroup className='d-flex gap-3 form_group form_group-fast'>
-                        <span><i class="ri-calendar-line"></i></span>
+                        <span><i className="ri-calendar-line"></i></span>
                         <div>
                             <h6>Select Your Date</h6>
                             <input type='date'/>

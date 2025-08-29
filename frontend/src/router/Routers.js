@@ -17,16 +17,12 @@ const Routers = () => {
         <Route path='/home' element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/tours' element={<Tours />}></Route>
+        <Route path='/tours/search' element={<Tours />}></Route>
         <Route path='/tours/:id' element={<TourDetails />}></Route>
         <Route path='/login' element={<Login />}></Route>    
         <Route path='/register' element={<Register />}></Route>
         <Route path='/thank-you' element={<ThankYou/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
-        <Route path='/register' element={<Register/>}></Route>
-        <Route path='/register' element={<Register />}></Route>
-        <Route path='/ login' element={<Login/>}></Route>
-        <Route path='/ register' element={<Register/>}></Route>
-        <Route path='/tours/search' element={<SearchResultList />}></Route>
+        {/* Deprecated routes cleaned up to avoid duplicates and typos */}
     </Routes>
   );
 };

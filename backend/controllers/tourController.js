@@ -69,7 +69,7 @@ export const deleteTour = async (req, res) => {
 export const getSingleTour = async (req, res) => {
     const id = req.params.id;
     try {
-        const tours = await Tour.findById(id);
+        const tours = await Tour.findById(id).populate('reviews');
 
         res.status(200)
         .json({
