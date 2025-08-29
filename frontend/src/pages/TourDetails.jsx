@@ -24,11 +24,43 @@ const TourDetails = () => {
   const { data: tourApi, loading, error } = useFetch(fetchUrl);
 
   // Prefer API when available; otherwise use local data
-  const tour = tourApi && Object.keys(tourApi).length ? tourApi : localMatch;
+  const [localTour, setLocalTour] = useState(() => {
+    // Check if we have saved reviews for this tour in localStorage
+    if (localMatch && !isLikelyMongoId) {
+      const savedReviews = localStorage.getItem(`tour_reviews_${id}`);
+      if (savedReviews) {
+        const parsedReviews = JSON.parse(savedReviews);
+        return {
+          ...localMatch,
+          reviews: [...(localMatch.reviews || []), ...parsedReviews]
+        };
+      }
+    }
+    return localMatch;
+  });
+  const tour = tourApi && Object.keys(tourApi).length ? tourApi : localTour;
 
   // Destructure tour data if available
   const { photo, title, desc, price, address, reviews, city, distance, maxGroupSize } = tour || {};
   const { totalRating, avgRating } = calculateAvgRating(reviews);
+
+  // Recalculate average rating when reviews change
+  const [currentAvgRating, setCurrentAvgRating] = useState(avgRating);
+
+  useEffect(() => {
+    if (reviews) {
+      const { avgRating: newAvgRating } = calculateAvgRating(reviews);
+      setCurrentAvgRating(newAvgRating);
+    }
+  }, [reviews, tour]);
+
+  // Update initial rating when tour changes
+  useEffect(() => {
+    if (tour && tour.reviews) {
+      const { avgRating: newAvgRating } = calculateAvgRating(tour.reviews);
+      setCurrentAvgRating(newAvgRating);
+    }
+  }, [tour]);
 
   // Format date for review display
   const dateFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
@@ -53,25 +85,33 @@ const TourDetails = () => {
         rating: tourRating,
       };
 
-      // If this tour is from local dataset (non-Mongo id), append locally and stop
-      if (!isLikelyMongoId) {
-        reviewMsgRef.current.value = '';
-        setTourRating(null);
-        if (tour && Array.isArray(tour.reviews)) {
-          tour.reviews = [
-            ...tour.reviews,
-            {
-              _id: Math.random().toString(36).slice(2),
-              username: reviewObj.username,
-              reviewText: reviewObj.reviewText,
-              rating: reviewObj.rating,
-              createdAt: new Date().toISOString(),
-            },
-          ];
-        }
-        alert('Review saved locally for demo data');
-        return;
-      }
+             // If this tour is from local dataset (non-Mongo id), append locally and stop
+       if (!isLikelyMongoId) {
+         reviewMsgRef.current.value = '';
+         setTourRating(null);
+         if (localTour && Array.isArray(localTour.reviews)) {
+           const newReview = {
+             _id: Math.random().toString(36).slice(2),
+             username: reviewObj.username,
+             reviewText: reviewObj.reviewText,
+             rating: reviewObj.rating,
+             createdAt: new Date().toISOString(),
+           };
+           
+           const updatedTour = {
+             ...localTour,
+             reviews: [...localTour.reviews, newReview],
+           };
+           
+           // Save to localStorage
+           const existingReviews = JSON.parse(localStorage.getItem(`tour_reviews_${id}`) || '[]');
+           localStorage.setItem(`tour_reviews_${id}`, JSON.stringify([...existingReviews, newReview]));
+           
+           setLocalTour(updatedTour);
+         }
+         alert('Review saved locally for demo data');
+         return;
+       }
 
       if (!user) {
         alert('Please Sign in to submit a review');
@@ -94,19 +134,27 @@ const TourDetails = () => {
       reviewMsgRef.current.value = '';
       setTourRating(null);
 
-      // Optimistically append the new review to the list if using local data
-      if (tour && Array.isArray(tour.reviews)) {
-        tour.reviews = [
-          ...tour.reviews,
-          {
-            _id: result.data?._id || Math.random().toString(36).slice(2),
-            username: reviewObj.username,
-            reviewText: reviewObj.reviewText,
-            rating: reviewObj.rating,
-            createdAt: new Date().toISOString(),
-          },
-        ];
-      }
+             // Optimistically append the new review to the list if using local data
+       if (localTour && Array.isArray(localTour.reviews)) {
+         const newReview = {
+           _id: result.data?._id || Math.random().toString(36).slice(2),
+           username: reviewObj.username,
+           reviewText: reviewObj.reviewText,
+           rating: reviewObj.rating,
+           createdAt: new Date().toISOString(),
+         };
+         
+         const updatedTour = {
+           ...localTour,
+           reviews: [...localTour.reviews, newReview],
+         };
+         
+         // Save to localStorage for API tours as well
+         const existingReviews = JSON.parse(localStorage.getItem(`tour_reviews_${id}`) || '[]');
+         localStorage.setItem(`tour_reviews_${id}`, JSON.stringify([...existingReviews, newReview]));
+         
+         setLocalTour(updatedTour);
+       }
     } catch (err) {
       alert(err.message);
     }
@@ -130,17 +178,17 @@ const TourDetails = () => {
                 {photo && <img className="animate-fade" src={photo} alt={title} />}
                 <div className="tour_info enhanced-copy animate-slide">
                   <h2>{title}</h2>
-                  {/* Average rating out of 5 */}
-                  <div className="d-flex align-items-center gap-2 mb-2">
-                    {[1,2,3,4,5].map((i) => (
-                      <i
-                        key={`avg-star-${i}`}
-                        className="ri-star-s-fill"
-                        style={{ color: i <= Math.round(avgRating || 0) ? '#f5c518' : '#d2d2d2' }}
-                      ></i>
-                    ))}
-                    <span style={{ fontWeight: 600 }}>{avgRating ? `${avgRating}/5` : 'Not Rated'}</span>
-                  </div>
+                                     {/* Average rating out of 5 */}
+                   <div className="d-flex align-items-center gap-2 mb-2">
+                     {[1,2,3,4,5].map((i) => (
+                       <i
+                         key={`avg-star-${i}`}
+                         className="ri-star-s-fill"
+                         style={{ color: i <= Math.round(currentAvgRating || 0) ? '#f5c518' : '#d2d2d2' }}
+                       ></i>
+                     ))}
+                     <span style={{ fontWeight: 600 }}>{currentAvgRating ? `${currentAvgRating}/5` : 'Not Rated'}</span>
+                   </div>
                   <p>{desc}</p>
                   <h5>Price: ${price}</h5>
                   <h5>Location: {city}, {distance} km</h5>
@@ -149,7 +197,7 @@ const TourDetails = () => {
                                      <div className="d-flex align-items-center gap-5">
                      <span className="tour_rating d-flex align-items-center gap-1">
                        <i className="ri-star-s-fill" style={{ color: 'black' }}></i>
-                       {avgRating !== 0 ? avgRating : ''}
+                       {currentAvgRating !== 0 ? currentAvgRating : ''}
                        {reviews?.length > 0 && <span>{reviews.length}</span>}
                      </span>
 
