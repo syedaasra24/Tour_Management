@@ -147,6 +147,158 @@
     box-shadow: 0 0 0 3px rgba(16, 102, 103, 0.3) !important;
 }
 
+/* Authentication Required Message Styles */
+.auth_required_message {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    margin: 1rem 0;
+    border: 2px dashed rgb(16, 102, 103);
+}
+
+.auth_icon {
+    font-size: 3rem;
+    color: rgb(16, 102, 103);
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.auth_required_message h4 {
+    color: rgb(16, 102, 103);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.auth_required_message p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.auth_buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.auth_buttons .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.auth_buttons .secondary_btn {
+    background: linear-gradient(135deg, rgb(16, 102, 103), #4CAF50);
+    color: white;
+    border: none;
+}
+
+.auth_buttons .secondary_btn:hover {
+    background: linear-gradient(135deg, #4CAF50, rgb(16, 102, 103));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(16, 102, 103, 0.4);
+    color: white;
+}
+
+.auth_buttons .primary_btn {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    border: none;
+}
+
+.auth_buttons .primary_btn:hover {
+    background: linear-gradient(135deg, #ee5a52, #ff6b6b);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    color: white;
+}
+
+.auth_info {
+    background: rgba(16, 102, 103, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid rgb(16, 102, 103);
+}
+
+.auth_info p {
+    color: rgb(16, 102, 103);
+    font-size: 0.9rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.auth_info i {
+    font-size: 1.1rem;
+}
+
+/* User Info Display Styles */
+.user_info_display {
+    background: linear-gradient(135deg, rgba(16, 102, 103, 0.1), rgba(76, 175, 80, 0.1));
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #4CAF50;
+}
+
+.user_info_display p {
+    margin: 0.5rem 0;
+    color: rgb(16, 102, 103);
+    font-weight: 500;
+}
+
+.user_info_display p:first-child {
+    font-size: 1.1rem;
+    color: #4CAF50;
+}
+
+.user_info_display p:last-child {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive adjustments for auth buttons */
+@media (max-width: 768px) {
+    .auth_buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .auth_buttons .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .auth_required_message {
+        padding: 1.5rem 1rem;
+    }
+}
+
 .booking_bottom li{
     display: flex;
     align-items: center;

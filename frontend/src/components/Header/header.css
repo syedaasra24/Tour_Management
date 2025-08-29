@@ -31,8 +31,39 @@
 
 /* -------------------------------------------- */
 
+.nav_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
 .menu {
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav_right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.nav_btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .nav_item a {
@@ -134,7 +165,7 @@ li {
 }
 
 .btn-logout {
-    background: linear-gradient(135deg, #ff4d4d, #ff1a1a);
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
     color: white;
     border: none;
     padding: 12px 20px;
@@ -144,7 +175,7 @@ li {
     cursor: pointer;
     border-radius: 25px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -165,9 +196,9 @@ li {
 }
 
 .btn-logout:hover {
-    background: linear-gradient(135deg, #ff1a1a, #ff4d4d);
+    background: linear-gradient(135deg, #ee5a52, #ff6b6b);
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
 }
 
 /* Enhanced Button Styles - Same Size */
@@ -203,7 +234,7 @@ li {
     gap: 8px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #ff4d4d, #ff1a1a);
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
     color: white;
     padding: 12px 24px;
     border-radius: 25px;
@@ -212,7 +243,7 @@ li {
     letter-spacing: 0.5px;
     min-width: 120px;
     height: 45px;
-    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
 /* Shimmer Effect for Both Buttons */
@@ -241,9 +272,9 @@ li {
 }
 
 .btn.primary_btn:hover {
-    background: linear-gradient(135deg, #ff1a1a, #ff4d4d);
+    background: linear-gradient(135deg, #ee5a52, #ff6b6b);
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
 }
 
 /* Active States */

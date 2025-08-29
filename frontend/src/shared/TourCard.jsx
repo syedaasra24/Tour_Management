@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Card, CardBody } from 'reactstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {calculateAvgRating} from '../utils/avgRating';
 import './tour-card.css';
+import { AuthContext } from '../context/AuthContext';
 
 const TourCard = ({tour}) => {
   const{_id, title, city, photo, price, featured, reviews } = tour;
   const idValue = _id || tour.id;
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const totalRating= calculateAvgRating(reviews);
+
+  const handleTourClick = (e) => {
+    if (!user) {
+      e.preventDefault();
+      // Show alert or redirect to login
+      if (window.confirm('Please login or register to view tour details. Would you like to go to login page?')) {
+        navigate('/login');
+      }
+      return;
+    }
+    // If user is logged in, allow navigation to tour details
+  };
 
   return (
   <div className='tour_card'>
@@ -30,13 +45,13 @@ const TourCard = ({tour}) => {
         </span>
         </div>
         <h5 className='tour_title'>
-        <Link to={`/tours/${idValue}`}>{title}</Link>
+        <Link to={user ? `/tours/${idValue}` : '#'} onClick={handleTourClick}>{title}</Link>
         </h5>
         <div className='card_bottom d-flex align-items-center justify-content-between mt-3'>
           <h5>Rs {price} <span> /per person</span></h5>
 
-          <button className='btn booking_btn'>
-            <Link to={`/tours/${idValue}`}>Book Now</Link>
+          <button className='btn booking_btn' onClick={handleTourClick}>
+            <Link to={user ? `/tours/${idValue}` : '#'}>Book Now</Link>
           </button>
         </div>
       </CardBody>
