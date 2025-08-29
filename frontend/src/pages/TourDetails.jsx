@@ -42,7 +42,7 @@ const TourDetails = () => {
 
   // Destructure tour data if available
   const { photo, title, desc, price, address, reviews, city, distance, maxGroupSize } = tour || {};
-  const { totalRating, avgRating } = calculateAvgRating(reviews);
+  const { avgRating } = calculateAvgRating(reviews);
 
   // Recalculate average rating when reviews change
   const [currentAvgRating, setCurrentAvgRating] = useState(avgRating);

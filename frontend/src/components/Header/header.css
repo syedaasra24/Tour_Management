@@ -10,11 +10,17 @@
     z-index: 700; 
     line-height: 80px;
     background: rgb(16, 102, 103);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     width: 30%;
     padding-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 .logo img {
@@ -35,15 +41,37 @@
     font-weight: 700;
     font-size: 1.3rem;
     font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav_item a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4CAF50, white);
+    transition: width 0.3s ease;
+}
+
+.nav_item a:hover::after {
+    width: 100%;
 }
 
 .nav_item a:hover {
     color: white;
+    transform: translateY(-2px);
 }
 
 .nav_item a.active_link {
     color: whitesmoke;
     text-transform: bold;
+}
+
+.nav_item a.active_link::after {
+    width: 100%;
 }
 
 .nav_item a.active_link:hover {
@@ -55,6 +83,11 @@
     color: #fff;
     font-size: 24px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mobile_menu:hover {
+    transform: scale(1.1);
 }
 
 /* Sticky header styles */
@@ -63,7 +96,7 @@
     height: 80px;
     line-height: 80px;
     background: rgb(16, 102, 103);
-    position: sticky; /* Changed to sticky */
+    position: sticky;
     top: 0;
     left: 0;
     box-shadow: 3px 3px 8px -3px #ddd;
@@ -75,10 +108,12 @@ button a {
     font-size: 18px;
     text-decoration: none;
     font-weight: 900;
+    transition: all 0.3s ease;
 }
 
 button a:hover {
     color: white;
+    transform: translateY(-1px);
 }
 
 button a.active {
@@ -99,101 +134,135 @@ li {
 }
 
 .btn-logout {
-    background-color: #ff4d4d;
-    color: white; /* White text */
+    background: linear-gradient(135deg, #ff4d4d, #ff1a1a);
+    color: white;
     border: none;
-    padding: 10px 10px;
+    padding: 12px 20px;
     line-height: 1.2;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-logout:hover {
-    background-color: #ff1a1a; /* Darker red on hover */
-}
-
-
-.btn.secondary_btn {
-    border: none;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
     position: relative;
     overflow: hidden;
 }
 
-/* Ripple Effect for Buttons */
-.btn.secondary_btn:active::after {
-    color: #ddd;
+.btn-logout::before {
+    content: '';
     position: absolute;
-    width: 200%;
-    height: 200%;
-    top: 50%;
-    left: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    animation: ripple 0.6s linear;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-logout:hover::before {
+    left: 100%;
+}
+
+.btn-logout:hover {
+    background: linear-gradient(135deg, #ff1a1a, #ff4d4d);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
+}
+
+/* Enhanced Button Styles - Same Size */
+.btn.secondary_btn {
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgb(16, 102, 103), #4CAF50);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    height: 45px;
+    box-shadow: 0 4px 15px rgba(16, 102, 103, 0.3);
 }
 
 .btn.primary_btn {
     border: none;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     display: flex;
-    line-height: 1.5;
     align-items: center;
-    gap: 10px;
-    background-color: #ff4d4d;
+    justify-content: center;
+    gap: 8px;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, #ff4d4d, #ff1a1a);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    height: 45px;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
 }
 
-/* Ripple Effect for Buttons */
-.btn.primary_btn:active::after {
-    color: #ddd;
+/* Shimmer Effect for Both Buttons */
+.btn.secondary_btn::before,
+.btn.primary_btn::before {
+    content: '';
     position: absolute;
-    width: 200%;
-    height: 200%;
-    top: 50%;
-    left: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    animation: ripple 0.6s linear;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
 }
 
-@keyframes ripple {
-    to {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0;
-    }
+.btn.secondary_btn:hover::before,
+.btn.primary_btn:hover::before {
+    left: 100%;
 }
 
+/* Hover Effects */
 .btn.secondary_btn:hover {
-    background-color: rgb(13, 175, 13);
+    background: linear-gradient(135deg, #4CAF50, rgb(16, 102, 103));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(16, 102, 103, 0.4);
 }
 
 .btn.primary_btn:hover {
-    background-color: rgb(13, 175, 13);
+    background: linear-gradient(135deg, #ff1a1a, #ff4d4d);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
 }
 
+/* Active States */
+.btn.secondary_btn:active,
+.btn.primary_btn:active {
+    transform: translateY(-1px);
+}
+
+/* Icon Styling */
 .icon {
     font-size: 18px;
-    transition: transform 0.4s ease;
+    transition: all 0.3s ease;
     margin-right: 0px;
 }
 
 /* Icon Animation on Hover */
 .btn:hover .icon {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.1);
 }
-
 
 /* Responsive Styles */
 @media only screen and (max-width: 992px) {
@@ -213,12 +282,12 @@ li {
         justify-content: center;
         align-items: center;
         z-index: 999;
-        display: none; /* Hidden initially */
+        display: none;
         transition: all 0.3s ease-in-out;
     }
 
     .show_menu {
-        display: flex; /* Show navigation when toggled */
+        display: flex;
     }
 
     .menu {
@@ -227,12 +296,21 @@ li {
     }
 
     .mobile_menu {
-        display: block; /* Show mobile menu icon on small screens */
+        display: block;
     }
 
     .nav_item a {
         font-size: 1.5rem;
         color: white;
         font-weight: bold;
+    }
+    
+    /* Mobile button adjustments */
+    .btn.secondary_btn,
+    .btn.primary_btn {
+        min-width: 100px;
+        height: 40px;
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }

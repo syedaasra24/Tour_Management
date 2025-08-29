@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/Home.css'; // Importing the styles for the Home page
-
-// Imported assets
 import Video from '../../src/video.mp4';
 import Subtitle from '../shared/Subtitle';
 import SearchBar from '../shared/SearchBar';
@@ -16,15 +14,8 @@ import Footer from '../components/Footer/Footer';
 import earthImg from '../assets/images/earth.png';
 
 const Home = () => {
-  const [pageCount, setPageCount] = useState(0);
-  const [page] = useState(0);
   const [visibleTours, setVisibleTours] = useState(8);
   const [seeMore, setSeeMore] = useState(true);
-
-  useEffect(() => {
-    const pages = Math.ceil(5 / 8); // later we will use backend
-    setPageCount(pages);
-  }, [page]);
 
   const toggleTours = () => {
     if (seeMore) {

@@ -1,14 +1,40 @@
 .booking{
     padding: 2rem;
-    border-radius: 0.5rem;
+    border-radius: 15px;
     border: 1px solid rgb(229, 231, 235);
     position: sticky;
     top: 80px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.booking:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(16, 102, 103, 0.15);
 }
 
 .booking_top h3{
     font-size: 2rem;
     font-weight: 700;
+    color: rgb(16, 102, 103);
+    transition: all 0.3s ease;
+}
+
+.booking:hover .booking_top h3 {
+    color: #4CAF50;
 }
 
 .booking_top h3 span{
@@ -24,7 +50,13 @@
 }
 
 .booking_top span i {
-    color: black;
+    color: rgb(16, 102, 103);
+    transition: transform 0.3s ease;
+}
+
+.booking_top span:hover i {
+    transform: scale(1.2);
+    color: #4CAF50;
 }
 
 .booking_top {
@@ -32,47 +64,150 @@
     border-bottom: 1px solid rgb(229, 231, 235);
 }
 
-
 .booking_form{
     padding-top: 2rem;
 }
 
 .booking_form h5 {
     margin-bottom: 1rem;
+    color: rgb(16, 102, 103);
+    font-weight: 600;
 }
 
 .booking_form input {
     width: 100%;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 8px;
     color: black;
     font-size: 1rem;
-    border: none;
-    border-bottom: 1px solid rgb(229, 231, 235);
+    border: 2px solid transparent;
+    border-bottom: 2px solid rgb(229, 231, 235);
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .booking_form input:focus {
     outline: none;
+    border-color: rgb(16, 102, 103);
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 102, 103, 0.1);
+}
+
+.booking_form input:hover {
+    background: #fff;
+    transform: translateY(-1px);
+}
+
+/* Enhanced Book Now Button */
+.primary_btn {
+    background: linear-gradient(135deg, rgb(16, 102, 103), #4CAF50) !important;
+    border: none !important;
+    color: white !important;
+    padding: 1rem 2rem !important;
+    border-radius: 25px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 20px rgba(16, 102, 103, 0.3) !important;
+    text-transform: uppercase !important;
+}
+
+.primary_btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.primary_btn:hover::before {
+    left: 100%;
+}
+
+.primary_btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 30px rgba(16, 102, 103, 0.4) !important;
+    background: linear-gradient(135deg, #4CAF50, rgb(16, 102, 103)) !important;
+}
+
+.primary_btn:active {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(16, 102, 103, 0.3) !important;
+}
+
+.primary_btn:focus {
+    box-shadow: 0 0 0 3px rgba(16, 102, 103, 0.3) !important;
 }
 
 .booking_bottom li{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.8rem 0;
+    transition: all 0.3s ease;
+}
+
+.booking_bottom li:hover {
+    background: rgba(16, 102, 103, 0.05);
+    border-radius: 8px;
+    padding-left: 0.5rem;
 }
 
 .booking_bottom li h5, .booking_bottom li span{
     font-size: 1rem;
     color: black;
     font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.booking_bottom li:hover h5,
+.booking_bottom li:hover span {
+    color: rgb(16, 102, 103);
 }
 
 .booking_bottom{
     margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgb(229, 231, 235);
 }
 
 .total h5, .total span{
-    color: black;
+    color: rgb(16, 102, 103) !important;
     font-weight: 700 !important;
     font-size: 1.1rem !important;
+    transition: all 0.3s ease;
+}
+
+.total:hover h5,
+.total:hover span {
+    color: #4CAF50 !important;
+    transform: scale(1.05);
+}
+
+/* Form group animations */
+.booking_form .form-group {
+    animation: slideInUp 0.6s ease-out both;
+}
+
+.booking_form .form-group:nth-child(1) { animation-delay: 0.1s; }
+.booking_form .form-group:nth-child(2) { animation-delay: 0.2s; }
+.booking_form .form-group:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
