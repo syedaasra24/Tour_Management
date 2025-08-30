@@ -19,7 +19,6 @@ export const createUser =  async (req,res)=> {
     }
 };
 
-
 // update User
 export const updateUser = async (req, res) => {
     const id = req.params.id;
@@ -70,12 +69,13 @@ export const getSingleUser = async (req, res) => {
     try {
         const users = await User.findById(id);
 
-        res.status(200)
+        return res.status(200)
         .json({
          success: true,
          message: "Successfully ",
          data: users,
         });
+
     } catch (err) {
         res.status(404)
         .json({

@@ -1,15 +1,40 @@
-
 .booking{
     padding: 2rem;
-    border-radius: 0.5rem;
+    border-radius: 15px;
     border: 1px solid rgb(229, 231, 235);
     position: sticky;
     top: 80px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.booking:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(16, 102, 103, 0.15);
 }
 
 .booking_top h3{
     font-size: 2rem;
     font-weight: 700;
+    color: rgb(16, 102, 103);
+    transition: all 0.3s ease;
+}
+
+.booking:hover .booking_top h3 {
+    color: #4CAF50;
 }
 
 .booking_top h3 span{
@@ -25,7 +50,13 @@
 }
 
 .booking_top span i {
-    color: black;
+    color: rgb(16, 102, 103);
+    transition: transform 0.3s ease;
+}
+
+.booking_top span:hover i {
+    transform: scale(1.2);
+    color: #4CAF50;
 }
 
 .booking_top {
@@ -33,49 +64,735 @@
     border-bottom: 1px solid rgb(229, 231, 235);
 }
 
-
 .booking_form{
     padding-top: 2rem;
 }
 
 .booking_form h5 {
     margin-bottom: 1rem;
+    color: rgb(16, 102, 103);
+    font-weight: 600;
 }
 
 .booking_form input {
     width: 100%;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 8px;
     color: black;
     font-size: 1rem;
-    border: none;
-    border-bottom: 1px solid rgb(229, 231, 235);
+    border: 2px solid transparent;
+    border-bottom: 2px solid rgb(229, 231, 235);
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .booking_form input:focus {
     outline: none;
+    border-color: rgb(16, 102, 103);
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 102, 103, 0.1);
+}
+
+.booking_form input:hover {
+    background: #fff;
+    transform: translateY(-1px);
+}
+
+/* Enhanced Book Now Button */
+.primary_btn {
+    background: linear-gradient(135deg, rgb(16, 102, 103), #4CAF50) !important;
+    border: none !important;
+    color: white !important;
+    padding: 1rem 2rem !important;
+    border-radius: 25px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 20px rgba(16, 102, 103, 0.3) !important;
+    text-transform: uppercase !important;
+}
+
+.primary_btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.primary_btn:hover::before {
+    left: 100%;
+}
+
+.primary_btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 30px rgba(16, 102, 103, 0.4) !important;
+    background: linear-gradient(135deg, #4CAF50, rgb(16, 102, 103)) !important;
+}
+
+.primary_btn:active {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(16, 102, 103, 0.3) !important;
+}
+
+.primary_btn:focus {
+    box-shadow: 0 0 0 3px rgba(16, 102, 103, 0.3) !important;
+}
+
+/* Authentication Required Message Styles */
+.auth_required_message {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    margin: 1rem 0;
+    border: 2px dashed rgb(16, 102, 103);
+}
+
+.auth_icon {
+    font-size: 3rem;
+    color: rgb(16, 102, 103);
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.auth_required_message h4 {
+    color: rgb(16, 102, 103);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.auth_required_message p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.auth_buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.auth_buttons .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.auth_buttons .secondary_btn {
+    background: linear-gradient(135deg, rgb(16, 102, 103), #4CAF50);
+    color: white;
+    border: none;
+}
+
+.auth_buttons .secondary_btn:hover {
+    background: linear-gradient(135deg, #4CAF50, rgb(16, 102, 103));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(16, 102, 103, 0.4);
+    color: white;
+}
+
+.auth_buttons .primary_btn {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    border: none;
+}
+
+.auth_buttons .primary_btn:hover {
+    background: linear-gradient(135deg, #ee5a52, #ff6b6b);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    color: white;
+}
+
+.auth_info {
+    background: rgba(16, 102, 103, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid rgb(16, 102, 103);
+}
+
+.auth_info p {
+    color: rgb(16, 102, 103);
+    font-size: 0.9rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.auth_info i {
+    font-size: 1.1rem;
+}
+
+/* User Info Display Styles */
+.user_info_display {
+    background: linear-gradient(135deg, rgba(16, 102, 103, 0.1), rgba(76, 175, 80, 0.1));
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #4CAF50;
+}
+
+.user_info_display p {
+    margin: 0.5rem 0;
+    color: rgb(16, 102, 103);
+    font-weight: 500;
+}
+
+.user_info_display p:first-child {
+    font-size: 1.1rem;
+    color: #4CAF50;
+}
+
+.user_info_display p:last-child {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ===== RESPONSIVE DESIGN FOR BOOKING COMPONENT ===== */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .booking {
+        padding: 2.5rem;
+        max-width: 400px;
+    }
+    
+    .booking_top h3 {
+        font-size: 2.2rem;
+    }
+    
+    .booking_form input {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .primary_btn {
+        padding: 1.2rem 2.5rem !important;
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) {
+    .booking {
+        padding: 2.2rem;
+        max-width: 380px;
+    }
+    
+    .booking_top h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) {
+    .booking {
+        position: static;
+        top: auto;
+        padding: 2rem;
+        margin: 2rem auto;
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .booking_form h5 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .booking_form input {
+        padding: 0.9rem;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+    
+    .primary_btn {
+        padding: 1rem 2rem !important;
+        font-size: 1.1rem !important;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .booking_bottom li {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+    
+    .auth_required_message {
+        padding: 2rem 1.5rem;
+    }
+    
+    .auth_required_message h4 {
+        font-size: 1.6rem;
+    }
+    
+    .auth_required_message p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Large (576px to 767px) */
+@media (max-width: 767px) {
+    .booking {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+        max-width: 100%;
+        border-radius: 12px;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .booking_top h3 span {
+        font-size: 1rem;
+    }
+    
+    .booking_top span {
+        font-size: 1rem;
+    }
+    
+    .booking_form h5 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+        text-align: left;
+    }
+    
+    .booking_form input {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+        border-radius: 8px;
+        margin-bottom: 1.2rem;
+    }
+    
+    .primary_btn {
+        padding: 0.9rem 1.8rem !important;
+        font-size: 1rem !important;
+        width: 100%;
+        margin-top: 1rem;
+        border-radius: 20px !important;
+    }
+    
+    .booking_bottom li {
+        padding: 0.8rem 0;
+        font-size: 0.95rem;
+    }
+    
+    .booking_bottom li h5,
+    .booking_bottom li span {
+        font-size: 0.95rem;
+    }
+    
+    .total h5,
+    .total span {
+        font-size: 1rem !important;
+    }
+    
+    /* Auth message adjustments */
+    .auth_required_message {
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+    
+    .auth_required_message h4 {
+        font-size: 1.4rem;
+    }
+    
+    .auth_required_message p {
+        font-size: 1rem;
+    }
+    
+    .auth_buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .auth_buttons .btn {
+        width: 100%;
+        max-width: 250px;
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .auth_icon {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile Small (up to 575px) */
+@media (max-width: 575px) {
+    .booking {
+        padding: 1.2rem;
+        margin: 1rem auto;
+        border-radius: 10px;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.4rem;
+    }
+    
+    .booking_top h3 span {
+        font-size: 0.9rem;
+    }
+    
+    .booking_top span {
+        font-size: 0.9rem;
+    }
+    
+    .booking_form h5 {
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .booking_form input {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+    }
+    
+    .primary_btn {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.95rem !important;
+        width: 100%;
+        margin-top: 0.8rem;
+        border-radius: 18px !important;
+    }
+    
+    .booking_bottom {
+        margin-top: 0.8rem;
+        padding-top: 0.8rem;
+    }
+    
+    .booking_bottom li {
+        padding: 0.6rem 0;
+        font-size: 0.9rem;
+    }
+    
+    .booking_bottom li h5,
+    .booking_bottom li span {
+        font-size: 0.9rem;
+    }
+    
+    .total h5,
+    .total span {
+        font-size: 0.95rem !important;
+    }
+    
+    /* Auth message adjustments */
+    .auth_required_message {
+        padding: 1.2rem 0.8rem;
+        border-radius: 10px;
+    }
+    
+    .auth_required_message h4 {
+        font-size: 1.2rem;
+    }
+    
+    .auth_required_message p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .auth_buttons .btn {
+        max-width: 100%;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .auth_icon {
+        font-size: 2rem;
+    }
+    
+    .auth_info {
+        padding: 0.8rem;
+        border-radius: 8px;
+    }
+    
+    .auth_info p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra Small Mobile (up to 375px) */
+@media (max-width: 375px) {
+    .booking {
+        padding: 1rem;
+        margin: 0.8rem auto;
+        border-radius: 8px;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.2rem;
+    }
+    
+    .booking_top h3 span {
+        font-size: 0.8rem;
+    }
+    
+    .booking_top span {
+        font-size: 0.8rem;
+    }
+    
+    .booking_form h5 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .booking_form input {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+        border-radius: 5px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .primary_btn {
+        padding: 0.7rem 1.2rem !important;
+        font-size: 0.9rem !important;
+        width: 100%;
+        margin-top: 0.6rem;
+        border-radius: 15px !important;
+    }
+    
+    .booking_bottom li {
+        padding: 0.5rem 0;
+        font-size: 0.85rem;
+    }
+    
+    .booking_bottom li h5,
+    .booking_bottom li span {
+        font-size: 0.85rem;
+    }
+    
+    .total h5,
+    .total span {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Auth message adjustments */
+    .auth_required_message {
+        padding: 1rem 0.6rem;
+        border-radius: 8px;
+    }
+    
+    .auth_required_message h4 {
+        font-size: 1.1rem;
+    }
+    
+    .auth_required_message p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .auth_buttons .btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .auth_icon {
+        font-size: 1.8rem;
+    }
+}
+
+/* iOS Safari specific optimizations */
+@supports (-webkit-touch-callout: none) {
+    .booking_form input {
+        -webkit-appearance: none;
+        border-radius: 0;
+        font-size: 16px; /* Prevent zoom on focus */
+    }
+    
+    .primary_btn {
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .auth_buttons .btn {
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .booking {
+        padding: 1rem;
+        margin: 0.5rem auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .booking_form h5 {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .booking_form input {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .primary_btn {
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
+        margin-top: 0.5rem;
+    }
+    
+    .booking_bottom li {
+        padding: 0.4rem 0;
+    }
+    
+    .auth_required_message {
+        padding: 0.8rem;
+    }
+    
+    .auth_icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .booking {
+        border: 2px solid var(--primary-color);
+    }
+    
+    .booking_form input {
+        border: 2px solid var(--text-dark);
+    }
+    
+    .primary_btn {
+        border: 2px solid white !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .booking {
+        animation: none;
+    }
+    
+    .booking:hover {
+        transform: none;
+    }
+    
+    .primary_btn:hover {
+        transform: none !important;
+    }
+    
+    .auth_icon {
+        animation: none;
+    }
 }
 
 .booking_bottom li{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.8rem 0;
+    transition: all 0.3s ease;
+}
+
+.booking_bottom li:hover {
+    background: rgba(16, 102, 103, 0.05);
+    border-radius: 8px;
+    padding-left: 0.5rem;
 }
 
 .booking_bottom li h5, .booking_bottom li span{
     font-size: 1rem;
     color: black;
     font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.booking_bottom li:hover h5,
+.booking_bottom li:hover span {
+    color: rgb(16, 102, 103);
 }
 
 .booking_bottom{
     margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgb(229, 231, 235);
 }
 
 .total h5, .total span{
-    color: black;
+    color: rgb(16, 102, 103) !important;
     font-weight: 700 !important;
     font-size: 1.1rem !important;
+    transition: all 0.3s ease;
 }
 
+.total:hover h5,
+.total:hover span {
+    color: #4CAF50 !important;
+    transform: scale(1.05);
+}
 
+/* Form group animations */
+.booking_form .form-group {
+    animation: slideInUp 0.6s ease-out both;
+}
+
+.booking_form .form-group:nth-child(1) { animation-delay: 0.1s; }
+.booking_form .form-group:nth-child(2) { animation-delay: 0.2s; }
+.booking_form .form-group:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

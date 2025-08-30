@@ -35,7 +35,7 @@ const testimonialsData = [
   },
 ];
 
- const Testimonials = () => {
+const Testimonials = () => {
 
 const settings = {
   dots: true,
@@ -62,8 +62,6 @@ const settings = {
     },
   ],
 };
-
-
 
 
   return (

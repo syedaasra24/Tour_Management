@@ -5,6 +5,24 @@
    border-radius: 0.5rem;
    margin-bottom: 2.5rem;
 }
+/* Subtle entrance animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade {
+  animation: fadeIn .6s ease-out both;
+}
+
+.animate-slide {
+  animation: slideUp .6s ease-out .1s both;
+}
     
 .tour_info , .tour_reviews{
     border-radius: 0.5rem;
@@ -45,6 +63,13 @@
     line-height: 30px;
     font-size: 1rem;
     color: black;
+  }
+
+  /* Slightly improved reading rhythm for paragraphs */
+  .tour_info.enhanced-copy p {
+    line-height: 1.8;
+    letter-spacing: 0.1px;
+    word-spacing: 0.4px;
   }
 
  

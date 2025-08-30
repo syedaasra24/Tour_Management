@@ -1,10 +1,9 @@
-
 import React, { useRef, useContext } from 'react';
 import { Container, Row, } from 'reactstrap';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { FaSignInAlt, FaUserPlus, FaAngleLeft } from 'react-icons/fa'; 
 import './header.css';
-import logo from '../../assets/images/logo2.png';
+import logo from '../../assets/images/Logo1.png';
 import { AuthContext } from './../../context/AuthContext';
 
 const nav_links = [

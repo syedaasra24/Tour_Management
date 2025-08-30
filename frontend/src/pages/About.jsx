@@ -1,106 +1,3 @@
-// import React from 'react';
-// import './About.css';
-
-// import Video from '../../src/video1.mp4';
-// import Subtitle from '../shared/Subtitle';
-// import SearchBar from '../shared/SearchBar';
-// import Footer from '../components/Footer/Footer';
-
-
-
-// import tourImg01 from "../assets/images/tour-01.jpg";
-
-// const About = () => {
-//   const member = [
-//     {
-//       id: "01",
-//       title: "Saathi Paul",
-//       role : "Frontend Developer",
-//       reviews: [
-//         {
-//           name: "Saathi Paul",
-//         },
-//       ],
-//       photo: tourImg01,
-//     },
-
-//     {
-//       id: "01",
-//       title: "Saathi Paul",
-//       role : "Frontend Developer",
-//       reviews: [
-//         {
-//           name: "Mukesh roy",
-//         },
-//       ],
-//       photo: tourImg01,
-//     },
-
-//     {
-//       id: "01",
-//       title: "Saathi Paul",
-//       role : "Frontend Developer",
-//       reviews: [
-//         {
-//           name: "Mukesh roy",
-//         },
-//       ],
-//       photo: tourImg01,
-//     },
-    
-//     {
-//       id: "01",
-//       title: "Saathi Paul",
-//       role : "Frontend Developer",
-//       reviews: [
-//         {
-//           name: "Mukesh roy",
-//         },
-//       ],
-//       photo: tourImg01,
-//     },
-    
-//     {
-//       id: "01",
-//       title: "Saathi Paul",
-//       role : "Frontend Developer",
-//       reviews: [
-//         {
-//           name: "Mukesh roy",
-//         },
-//       ],
-//       photo: tourImg01,
-//     },
-    
-    
-//   ];
-//   return (
-//     <div className='About'>
-//       {/* Background Video Section */}
-//       <div className='videoBg1'>
-//         <video src={Video} autoPlay loop muted></video>
-//       </div>
-
-//       {/* Section Text */}
-//       <div className='sectionText1'>
-//         <h1>About Us</h1>
-//         <br /><br />
-//         <SearchBar />
-//         <Subtitle />
-//       </div>
-
-//       {/* Footer Component */}
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default About;
-
-
-
-
-
 import React from 'react';
 import './About.css';
 
@@ -118,10 +15,10 @@ import tourImg05 from "../assets/images/photo05.jpg"; // Import your team member
 const About = () => {
   const team = [
     { id: "01", name: "Saathi Paul", role: "Frontend Developer", photo: tourImg01 },
-    { id: "02", name: "Anshu Raj", role: "Backend Developer", photo: tourImg02 },
-    { id: "03", name: "Ankita Chowdhury", role: "Frontend Developer", photo: tourImg03 },
-    { id: "04", name: "Bapon Paramanik", role: "Backend Developer", photo: tourImg04 },
-    { id: "05", name: "Sayeda Asra Faisal", role: "Frontend Developer", photo: tourImg05 },
+    { id: "02", name: "Ankita Chowdhury", role: "Frontend Developer", photo: tourImg03 },
+    { id: "03", name: "Sayeda Asra Faisal", role: "Frontend Developer", photo: tourImg05 },
+    { id: "04", name: "Anshu Raj", role: "Backend Developer", photo: tourImg02 },
+    { id: "05", name: "Bapon Paramanik", role: "Backend Developer", photo: tourImg04 },
   ];
 
   return (
@@ -135,16 +32,17 @@ const About = () => {
         <SearchBar />
         <Subtitle />
       </div>
-
+       
       <div className='welcome'>
         <p>Welcome to Travel Tales</p>
       </div>
       <div className='paragraph'>
         <p>
-          We’re a team of five MERN stack developers dedicated to making your travel planning seamless and exciting. 
-          Our platform offers curated tour packages for every kind of traveler. 
-          With a passion for tech and exploration, we’re here to connect you to unforgettable journeys. 
-          Start your next adventure with us today!
+          Embark on extraordinary journeys with Travel Tales, where innovation meets adventure. 
+          Our passionate team of five MERN stack developers has crafted a cutting-edge platform 
+          that transforms your travel dreams into reality. We specialize in curating exceptional 
+          tour experiences that cater to every traveler's unique preferences, ensuring your 
+          adventures are not just memorable but truly extraordinary.
         </p>
       </div>
 
@@ -152,50 +50,64 @@ const About = () => {
         <div className="visionSection">
           <h2>Our Vision</h2>
           <p>
-            Our mission at Travel Tales is to bridge the gap between dreams and destinations by creating a reliable and user-friendly 
-            platform for travelers. We envision a world where exploring new places is accessible, safe, and enjoyable for everyone. 
-            Whether you’re a solo adventurer, family traveler, or a group of friends, we aim to bring you closer to the experiences 
-            you seek and cherish.
+            At Travel Tales, we envision a world where extraordinary travel experiences are 
+            accessible to everyone. Our mission is to revolutionize the way people discover, 
+            plan, and experience the world around them. We believe that every journey should 
+            be more than just a trip—it should be a transformative experience that enriches 
+            your life and broadens your horizons. Whether you're seeking solo adventures, 
+            family bonding experiences, or group expeditions, we're here to make your travel 
+            aspirations come to life.
           </p>
         </div>
 
         <div className="trustSection">
-          <h2>Why People Trust Us</h2>
+          <h2>Why Travelers Choose Us</h2>
           <p>
-            Trust is the foundation of our platform. Here’s why our users choose Travel Tales:
+            Trust is the cornerstone of our success, and we've earned it through unwavering 
+            commitment to excellence. Here's what sets Travel Tales apart:
           </p>
           <ul>
-            <li><strong>Transparent Pricing:</strong> We provide honest, up-front costs for every booking.</li>
-            <li><strong>Reliable and Secure Bookings:</strong> Our secure systems ensure all payments and personal details remain protected.</li>
-            <li><strong>Quality Assurance:</strong> We partner only with trusted providers to offer quality experiences.</li>
-            <li><strong>24/7 Customer Support:</strong> Our support team is here to assist you at every stage of your journey.</li>
+            <li><strong>Transparent & Honest Pricing:</strong> Complete transparency in all costs with no hidden fees or surprises.</li>
+            <li><strong>Bank-Grade Security:</strong> State-of-the-art encryption protects your personal data and payment information.</li>
+            <li><strong>Curated Excellence:</strong> Every tour and experience is personally vetted to ensure exceptional quality.</li>
+            <li><strong>Round-the-Clock Support:</strong> Our dedicated team is available 24/7 to assist you throughout your journey.</li>
+            <li><strong>Flexible Booking Options:</strong> Customizable plans that adapt to your schedule and preferences.</li>
           </ul>
         </div>
 
         <div className="servicesSection">
-          <h2>Our Services</h2>
+          <h2>Premium Services We Offer</h2>
           <p>
-            From hassle-free booking to unique travel experiences, our services are designed to make every trip unforgettable.
+            We go beyond traditional travel booking to deliver comprehensive, personalized 
+            experiences that exceed expectations and create lasting memories.
           </p>
           <ul>
-            <li><strong>Curated Packages:</strong> Carefully crafted itineraries for various travel styles and interests.</li>
-            <li><strong>Customizable Plans:</strong> Tailor your travel experience with flexible, customizable options.</li>
-            <li><strong>Secure Online Booking:</strong> A user-friendly and safe booking process for peace of mind.</li>
-            <li><strong>Dedicated Support:</strong> Available for group, solo, and family travelers alike.</li>
+            <li><strong>Expertly Curated Packages:</strong> Handpicked destinations and experiences tailored to diverse travel styles.</li>
+            <li><strong>Personalized Travel Planning:</strong> Custom itineraries designed around your interests, budget, and timeline.</li>
+            <li><strong>Seamless Digital Experience:</strong> Intuitive platform with real-time updates and instant confirmations.</li>
+            <li><strong>Comprehensive Travel Support:</strong> From initial planning to post-trip assistance, we're with you every step.</li>
+            <li><strong>Exclusive Access:</strong> Special deals and unique experiences available only to our valued customers.</li>
           </ul>
         </div>
 
         <div className="commitmentSection">
-          <h2>Our Commitment</h2>
+          <h2>Our Unwavering Commitment</h2>
           <p>
-            At Travel Tales, we are committed to bringing our users the best experiences with professionalism and integrity. 
-            We strive to innovate constantly, listening to our customers to improve and expand our offerings. Every journey 
-            booked with us is an opportunity to build trust, create memories, and make travel dreams a reality.
+            Travel Tales is built on a foundation of integrity, innovation, and customer 
+            satisfaction. We continuously evolve our platform based on real user feedback, 
+            ensuring every feature serves your needs. Our commitment extends beyond booking 
+            tours—we're committed to being your trusted travel partner, helping you create 
+            stories worth sharing and memories that last a lifetime. Every booking represents 
+            our promise to deliver excellence, reliability, and unforgettable experiences.
           </p>
         </div>
 
         <div className="teamSection">
-          <h2>Meet Our Team</h2>
+          <h2>Meet Our Exceptional Team</h2>
+          <p>
+            Behind every successful journey is our dedicated team of passionate professionals 
+            who bring expertise, creativity, and dedication to every aspect of your travel experience.
+          </p>
           <div className="teamContainer">
             {team.map((member) => (
               <div key={member.id} className="teamMember">
