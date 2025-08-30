@@ -2,13 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose"; 
 import cors from "cors"; 
-import cookieParser from "cookie-parser"; 
-import helmet from "helmet";
-import rateLimit from "express-rate-limit";
-import morgan from "morgan";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import cookieParser from "cookie-parser";
 
 import tourRoute from './routes/tours.js';
 import userRoute from './routes/users.js';
@@ -40,58 +34,12 @@ const connect = async()=>{
 	}	
 };
 
-// Set up logging
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-// Create logs directory if it doesn't exist
-const logsDir = path.join(__dirname, 'logs');
-if (!fs.existsSync(logsDir)) {
-	fs.mkdirSync(logsDir);
-}
-
-// Create a write stream for access logs
-const accessLogStream = fs.createWriteStream(
-	path.join(logsDir, 'access.log'),
-	{ flags: 'a' }
-);
 
 //middleware
-app.use(helmet());
-app.use(express.json({ limit: '10kb' }));
+app.use(express.json());
 app.use(cors(corsOptions));
 app.use(cookieParser());
-
-// Logging middleware
-if (process.env.NODE_ENV === 'development') {
-	app.use(morgan('dev')); // Log to console in development
-} else {
-	app.use(morgan('combined', { stream: accessLogStream })); // Log to file in production
-}
-
-// Set security HTTP headers
-app.use(helmet.contentSecurityPolicy({
-	directives: {
-		defaultSrc: ["'self'"],
-		scriptSrc: ["'self'", "'unsafe-inline'", "data:", "blob:"],
-		connectSrc: ["'self'", "http://localhost:4000"],
-		imgSrc: ["'self'", "data:", "blob:"],
-		frameSrc: ["'self'"],
-		fontSrc: ["'self'", "https:", "data:"],
-	}
-}));
-
-// Rate limiting to prevent brute force attacks
-const limiter = {
-	windowMs: 15 * 60 * 1000, // 15 minutes
-	max: 100, // limit each IP to 100 requests per windowMs
-	message: 'Too many requests from this IP, please try again after 15 minutes'
-};
-
-// Apply rate limiting to authentication routes
-if (process.env.NODE_ENV === 'production') {
-	app.use('/api/v1/auth', rateLimit(limiter));
-}
 
 // Routes
 app.use('/api/v1/auth', authRoute);
@@ -109,7 +57,7 @@ app.use((err, req, res, next) => {
 		success: false,
 		status: errorStatus,
 		message: errorMessage,
-		stack: process.env.NODE_ENV === "development" ? err.stack : {}
+		stack: err.stack
 	});
 });
 
