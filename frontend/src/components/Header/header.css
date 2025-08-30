@@ -24,7 +24,7 @@
 }
 
 .logo img {
-    width: 30%;
+    width: 35%;
     margin-right: 0px;
     padding-bottom: 4px;
 }
@@ -354,12 +354,13 @@ li {
     }
     
     .logo {
-        width: 25%;
-        padding-right: 15px;
+        width: 18%;
+        padding-right: 10px;
     }
     
     .logo img {
-        width: 130px;
+        width: 100px;
+        padding-bottom: 8px;
     }
     
     .nav_wrapper {
@@ -376,24 +377,25 @@ li {
     
     .btn.secondary_btn,
     .btn.primary_btn {
-        min-width: 90px;
-        height: 38px;
-        font-size: 13px;
-        padding: 8px 15px;
+        min-width: 85px;
+        height: 36px;
+        font-size: 12px;
+        padding: 7px 12px;
     }
     
     .btn-logout {
-        padding: 10px 15px;
-        font-size: 16px;
+        padding: 8px 14px;
+        font-size: 14px;
+        border-radius: 20px;
     }
     
     h5.mb-0.text-white {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
-/* Mobile M - 375px */
-@media only screen and (max-width: 375px) {
+/* Mobile L - 425px */
+@media only screen and (max-width: 425px) {
     .header {
         height: 60px;
         line-height: 60px;
@@ -401,12 +403,12 @@ li {
     
     .logo {
         width: 20%;
-        padding-right: 10px;
+        padding-right: 5px;
     }
     
     .logo img {
-        width: 100px;
-        padding-bottom: 8px;
+        width: 70px;
+        padding-bottom: 5px;
     }
     
     .nav_wrapper {
@@ -415,84 +417,32 @@ li {
     
     .nav_right {
         gap: 0.3rem;
+        margin-top: -5px;
     }
     
     .nav_btns {
         gap: 0.3rem;
+        margin-top: -5px;
     }
     
     .btn.secondary_btn,
     .btn.primary_btn {
-        min-width: 70px;
-        height: 32px;
-        font-size: 11px;
-        padding: 5px 10px;
-    }
-    
-    .btn-logout {
-        padding: 6px 12px;
-        font-size: 13px;
-        border-radius: 20px;
-    }
-    
-    h5.mb-0.text-white {
-        font-size: 0.85rem;
-    }
-    
-    .icon {
-        font-size: 14px;
-    }
-    
-    .mobile_menu {
-        font-size: 20px;
-    }
-}
-
-/* Mobile S - 320px */
-@media only screen and (max-width: 320px) {
-    .header {
-        height: 55px;
-        line-height: 55px;
-    }
-    
-    .logo {
-        width: 18%;
-        padding-right: 5px;
-    }
-    
-    .logo img {
-        width: 80px;
-        padding-bottom: 5px;
-    }
-    
-    .nav_wrapper {
-        padding: 0 8px;
-    }
-    
-    .nav_right {
-        gap: 0.2rem;
-    }
-    
-    .nav_btns {
-        gap: 0.2rem;
-    }
-    
-    .btn.secondary_btn,
-    .btn.primary_btn {
-        min-width: 60px;
-        height: 28px;
+        min-width: 65px;
+        height: 30px;
         font-size: 10px;
         padding: 4px 8px;
+        margin-top: -5px;
     }
     
     .btn-logout {
         padding: 5px 10px;
         font-size: 11px;
         border-radius: 15px;
+        margin-top: -5px;
     }
     
     h5.mb-0.text-white {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
     
     .icon {
@@ -501,5 +451,125 @@ li {
     
     .mobile_menu {
         font-size: 18px;
+    }
+}
+
+/* Mobile M - 375px */
+@media only screen and (max-width: 375px) {
+    .header {
+        height: 55px;
+        line-height: 55px;
+    }
+    
+    .logo {
+        width: 18%;
+        padding-right: 4px;
+    }
+    
+    .logo img {
+        width: 60px;
+        padding-bottom: 5px;
+    }
+    
+    .nav_wrapper {
+        padding: 0 8px;
+    }
+    
+    .nav_right {
+        gap: 0.25rem;
+        margin-top: -7px;
+    }
+    
+    .nav_btns {
+        gap: 0.25rem;
+        margin-top: -7px;
+    }
+    
+    .btn.secondary_btn,
+    .btn.primary_btn {
+        min-width: 60px;
+        height: 28px;
+        font-size: 9px;
+        padding: 3px 6px;
+        margin-top: -7px;
+    }
+    
+    .btn-logout {
+        padding: 4px 8px;
+        font-size: 10px;
+        border-radius: 14px;
+        margin-top: -7px;
+    }
+    
+    h5.mb-0.text-white {
+        font-size: 0.75rem;
+    }
+    
+    .icon {
+        font-size: 11px;
+    }
+    
+    .mobile_menu {
+        font-size: 16px;
+    }
+}
+
+/* Mobile S - 320px */
+@media only screen and (max-width: 320px) {
+    .header {
+        height: 45px;
+        line-height: 45px;
+    }
+    
+    .logo {
+        width: 16%;
+        padding-right: 3px;
+    }
+    
+    .logo img {
+        width: 50px;
+        padding-bottom: 3px;
+    }
+    
+    .nav_wrapper {
+        padding: 0 5px;
+    }
+    
+    .nav_right {
+        gap: 0.12rem;
+        margin-top: -10px;
+    }
+    
+    .nav_btns {
+        gap: 0.12rem;
+        margin-top: -10px;
+    }
+    
+    .btn.secondary_btn,
+    .btn.primary_btn {
+        min-width: 50px;
+        height: 24px;
+        font-size: 8px;
+        padding: 2px 4px;
+        margin-top: -10px;
+    }
+    
+    .btn-logout {
+        padding: 3px 6px;
+        font-size: 9px;
+        border-radius: 12px;
+        margin-top: -10px;
+    }
+    
+    h5.mb-0.text-white {
+        font-size: 0.65rem;
+    }
+    
+    .icon {
+        font-size: 9px;
+    }
+    
+    .mobile_menu {
+        font-size: 14px;
     }
 }
