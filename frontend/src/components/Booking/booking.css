@@ -282,20 +282,453 @@
     color: #666;
 }
 
-/* Responsive adjustments for auth buttons */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE DESIGN FOR BOOKING COMPONENT ===== */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .booking {
+        padding: 2.5rem;
+        max-width: 400px;
+    }
+    
+    .booking_top h3 {
+        font-size: 2.2rem;
+    }
+    
+    .booking_form input {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .primary_btn {
+        padding: 1.2rem 2.5rem !important;
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) {
+    .booking {
+        padding: 2.2rem;
+        max-width: 380px;
+    }
+    
+    .booking_top h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) {
+    .booking {
+        position: static;
+        top: auto;
+        padding: 2rem;
+        margin: 2rem auto;
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .booking_form h5 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .booking_form input {
+        padding: 0.9rem;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+    
+    .primary_btn {
+        padding: 1rem 2rem !important;
+        font-size: 1.1rem !important;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .booking_bottom li {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+    
+    .auth_required_message {
+        padding: 2rem 1.5rem;
+    }
+    
+    .auth_required_message h4 {
+        font-size: 1.6rem;
+    }
+    
+    .auth_required_message p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Large (576px to 767px) */
+@media (max-width: 767px) {
+    .booking {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+        max-width: 100%;
+        border-radius: 12px;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .booking_top h3 span {
+        font-size: 1rem;
+    }
+    
+    .booking_top span {
+        font-size: 1rem;
+    }
+    
+    .booking_form h5 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+        text-align: left;
+    }
+    
+    .booking_form input {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+        border-radius: 8px;
+        margin-bottom: 1.2rem;
+    }
+    
+    .primary_btn {
+        padding: 0.9rem 1.8rem !important;
+        font-size: 1rem !important;
+        width: 100%;
+        margin-top: 1rem;
+        border-radius: 20px !important;
+    }
+    
+    .booking_bottom li {
+        padding: 0.8rem 0;
+        font-size: 0.95rem;
+    }
+    
+    .booking_bottom li h5,
+    .booking_bottom li span {
+        font-size: 0.95rem;
+    }
+    
+    .total h5,
+    .total span {
+        font-size: 1rem !important;
+    }
+    
+    /* Auth message adjustments */
+    .auth_required_message {
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+    
+    .auth_required_message h4 {
+        font-size: 1.4rem;
+    }
+    
+    .auth_required_message p {
+        font-size: 1rem;
+    }
+    
     .auth_buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
     
     .auth_buttons .btn {
         width: 100%;
-        max-width: 200px;
+        max-width: 250px;
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .auth_icon {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile Small (up to 575px) */
+@media (max-width: 575px) {
+    .booking {
+        padding: 1.2rem;
+        margin: 1rem auto;
+        border-radius: 10px;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.4rem;
+    }
+    
+    .booking_top h3 span {
+        font-size: 0.9rem;
+    }
+    
+    .booking_top span {
+        font-size: 0.9rem;
+    }
+    
+    .booking_form h5 {
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .booking_form input {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+    }
+    
+    .primary_btn {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.95rem !important;
+        width: 100%;
+        margin-top: 0.8rem;
+        border-radius: 18px !important;
+    }
+    
+    .booking_bottom {
+        margin-top: 0.8rem;
+        padding-top: 0.8rem;
+    }
+    
+    .booking_bottom li {
+        padding: 0.6rem 0;
+        font-size: 0.9rem;
+    }
+    
+    .booking_bottom li h5,
+    .booking_bottom li span {
+        font-size: 0.9rem;
+    }
+    
+    .total h5,
+    .total span {
+        font-size: 0.95rem !important;
+    }
+    
+    /* Auth message adjustments */
+    .auth_required_message {
+        padding: 1.2rem 0.8rem;
+        border-radius: 10px;
+    }
+    
+    .auth_required_message h4 {
+        font-size: 1.2rem;
+    }
+    
+    .auth_required_message p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .auth_buttons .btn {
+        max-width: 100%;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .auth_icon {
+        font-size: 2rem;
+    }
+    
+    .auth_info {
+        padding: 0.8rem;
+        border-radius: 8px;
+    }
+    
+    .auth_info p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra Small Mobile (up to 375px) */
+@media (max-width: 375px) {
+    .booking {
+        padding: 1rem;
+        margin: 0.8rem auto;
+        border-radius: 8px;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.2rem;
+    }
+    
+    .booking_top h3 span {
+        font-size: 0.8rem;
+    }
+    
+    .booking_top span {
+        font-size: 0.8rem;
+    }
+    
+    .booking_form h5 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .booking_form input {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+        border-radius: 5px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .primary_btn {
+        padding: 0.7rem 1.2rem !important;
+        font-size: 0.9rem !important;
+        width: 100%;
+        margin-top: 0.6rem;
+        border-radius: 15px !important;
+    }
+    
+    .booking_bottom li {
+        padding: 0.5rem 0;
+        font-size: 0.85rem;
+    }
+    
+    .booking_bottom li h5,
+    .booking_bottom li span {
+        font-size: 0.85rem;
+    }
+    
+    .total h5,
+    .total span {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Auth message adjustments */
+    .auth_required_message {
+        padding: 1rem 0.6rem;
+        border-radius: 8px;
+    }
+    
+    .auth_required_message h4 {
+        font-size: 1.1rem;
+    }
+    
+    .auth_required_message p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .auth_buttons .btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .auth_icon {
+        font-size: 1.8rem;
+    }
+}
+
+/* iOS Safari specific optimizations */
+@supports (-webkit-touch-callout: none) {
+    .booking_form input {
+        -webkit-appearance: none;
+        border-radius: 0;
+        font-size: 16px; /* Prevent zoom on focus */
+    }
+    
+    .primary_btn {
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .auth_buttons .btn {
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .booking {
+        padding: 1rem;
+        margin: 0.5rem auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .booking_top h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .booking_form h5 {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .booking_form input {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .primary_btn {
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
+        margin-top: 0.5rem;
+    }
+    
+    .booking_bottom li {
+        padding: 0.4rem 0;
     }
     
     .auth_required_message {
-        padding: 1.5rem 1rem;
+        padding: 0.8rem;
+    }
+    
+    .auth_icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .booking {
+        border: 2px solid var(--primary-color);
+    }
+    
+    .booking_form input {
+        border: 2px solid var(--text-dark);
+    }
+    
+    .primary_btn {
+        border: 2px solid white !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .booking {
+        animation: none;
+    }
+    
+    .booking:hover {
+        transform: none;
+    }
+    
+    .primary_btn:hover {
+        transform: none !important;
+    }
+    
+    .auth_icon {
+        animation: none;
     }
 }
 
