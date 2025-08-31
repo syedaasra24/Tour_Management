@@ -33,7 +33,7 @@ pnpm-debug.log
 .npm/
 
 # Environment variables
-# .env
+.env
 
 # Logs
 logs/
